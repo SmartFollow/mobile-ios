@@ -8,9 +8,7 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
-
-    @IBOutlet weak var logOut: UIButton!
+class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +24,7 @@ class WelcomeViewController: UIViewController {
     @IBAction func Logout(_ sender: Any) {
         LoginService.sharedInstance.signOut()
         
-        let controllerId = LoginService.sharedInstance.isLoggedIn() ? "Welcome" : "Login";
+        let controllerId = LoginService.sharedInstance.isLoggedIn() ? "Profile" : "Login";
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let initViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: controllerId) as UIViewController
         self.present(initViewController, animated: true, completion: nil)
