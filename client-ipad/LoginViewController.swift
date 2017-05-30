@@ -36,7 +36,22 @@ class LoginViewController: UIViewController {
     {
         LoginService.sharedInstance.loginWithCompletionHandler(username: _user, password: _psw) { (error) -> Void in
             if (error == nil) {
-                print(LoginService.sharedInstance.getToken())
+                DispatchQueue.main.async(execute: { () -> Void in
+                    print(LoginService.sharedInstance.getToken())
+                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let initViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: "Welcome") as UIViewController
+                    self.present(initViewController, animated: true, completion: nil)
+                })
+                
+            } else {
+                
+                DispatchQueue.main.async(execute: { () -> Void in
+                    let alertController = UIAlertController(title: "Erreur", message:
+                    error, preferredStyle: UIAlertControllerStyle.alert)
+                    alertController.addAction(UIAlertAction(title: "Retour", style: UIAlertActionStyle.default,handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
+                })
+                
             }
         }
         

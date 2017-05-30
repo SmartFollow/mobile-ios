@@ -39,7 +39,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButton:" destination="XsI-UC-8Ic" eventType="touchUpInside" id="iXj-PG-iX8"/>
+                                    <action selector="loginButton:" destination="XsI-UC-8Ic" eventType="touchUpInside" id="pot-gS-gdi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="1002" y="209"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="WUr-kp-JRd">
             <objects>
-                <viewController storyboardIdentifier="Welcome" id="HVD-2P-30N" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Welcome" id="HVD-2P-30N" customClass="WelcomeViewController" customModule="client_ipad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NMa-rc-Wsf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,10 +70,16 @@
                                 <state key="normal" title="Signed out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="Logout:" destination="HVD-2P-30N" eventType="touchUpInside" id="ywg-Vs-sex"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="logOut" destination="B3y-J0-Knd" id="MDv-DA-477"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h02-UP-Vfs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

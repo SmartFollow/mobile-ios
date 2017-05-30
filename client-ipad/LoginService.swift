@@ -136,7 +136,7 @@ public class LoginService : NSObject {
         let request = NSMutableURLRequest(url: url as URL)
         request.httpMethod = "POST"
         
-        let params = ConnectionSettings.InitialiseParameter() + "username=stephany.funk@example.com&password=secret"
+        let params = ConnectionSettings.InitialiseParameter() + "username=\(username)&password=\(password)"
         
         request.httpBody = params.data(using: String.Encoding.utf8, allowLossyConversion: false)
         
@@ -160,18 +160,23 @@ public class LoginService : NSObject {
                 return
             }
             
-            
-            let tokenType = server_response["token_type"] as? String
-            let expiresIn = server_response["expires_in"] as? Double
-            let accessToken = server_response["access_token"] as? String
-            let refreshToken = server_response["refresh_token"] as? String
-
-            let ExpiresAt = NSDate().addingTimeInterval(expiresIn!).timeIntervalSince1970
-            let tokenExpiresAt = NSDate(timeIntervalSince1970: ExpiresAt) as Date
-            
-            let oauthInfo = OAuthInfo(tokenType: tokenType!, tokenExpiresIn: expiresIn!, refreshToken: refreshToken!, accessToken: accessToken!, tokenExpiresAt: tokenExpiresAt)
-            completion(oauthInfo, nil)
-            //print(oauthInfo)
+            if (server_response["error"] == nil) {
+                let tokenType = server_response["token_type"] as? String
+                let expiresIn = server_response["expires_in"] as? Double
+                let accessToken = server_response["access_token"] as? String
+                let refreshToken = server_response["refresh_token"] as? String
+                
+                let ExpiresAt = NSDate().addingTimeInterval(expiresIn!).timeIntervalSince1970
+                let tokenExpiresAt = NSDate(timeIntervalSince1970: ExpiresAt) as Date
+                
+                let oauthInfo = OAuthInfo(tokenType: tokenType!, tokenExpiresIn: expiresIn!, refreshToken: refreshToken!, accessToken: accessToken!, tokenExpiresAt: tokenExpiresAt)
+                completion(oauthInfo, nil)
+                //print(OAuthInfo)
+            }
+            else {
+                let err = server_response["message"] as! String?
+                completion(OAuthInfo(), err)
+            }
             
         })
         
