@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
             if (error == nil) {
                 DispatchQueue.main.async(execute: { () -> Void in
                     let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let initViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: "Profile") as UIViewController
+                    let initViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as UIViewController
                     self.present(initViewController, animated: true, completion: nil)
                 })
                 

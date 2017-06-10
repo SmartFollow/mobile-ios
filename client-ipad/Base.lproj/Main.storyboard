@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" colorMatched="YES" initialViewController="XsI-UC-8Ic">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" colorMatched="YES" initialViewController="XsI-UC-8Ic">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,12 +12,12 @@
         <!--Login View Controller-->
         <scene sceneID="0NJ-Yw-IvU">
             <objects>
-                <viewController storyboardIdentifier="Login" id="XsI-UC-8Ic" customClass="LoginViewController" customModule="client_ipad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="XsI-UC-8Ic" customClass="LoginViewController" customModule="client_ipad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M8O-C0-ynx" userLabel="Login View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="stephany.funk@example.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="68e-6g-4Ji" userLabel="Username Text Field">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ublanda@example.net" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="68e-6g-4Ji" userLabel="Username Text Field">
                                 <rect key="frame" x="8" y="123" width="305" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -58,7 +58,7 @@
         <!--Profile View Controller-->
         <scene sceneID="WUr-kp-JRd">
             <objects>
-                <viewController storyboardIdentifier="Profile" id="HVD-2P-30N" customClass="ProfileViewController" customModule="client_ipad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="HVD-2P-30N" customClass="ProfileViewController" customModule="client_ipad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NMa-rc-Wsf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
