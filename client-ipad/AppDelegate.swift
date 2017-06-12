@@ -12,7 +12,27 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    
+//    private func loadProfileMenu() {
+//        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        
+//        let mainViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+//        let leftViewController = storyboard.instantiateViewController(withIdentifier: "LeftViewController") as! LeftViewController
+//        
+//        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+//        
+//        UINavigationBar.appearance().tintColor = UIColor(hex: "689F38")
+//        
+//        leftViewController.mainViewController = nvc
+//        
+//        let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+//        slideMenuController.automaticallyAdjustsScrollViewInsets = true
+//        self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
+//        self.window?.rootViewController = slideMenuController
+//        self.window?.makeKeyAndVisible()
+//    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         

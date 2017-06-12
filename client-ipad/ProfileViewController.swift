@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
     }
 
     override func didReceiveMemoryWarning() {
