@@ -19,6 +19,7 @@
 		FA4CD83E1ED608A900621D34 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4CD83D1ED608A900621D34 /* LoginService.swift */; };
 		FA4CD8401ED60BE800621D34 /* ConnectionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4CD83F1ED60BE800621D34 /* ConnectionSettings.swift */; };
 		FA60525A1EEC6A8C001D6475 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6052591EEC6A8C001D6475 /* LeftViewController.swift */; };
+		FAB1A2791EEEB1E00020566B /* MessagerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1A2781EEEB1E00020566B /* MessagerieViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		FA4CD83D1ED608A900621D34 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		FA4CD83F1ED60BE800621D34 /* ConnectionSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionSettings.swift; sourceTree = "<group>"; };
 		FA6052591EEC6A8C001D6475 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		FAB1A2781EEEB1E00020566B /* MessagerieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagerieViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		FA4CD8021ED5D11800621D34 /* client-ipad */ = {
 			isa = PBXGroup;
 			children = (
+				FAB1A2771EEEB1C50020566B /* Messagerie */,
 				FA6052581EEC6A70001D6475 /* Profile */,
 				FADEB7CB1EDDED8300A15536 /* Authentication */,
 				FA4CD8031ED5D11800621D34 /* AppDelegate.swift */,
@@ -165,6 +168,14 @@
 				FA6052591EEC6A8C001D6475 /* LeftViewController.swift */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		FAB1A2771EEEB1C50020566B /* Messagerie */ = {
+			isa = PBXGroup;
+			children = (
+				FAB1A2781EEEB1E00020566B /* MessagerieViewController.swift */,
+			);
+			name = Messagerie;
 			sourceTree = "<group>";
 		};
 		FADEB7CB1EDDED8300A15536 /* Authentication */ = {
@@ -367,6 +378,7 @@
 				FA4CD83E1ED608A900621D34 /* LoginService.swift in Sources */,
 				FA60525A1EEC6A8C001D6475 /* LeftViewController.swift in Sources */,
 				FA4CD8061ED5D11800621D34 /* ProfileViewController.swift in Sources */,
+				FAB1A2791EEEB1E00020566B /* MessagerieViewController.swift in Sources */,
 				FA4CD8041ED5D11800621D34 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
