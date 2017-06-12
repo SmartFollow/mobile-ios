@@ -70,19 +70,6 @@
                     <view key="view" contentMode="scaleToFill" id="NMa-rc-Wsf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3y-J0-Knd">
-                                <rect key="frame" x="16" y="604" width="305" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.39750000000000002" green="0.74412500000000004" blue="0.75" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Signed out">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Logout:" destination="HVD-2P-30N" eventType="touchUpInside" id="f04-Nm-eCx"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -140,7 +127,7 @@
         <!--Messagerie View Controller-->
         <scene sceneID="uFO-wI-UOk">
             <objects>
-                <viewController storyboardIdentifier="MessagerieViewController" id="qTg-fo-KIO" customClass="MessagerieViewController" customModule="client_ipad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" id="qTg-fo-KIO" customClass="MessagerieViewController" customModule="client_ipad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R0u-t2-14B"/>
                         <viewControllerLayoutGuide type="bottom" id="lsr-0k-NvW"/>

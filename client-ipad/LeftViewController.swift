@@ -14,20 +14,35 @@ enum Menu : Int {
     case Courses
     case Chat
     case Settings
+    case Logout
 }
 
 class LeftViewController: UIViewController {
     
     let menus = ["Profile", "Cours", "Messagerie", "Paramètres", "Déconnexion"]
-    var chatViewController: UIViewController! = nil
+    var chatViewController: UIViewController!
+    var profileViewController: UIViewController!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let chatViewController = storyboard.instantiateViewController(withIdentifier: "MessagerieViewController") as! MessagerieViewController
+        let chatViewController = storyboard.instantiateViewController(withIdentifier: "ChatViewController")
         self.chatViewController = UINavigationController(rootViewController: chatViewController)
+        
+        let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController")
+        self.profileViewController = UINavigationController(rootViewController: profileViewController)
+    
+    }
+    
+     func Logout() {
+        LoginService.sharedInstance.signOut()
+        
+        let controllerId = LoginService.sharedInstance.isLoggedIn() ? "ProfileViewController" : "LoginViewController";
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let initViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: controllerId) as UIViewController
+        self.present(initViewController, animated: true, completion: nil)
     }
     
 }
@@ -50,11 +65,13 @@ extension LeftViewController: UITableViewDataSource {
         case .Chat:
             self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true)
         case .Profile:
-            self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true)
+            self.slideMenuController()?.changeMainViewController(self.profileViewController, close: true)
         case .Courses:
             self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true)
         case .Settings:
             self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true)
+        case .Logout:
+            self.Logout()
         }
     }
 }

@@ -20,16 +20,5 @@ class ProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    
-    @IBAction func Logout(_ sender: Any) {
-        LoginService.sharedInstance.signOut()
-        
-        let controllerId = LoginService.sharedInstance.isLoggedIn() ? "ProfileViewController" : "LoginViewController";
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let initViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: controllerId) as UIViewController
-        self.present(initViewController, animated: true, completion: nil)
-
-    }
 }
 
