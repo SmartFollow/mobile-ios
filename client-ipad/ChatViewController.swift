@@ -9,7 +9,7 @@
 import Foundation
 import SlideMenuControllerSwift
 
-class MessagerieViewController : UIViewController {
+class ChatViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

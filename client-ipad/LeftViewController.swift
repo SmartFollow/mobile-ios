@@ -22,6 +22,8 @@ class LeftViewController: UIViewController {
     let menus = ["Profile", "Cours", "Messagerie", "Paramètres", "Déconnexion"]
     var chatViewController: UIViewController!
     var profileViewController: UIViewController!
+    var topMenuView: TopMenuView!
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -33,16 +35,26 @@ class LeftViewController: UIViewController {
         
         let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController")
         self.profileViewController = UINavigationController(rootViewController: profileViewController)
+        
+        self.topMenuView = Bundle.main.loadNibNamed("TopMenuView", owner: nil, options: nil)?.first as? TopMenuView
+        self.view.addSubview(topMenuView)
+        
+        self.tableView.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1.0)
     
     }
     
      func Logout() {
         LoginService.sharedInstance.signOut()
-        
         let controllerId = LoginService.sharedInstance.isLoggedIn() ? "ProfileViewController" : "LoginViewController";
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let initViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: controllerId) as UIViewController
         self.present(initViewController, animated: true, completion: nil)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.topMenuView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 160)
+        self.view.layoutIfNeeded()
     }
     
 }
@@ -55,27 +67,28 @@ extension LeftViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        cell.backgroundColor = UIColor.clear
         cell.textLabel?.text = menus[indexPath.row]
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selection = Menu(rawValue: indexPath.row)
-        switch selection! {
-        case .Chat:
-            self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true)
-        case .Profile:
-            self.slideMenuController()?.changeMainViewController(self.profileViewController, close: true)
-        case .Courses:
-            self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true)
-        case .Settings:
-            self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true)
-        case .Logout:
-            self.Logout()
-        }
     }
 }
 
 extension LeftViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let selection = Menu(rawValue: indexPath.row) {
+            switch selection {
+            case .Chat:
+                self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true)
+            case .Profile:
+                self.slideMenuController()?.changeMainViewController(self.profileViewController, close: true)
+            case .Courses:
+                self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true)
+            case .Settings:
+                self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true)
+            case .Logout:
+                self.Logout()
+            }
+        }
+    }
 }
