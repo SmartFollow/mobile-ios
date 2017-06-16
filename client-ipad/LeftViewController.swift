@@ -39,8 +39,9 @@ class LeftViewController: UIViewController {
         self.topMenuView = Bundle.main.loadNibNamed("TopMenuView", owner: nil, options: nil)?.first as? TopMenuView
         self.view.addSubview(topMenuView)
         
+        self.tableView.tableFooterView = UIView()
+        
         self.tableView.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1.0)
-    
     }
     
      func Logout() {
@@ -68,6 +69,7 @@ extension LeftViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
         cell.backgroundColor = UIColor.clear
+        cell.textLabel?.textColor = UIColor.white
         cell.textLabel?.text = menus[indexPath.row]
         return cell
     }

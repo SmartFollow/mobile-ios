@@ -16,10 +16,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var _username: UITextField!
     @IBOutlet weak var _loginButton: UIButton!
     
-    enum MyError : Error {
-        case RuntimeError(String)
-    }
-    
     override func viewDidLoad() {
         
     }
@@ -30,11 +26,9 @@ class LoginViewController: UIViewController {
         let password = _password.text
         
         Login(_user: username!, _psw: password!)
-        
     }
     
     func loadProfile() {
-        // create viewController code...
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let mainViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
@@ -42,12 +36,6 @@ class LoginViewController: UIViewController {
         
         let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
         
-        //UINavigationBar.appearance().tintColor = UIColor(hex: "689F38")
-        
-        //leftViewController.mainViewController = nvc
-        
-        //let slideMenuController = ExSlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
-        //let slideMenuController = SlideMenuController(mainViewController: nvc, leftViewController: leftViewController)
         let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
         slideMenuController.automaticallyAdjustsScrollViewInsets = true
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
