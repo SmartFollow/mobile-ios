@@ -20,6 +20,7 @@
 		FA4CD83E1ED608A900621D34 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4CD83D1ED608A900621D34 /* LoginService.swift */; };
 		FA4CD8401ED60BE800621D34 /* ConnectionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4CD83F1ED60BE800621D34 /* ConnectionSettings.swift */; };
 		FA60525A1EEC6A8C001D6475 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6052591EEC6A8C001D6475 /* LeftViewController.swift */; };
+		FA6C59D31EF593E900BB4083 /* Login-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA6C59D21EF593E900BB4083 /* Login-logo.jpg */; };
 		FA99E8BB1EF33B1E00F3CE4E /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99E8BA1EF33B1E00F3CE4E /* ApiManager.swift */; };
 		FAB1A2791EEEB1E00020566B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1A2781EEEB1E00020566B /* ChatViewController.swift */; };
 		FAC13E241EEF05930068E912 /* TopMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC13E231EEF05930068E912 /* TopMenuView.xib */; };
@@ -68,6 +69,7 @@
 		FA4CD83D1ED608A900621D34 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		FA4CD83F1ED60BE800621D34 /* ConnectionSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionSettings.swift; sourceTree = "<group>"; };
 		FA6052591EEC6A8C001D6475 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		FA6C59D21EF593E900BB4083 /* Login-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Login-logo.jpg"; sourceTree = "<group>"; };
 		FA99E8BA1EF33B1E00F3CE4E /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		FAB1A2781EEEB1E00020566B /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FAC13E231EEF05930068E912 /* TopMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopMenuView.xib; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		FAC5B32F1EF1ADFD00267888 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				FA6C59D21EF593E900BB4083 /* Login-logo.jpg */,
 				FA0CEE251EEF3FC5008BBD1F /* Logo-black.jpg */,
 				FAC5B32D1EF1ADF600267888 /* profil1.jpg */,
 				FAC5B3301EF1B29200267888 /* Logo.jpg */,
@@ -339,6 +342,7 @@
 				FA0CEE261EEF3FC5008BBD1F /* Logo-black.jpg in Resources */,
 				FAC5B32E1EF1ADF600267888 /* profil1.jpg in Resources */,
 				FAC13E241EEF05930068E912 /* TopMenuView.xib in Resources */,
+				FA6C59D31EF593E900BB4083 /* Login-logo.jpg in Resources */,
 				FA4CD80E1ED5D11800621D34 /* LaunchScreen.storyboard in Resources */,
 				FA4CD80B1ED5D11800621D34 /* Assets.xcassets in Resources */,
 				FA4CD8091ED5D11800621D34 /* Main.storyboard in Resources */,
