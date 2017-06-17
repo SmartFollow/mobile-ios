@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var group: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var profilePicture: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
@@ -29,7 +30,7 @@ class ProfileViewController: UIViewController {
     }
     
     func saveInformationProfile(result: Data?) -> Void {
-        var taughtSubjectsArray: [(id: Int, levelId: Int)] = []
+        var taughtSubjectsArray = [Dictionary<String, Int>]()
         do {
             if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [String: Any] {
                 if let firstName = json["firstname"], let lastName = json["lastname"],
@@ -46,14 +47,17 @@ class ProfileViewController: UIViewController {
                 }
                 if let taughtSubjects = json["taught_subjects"] as? [[String: Any]] {
                     for subject in taughtSubjects {
-                        if var id = subject["id"] as? Int,
-                            var levelId = subject["level_id"] as? Int {
-                            var tmp = [id, levelId]
-                            //taughtSubjectsArray.append(<#T##newElement: (id: Int, levelId: Int)##(id: Int, levelId: Int)#>)
-                            taughtSubjectsArray.append((id: id, levelId: levelId))
+                        if let id = subject["id"] as? Int,
+                            let levelId = subject["level_id"] as? Int {
+                            taughtSubjectsArray.append(["id": id, "levelId": levelId])
                         }
                     }
                     UserDefaults.standard.set(taughtSubjectsArray, forKey: "taughtSubjects")
+                    let a = UserDefaults.standard.object(forKey: "taughtSubjects") as! [Dictionary<String, Int>]
+                    for b in a {
+                        print(b["id"]!)
+                        print(b["levelId"]!)
+                    }
                 }
             }
             
