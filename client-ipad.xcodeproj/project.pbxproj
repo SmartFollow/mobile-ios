@@ -10,6 +10,7 @@
 		CC30F6126EF91E71D13C4D1D /* Pods_client_ipad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839EA730BC92EAA6E1E12A1C /* Pods_client_ipad.framework */; };
 		FA0CEE261EEF3FC5008BBD1F /* Logo-black.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA0CEE251EEF3FC5008BBD1F /* Logo-black.jpg */; };
 		FA3F03931F09795900B0A51F /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F03921F09795900B0A51F /* CoursesViewController.swift */; };
+		FA3F03961F098C4600B0A51F /* Courses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3F03941F098C4600B0A51F /* Courses.storyboard */; };
 		FA4CD8041ED5D11800621D34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4CD8031ED5D11800621D34 /* AppDelegate.swift */; };
 		FA4CD8061ED5D11800621D34 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4CD8051ED5D11800621D34 /* ProfileViewController.swift */; };
 		FA4CD8091ED5D11800621D34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4CD8071ED5D11800621D34 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		839EA730BC92EAA6E1E12A1C /* Pods_client_ipad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_client_ipad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0CEE251EEF3FC5008BBD1F /* Logo-black.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Logo-black.jpg"; sourceTree = "<group>"; };
 		FA3F03921F09795900B0A51F /* CoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		FA3F03951F098C4600B0A51F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Courses.storyboard; sourceTree = "<group>"; };
 		FA4CD8001ED5D11800621D34 /* client-ipad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "client-ipad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4CD8031ED5D11800621D34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA4CD8051ED5D11800621D34 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				FADEB7CB1EDDED8300A15536 /* Authentication */,
 				FA4CD8031ED5D11800621D34 /* AppDelegate.swift */,
 				FA4CD8071ED5D11800621D34 /* Main.storyboard */,
+				FA3F03941F098C4600B0A51F /* Courses.storyboard */,
 				FA4CD80A1ED5D11800621D34 /* Assets.xcassets */,
 				FA4CD80C1ED5D11800621D34 /* LaunchScreen.storyboard */,
 				FA4CD80F1ED5D11800621D34 /* Info.plist */,
@@ -355,6 +358,7 @@
 				FAC13E241EEF05930068E912 /* TopMenuView.xib in Resources */,
 				FA6C59D31EF593E900BB4083 /* Login-logo.jpg in Resources */,
 				FA4CD80E1ED5D11800621D34 /* LaunchScreen.storyboard in Resources */,
+				FA3F03961F098C4600B0A51F /* Courses.storyboard in Resources */,
 				FA4CD80B1ED5D11800621D34 /* Assets.xcassets in Resources */,
 				FA4CD8091ED5D11800621D34 /* Main.storyboard in Resources */,
 			);
@@ -475,6 +479,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FA3F03941F098C4600B0A51F /* Courses.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA3F03951F098C4600B0A51F /* Base */,
+			);
+			name = Courses.storyboard;
+			sourceTree = "<group>";
+		};
 		FA4CD8071ED5D11800621D34 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

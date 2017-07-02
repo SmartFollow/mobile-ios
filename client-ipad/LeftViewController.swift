@@ -31,13 +31,15 @@ class LeftViewController: UIViewController {
         super.viewDidLoad()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let coursesStoryboard = UIStoryboard(name: "Courses", bundle: nil)
+        
         let chatViewController = storyboard.instantiateViewController(withIdentifier: "ChatViewController")
         self.chatViewController = UINavigationController(rootViewController: chatViewController)
         
         let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController")
         self.profileViewController = UINavigationController(rootViewController: profileViewController)
         
-        let coursesViewController = storyboard.instantiateViewController(withIdentifier: "CoursesViewController")
+        let coursesViewController = coursesStoryboard.instantiateViewController(withIdentifier: "CoursesViewController")
         self.coursesViewController = UINavigationController(rootViewController: coursesViewController)
         
         self.topMenuView = Bundle.main.loadNibNamed("TopMenuView", owner: nil, options: nil)?.first as? TopMenuView
