@@ -22,6 +22,7 @@ class LeftViewController: UIViewController {
     let menus = ["Profile", "Cours", "Messagerie", "Paramètres", "Déconnexion"]
     var chatViewController: UIViewController!
     var profileViewController: UIViewController!
+    var coursesViewController: UIViewController!
     var topMenuView: TopMenuView!
     
     @IBOutlet weak var tableView: UITableView!
@@ -35,6 +36,9 @@ class LeftViewController: UIViewController {
         
         let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController")
         self.profileViewController = UINavigationController(rootViewController: profileViewController)
+        
+        let coursesViewController = storyboard.instantiateViewController(withIdentifier: "CoursesViewController")
+        self.coursesViewController = UINavigationController(rootViewController: coursesViewController)
         
         self.topMenuView = Bundle.main.loadNibNamed("TopMenuView", owner: nil, options: nil)?.first as? TopMenuView
         self.view.addSubview(topMenuView)
@@ -85,7 +89,7 @@ extension LeftViewController: UITableViewDelegate {
             case .Profile:
                 self.slideMenuController()?.changeMainViewController(self.profileViewController, close: true)
             case .Courses:
-                self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true)
+                self.slideMenuController()?.changeMainViewController(self.coursesViewController, close: true)
             case .Settings:
                 self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true)
             case .Logout:
