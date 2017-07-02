@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 class LoginViewController: UIViewController {
     
@@ -14,10 +15,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var _password: UITextField!
     @IBOutlet weak var _username: UITextField!
     @IBOutlet weak var _loginButton: UIButton!
-    
-    enum MyError : Error {
-        case RuntimeError(String)
-    }
     
     override func viewDidLoad() {
         
@@ -29,17 +26,30 @@ class LoginViewController: UIViewController {
         let password = _password.text
         
         Login(_user: username!, _psw: password!)
-        
     }
     
+    func loadProfile() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        let leftViewController = storyboard.instantiateViewController(withIdentifier: "LeftViewController") as! LeftViewController
+        
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        
+        let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+        slideMenuController.automaticallyAdjustsScrollViewInsets = true
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
+        appDelegate.window?.rootViewController = slideMenuController
+        appDelegate.window?.makeKeyAndVisible()
+    }
+
     func Login(_user:String, _psw:String)
     {
         LoginService.sharedInstance.loginWithCompletionHandler(username: _user, password: _psw) { (error) -> Void in
             if (error == nil) {
                 DispatchQueue.main.async(execute: { () -> Void in
-                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let initViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as UIViewController
-                    self.present(initViewController, animated: true, completion: nil)
+                    self.loadProfile()
                 })
                 
             } else {

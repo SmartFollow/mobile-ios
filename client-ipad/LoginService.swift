@@ -171,7 +171,7 @@ public class LoginService : NSObject {
                 
                 let oauthInfo = OAuthInfo(tokenType: tokenType!, tokenExpiresIn: expiresIn!, refreshToken: refreshToken!, accessToken: accessToken!, tokenExpiresAt: tokenExpiresAt)
                 completion(oauthInfo, nil)
-                //print(OAuthInfo)
+                //print(oauthInfo)
             }
             else {
                 let err = server_response["message"] as! String?
