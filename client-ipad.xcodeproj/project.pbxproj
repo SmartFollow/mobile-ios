@@ -23,6 +23,14 @@
 		FA4CD8401ED60BE800621D34 /* ConnectionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4CD83F1ED60BE800621D34 /* ConnectionSettings.swift */; };
 		FA60525A1EEC6A8C001D6475 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6052591EEC6A8C001D6475 /* LeftViewController.swift */; };
 		FA6C59D31EF593E900BB4083 /* Login-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA6C59D21EF593E900BB4083 /* Login-logo.jpg */; };
+		FA897FA71F11387C00091D54 /* call.png in Resources */ = {isa = PBXBuildFile; fileRef = FA897FA61F11387C00091D54 /* call.png */; };
+		FA897FA91F11395900091D54 /* man-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FA897FA81F11395900091D54 /* man-7.png */; };
+		FA897FAB1F1139A000091D54 /* origami-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FA897FAA1F1139A000091D54 /* origami-7.png */; };
+		FA897FAD1F113A5900091D54 /* circle-tick-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FA897FAC1F113A5900091D54 /* circle-tick-7.png */; };
+		FA897FB11F113BA200091D54 /* file-list-tick-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FA897FB01F113BA200091D54 /* file-list-tick-7.png */; };
+		FA897FB31F114DC600091D54 /* calendar-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FA897FB21F114DC600091D54 /* calendar-7.png */; };
+		FA897FB51F116E1800091D54 /* CourseFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA897FB41F116E1800091D54 /* CourseFlowController.swift */; };
+		FA897FB71F11710D00091D54 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA897FB61F11710D00091D54 /* Lesson.swift */; };
 		FA99E8BB1EF33B1E00F3CE4E /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99E8BA1EF33B1E00F3CE4E /* ApiManager.swift */; };
 		FAB1A2791EEEB1E00020566B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1A2781EEEB1E00020566B /* ChatViewController.swift */; };
 		FAC13E241EEF05930068E912 /* TopMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC13E231EEF05930068E912 /* TopMenuView.xib */; };
@@ -74,6 +82,14 @@
 		FA4CD83F1ED60BE800621D34 /* ConnectionSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionSettings.swift; sourceTree = "<group>"; };
 		FA6052591EEC6A8C001D6475 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		FA6C59D21EF593E900BB4083 /* Login-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Login-logo.jpg"; sourceTree = "<group>"; };
+		FA897FA61F11387C00091D54 /* call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = call.png; sourceTree = "<group>"; };
+		FA897FA81F11395900091D54 /* man-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "man-7.png"; sourceTree = "<group>"; };
+		FA897FAA1F1139A000091D54 /* origami-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "origami-7.png"; sourceTree = "<group>"; };
+		FA897FAC1F113A5900091D54 /* circle-tick-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-tick-7.png"; sourceTree = "<group>"; };
+		FA897FB01F113BA200091D54 /* file-list-tick-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "file-list-tick-7.png"; sourceTree = "<group>"; };
+		FA897FB21F114DC600091D54 /* calendar-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-7.png"; sourceTree = "<group>"; };
+		FA897FB41F116E1800091D54 /* CourseFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseFlowController.swift; sourceTree = "<group>"; };
+		FA897FB61F11710D00091D54 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		FA99E8BA1EF33B1E00F3CE4E /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		FAB1A2781EEEB1E00020566B /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FAC13E231EEF05930068E912 /* TopMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopMenuView.xib; sourceTree = "<group>"; };
@@ -130,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				FA3F03921F09795900B0A51F /* CoursesViewController.swift */,
+				FA897FB41F116E1800091D54 /* CourseFlowController.swift */,
 			);
 			name = Course;
 			sourceTree = "<group>";
@@ -159,6 +176,8 @@
 		FA4CD8021ED5D11800621D34 /* client-ipad */ = {
 			isa = PBXGroup;
 			children = (
+				FA897FB91F1176D800091D54 /* Storyboards */,
+				FA897FB81F11711300091D54 /* Objects */,
 				FA3F038F1F09792B00B0A51F /* Course */,
 				FAEF45101EF3090A00EA62CD /* Extension */,
 				FAC5B32F1EF1ADFD00267888 /* Ressources */,
@@ -166,10 +185,7 @@
 				FA6052581EEC6A70001D6475 /* Profile */,
 				FADEB7CB1EDDED8300A15536 /* Authentication */,
 				FA4CD8031ED5D11800621D34 /* AppDelegate.swift */,
-				FA4CD8071ED5D11800621D34 /* Main.storyboard */,
-				FA3F03941F098C4600B0A51F /* Courses.storyboard */,
 				FA4CD80A1ED5D11800621D34 /* Assets.xcassets */,
-				FA4CD80C1ED5D11800621D34 /* LaunchScreen.storyboard */,
 				FA4CD80F1ED5D11800621D34 /* Info.plist */,
 				FA99E8BA1EF33B1E00F3CE4E /* ApiManager.swift */,
 			);
@@ -205,6 +221,24 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
+		FA897FB81F11711300091D54 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				FA897FB61F11710D00091D54 /* Lesson.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		FA897FB91F1176D800091D54 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA3F03941F098C4600B0A51F /* Courses.storyboard */,
+				FA4CD8071ED5D11800621D34 /* Main.storyboard */,
+				FA4CD80C1ED5D11800621D34 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		FAB1A2771EEEB1C50020566B /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +250,12 @@
 		FAC5B32F1EF1ADFD00267888 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				FA897FB21F114DC600091D54 /* calendar-7.png */,
+				FA897FB01F113BA200091D54 /* file-list-tick-7.png */,
+				FA897FAC1F113A5900091D54 /* circle-tick-7.png */,
+				FA897FAA1F1139A000091D54 /* origami-7.png */,
+				FA897FA81F11395900091D54 /* man-7.png */,
+				FA897FA61F11387C00091D54 /* call.png */,
 				FA6C59D21EF593E900BB4083 /* Login-logo.jpg */,
 				FA0CEE251EEF3FC5008BBD1F /* Logo-black.jpg */,
 				FAC5B32D1EF1ADF600267888 /* profil1.jpg */,
@@ -353,11 +393,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC5B3311EF1B29200267888 /* Logo.jpg in Resources */,
+				FA897FA91F11395900091D54 /* man-7.png in Resources */,
+				FA897FB11F113BA200091D54 /* file-list-tick-7.png in Resources */,
+				FA897FA71F11387C00091D54 /* call.png in Resources */,
+				FA897FAD1F113A5900091D54 /* circle-tick-7.png in Resources */,
 				FA0CEE261EEF3FC5008BBD1F /* Logo-black.jpg in Resources */,
 				FAC5B32E1EF1ADF600267888 /* profil1.jpg in Resources */,
 				FAC13E241EEF05930068E912 /* TopMenuView.xib in Resources */,
 				FA6C59D31EF593E900BB4083 /* Login-logo.jpg in Resources */,
+				FA897FB31F114DC600091D54 /* calendar-7.png in Resources */,
 				FA4CD80E1ED5D11800621D34 /* LaunchScreen.storyboard in Resources */,
+				FA897FAB1F1139A000091D54 /* origami-7.png in Resources */,
 				FA3F03961F098C4600B0A51F /* Courses.storyboard in Resources */,
 				FA4CD80B1ED5D11800621D34 /* Assets.xcassets in Resources */,
 				FA4CD8091ED5D11800621D34 /* Main.storyboard in Resources */,
@@ -435,10 +481,12 @@
 			files = (
 				FA4CD8381ED5DBE400621D34 /* LoginViewController.swift in Sources */,
 				FAEF45121EF3092C00EA62CD /* UIImageView.swift in Sources */,
+				FA897FB51F116E1800091D54 /* CourseFlowController.swift in Sources */,
 				FA3F03931F09795900B0A51F /* CoursesViewController.swift in Sources */,
 				FA99E8BB1EF33B1E00F3CE4E /* ApiManager.swift in Sources */,
 				FA4CD8401ED60BE800621D34 /* ConnectionSettings.swift in Sources */,
 				FA4CD83E1ED608A900621D34 /* LoginService.swift in Sources */,
+				FA897FB71F11710D00091D54 /* Lesson.swift in Sources */,
 				FAC13E261EEF07300068E912 /* TopMenuView.swift in Sources */,
 				FA60525A1EEC6A8C001D6475 /* LeftViewController.swift in Sources */,
 				FA4CD8061ED5D11800621D34 /* ProfileViewController.swift in Sources */,

@@ -11,7 +11,7 @@ import Foundation
 class ApiManager: NSObject {
     
     static let sharedInstance = ApiManager()
-    let baseUrl = "http://api.dev.smartfollow.lan"
+    let baseUrl = "http://api.dev.smartfollow.lan/api"
     
     public func b(endPoint: String, completion: @escaping (_ result: Data?) -> Void) {
         let url = URL(string: baseUrl + endPoint )

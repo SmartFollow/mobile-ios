@@ -11,7 +11,7 @@ import UIKit
 public struct ConnectionSettings {
     
     static let clientId = "2"
-    static let clientSecret = "hR7i6xQWWet1kztaksZTAgNGUXAMtS5NAlvwYh8j"
+    static let clientSecret = "tDwwmNLg8FBlp8kL7jfBlqIevXUv2SdE1O7yzn43"
     static let grantType = "password"
     static var apiBaseUrl = "http://api.dev.smartfollow.lan"
     
