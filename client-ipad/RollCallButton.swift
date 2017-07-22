@@ -46,14 +46,25 @@ class RollCallButton: UIButton {
         self.activityIndicator.hidesWhenStopped = true
         self.isEnabled = false
         ApiManager.sharedInstance.b(endPoint: "/evaluations/\(self.evaluationId!)/absences", method: "POST") { (result: Data?) in
-            self.stateStudent = self.stateStudent + 1
-            if (self.stateStudent > 2) {
-                self.stateStudent = 0
+            
+            do {
+                if let json = try JSONSerialization.jsonObject(with: result!, options: []) as?
+                    [String: Any] {
+                    if let success = json["success"] {
+                        self.stateStudent = self.stateStudent + 1
+                        if (self.stateStudent > 2) {
+                            self.stateStudent = 0
+                        }
+                        DispatchQueue.main.async(){
+                            self.activityIndicator.stopAnimating()
+                            self.isEnabled = true
+                            self.setImage(UIImage(named: self.iconTab[self.stateStudent]), for: .normal)
+                        }
+                    }
+                }
             }
-            DispatchQueue.main.async(){
-                self.activityIndicator.stopAnimating()
-                self.isEnabled = true
-                self.setImage(UIImage(named: self.iconTab[self.stateStudent]), for: .normal)
+            catch let error as NSError {
+                print("Failed to load: \(error.localizedDescription)")
             }
         }
     }
