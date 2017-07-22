@@ -11,14 +11,28 @@ import UIKit
 class CourseFlowController: UIViewController {
     
     @IBOutlet weak var professorLabel: UILabel!
+    @IBOutlet weak var picker: UIPickerView!
+    
+    var pickerData: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.picker.delegate = self
+        self.picker.dataSource = self
         
         ApiManager.sharedInstance.b(endPoint: "/lessons") { (result: Data?) in
-                self.fetchLesson(result: result)
+            var lessons = self.fetchLesson(result: result)
+            var tmpArr = [String]()
+            for lesson in lessons {
+                tmpArr.append(lesson.start)
+            }
+            self.pickerData = tmpArr
+            DispatchQueue.main.async {
+                self.picker.reloadAllComponents()
+            }
         }
-    
+        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,7 +42,7 @@ class CourseFlowController: UIViewController {
         })
     }
     
-    func fetchLesson(result : Data?) {
+    func fetchLesson(result : Data?) -> [Lesson] {
         var lessons = [Lesson]()
         do {
             if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [[String: Any]] {
@@ -56,7 +70,25 @@ class CourseFlowController: UIViewController {
         } catch let error as NSError {
             print("Failed to load: \(error.localizedDescription)")
         }
+        return lessons
     }
     
+}
+
+extension CourseFlowController : UIPickerViewDelegate,  UIPickerViewDataSource {
     
+    // The number of columns of data
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    // The number of rows of data
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    // The data to return for the row and component (column) that's being passed in
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
 }

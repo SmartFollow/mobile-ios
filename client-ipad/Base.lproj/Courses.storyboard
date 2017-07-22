@@ -96,6 +96,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fw1-B7-4nt">
+                                <rect key="frame" x="248" y="472" width="272" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                         <constraints>
@@ -115,6 +119,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Date" image="calendar-7.png" id="Kqz-to-lI2"/>
                     <connections>
+                        <outlet property="picker" destination="fw1-B7-4nt" id="F7V-GG-2sG"/>
                         <outlet property="professorLabel" destination="VSi-lv-lC4" id="qez-w6-U9i"/>
                     </connections>
                 </viewController>
@@ -125,7 +130,7 @@
         <!--Appel-->
         <scene sceneID="4qg-kv-z5o">
             <objects>
-                <viewController id="yM1-uK-TCU" sceneMemberID="viewController">
+                <viewController id="yM1-uK-TCU" customClass="RollCallViewController" customModule="client_ipad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N6i-JI-Jba"/>
                         <viewControllerLayoutGuide type="bottom" id="oEL-6e-fYv"/>
@@ -133,9 +138,23 @@
                     <view key="view" contentMode="scaleToFill" id="PMO-gE-Svx">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SKV-v6-Lqz">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                        <constraints>
+                            <constraint firstItem="SKV-v6-Lqz" firstAttribute="top" secondItem="N6i-JI-Jba" secondAttribute="bottom" constant="-20" id="9Vf-87-nyx"/>
+                            <constraint firstItem="SKV-v6-Lqz" firstAttribute="width" secondItem="PMO-gE-Svx" secondAttribute="width" id="Sqa-pp-sbB"/>
+                            <constraint firstItem="SKV-v6-Lqz" firstAttribute="leading" secondItem="PMO-gE-Svx" secondAttribute="leadingMargin" constant="-20" id="bc1-sX-acU"/>
+                            <constraint firstItem="SKV-v6-Lqz" firstAttribute="height" secondItem="PMO-gE-Svx" secondAttribute="height" id="fN6-Si-kp5"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Appel" image="circle-tick-7.png" id="IWW-p1-6FY"/>
+                    <connections>
+                        <outlet property="scrollView" destination="SKV-v6-Lqz" id="0Lo-M6-bBZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sKp-gE-elh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

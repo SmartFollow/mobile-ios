@@ -1,12 +1,27 @@
 PODS:
+  - OHHTTPStubs/Core (6.0.0)
+  - OHHTTPStubs/Default (6.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (6.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (6.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (6.0.0)
+  - OHHTTPStubs/Swift (6.0.0):
+    - OHHTTPStubs/Default
   - SlideMenuControllerSwift (3.0.1)
 
 DEPENDENCIES:
+  - OHHTTPStubs/Swift
   - SlideMenuControllerSwift
 
 SPEC CHECKSUMS:
+  OHHTTPStubs: 752f9b11fd810a15162d50f11c06ff94f8e012eb
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
 
-PODFILE CHECKSUM: c61d6035f0425330780edd337c0968f53bc5eb9b
+PODFILE CHECKSUM: 9778c69d0698fae0b2a83e794c877b48f33a6507
 
 COCOAPODS: 1.2.1

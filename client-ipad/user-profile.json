@@ -1,0 +1,62 @@
+[
+    {
+        "id": 6,
+        "email": "rgreen@example.net",
+        "created_at": "2017-01-08 06:05:31",
+        "updated_at": "2017-01-08 06:05:31",
+        "firstname": "Macy",
+        "lastname": "Wunsch",
+        "class_id": 4,
+        "group_id": 4
+    },
+    {
+        "id": 7,
+        "email": "edythe86@example.net",
+        "created_at": "2017-01-08 06:05:31",
+        "updated_at": "2017-01-08 06:05:31",
+        "firstname": "Verona",
+        "lastname": "Schuster",
+        "class_id": 4,
+        "group_id": 4
+    },
+    {
+        "id": 8,
+        "email": "hkutch@example.org",
+        "created_at": "2017-01-08 06:05:31",
+        "updated_at": "2017-01-08 06:05:31",
+        "firstname": "Salvatore",
+        "lastname": "Schuppe",
+        "class_id": 4,
+        "group_id": 4
+    },
+    {
+        "id": 9,
+        "email": "astrid.oreilly@example.org",
+        "created_at": "2017-01-08 06:05:32",
+        "updated_at": "2017-01-08 06:05:32",
+        "firstname": "Dejon",
+        "lastname": "Howell",
+        "class_id": 4,
+        "group_id": 4
+    },
+    {
+        "id": 18,
+        "email": "austin.pacocha@example.com",
+        "created_at": "2017-03-11 22:04:20",
+        "updated_at": "2017-03-11 22:04:20",
+        "firstname": "Theresa",
+        "lastname": "Hackett",
+        "class_id": 4,
+        "group_id": 4
+    },
+    {
+        "id": 19,
+        "email": "herminio.barton@example.com",
+        "created_at": "2017-03-11 22:04:20",
+        "updated_at": "2017-03-11 22:04:20",
+        "firstname": "Maxime",
+        "lastname": "Becker",
+        "class_id": 4,
+        "group_id": 4
+    }
+]
