@@ -12,13 +12,13 @@ import OHHTTPStubs
 class ApiManager: NSObject {
     
     static let sharedInstance = ApiManager()
-    let host = "http://api.dev.smartfollow.lan/api"
     
     public func b(endPoint: String, method: String = "GET", parameters: String = "", completion: @escaping (_ result: Data?) -> Void) {
         #if DEBUG
             stubbing()
         #endif
-        let url = URL(string: host + endPoint )
+        
+        let url = URL(string: ConnectionSettings.apiBaseUrl + endPoint )
         var request = URLRequest(url: (url as URL?)!)
         request.httpMethod = method
         request.httpBody = parameters.data(using: String.Encoding.utf8)
@@ -50,7 +50,7 @@ class ApiManager: NSObject {
     }
     
     func stubbing() {
-        stub(condition: isHost("api.dev.smartfollow.lan") && isPath("/api/student-classes/6/students")) { request in
+        stub(condition: isPath("/api/student-classes/1/students")) { request in
             return OHHTTPStubsResponse(
                 fileAtPath: OHPathForFile("user-profile.json", type(of: self))!,
                 statusCode: 200,
@@ -58,7 +58,7 @@ class ApiManager: NSObject {
             )
         }
         
-        stub(condition: isHost("api.dev.smartfollow.lan") && isPath("/api/evaluations/5/absences")) { request in
+        stub(condition: isPath("/api/evaluations/5/absences")) { request in
             return OHHTTPStubsResponse(
                 fileAtPath: OHPathForFile("postAbsence.json", type(of: self))!,
                 statusCode: 200,

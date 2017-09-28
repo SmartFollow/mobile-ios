@@ -19,9 +19,11 @@ class CourseFlowController: UIViewController {
         super.viewDidLoad()
         self.picker.delegate = self
         self.picker.dataSource = self
+
         
-        ApiManager.sharedInstance.b(endPoint: "/lessons") { (result: Data?) in
-            var lessons = self.fetchLesson(result: result)
+        ApiManager.sharedInstance.b(endPoint: "/api/lessons") { (result: Data?) in
+            
+            var lessons = self.parseLesson(result: result)
             var tmpArr = [String]()
             for lesson in lessons {
                 tmpArr.append(lesson.start)
@@ -42,15 +44,15 @@ class CourseFlowController: UIViewController {
         })
     }
     
-    func fetchLesson(result : Data?) -> [Lesson] {
+    func parseLesson(result : Data?) -> [Lesson] {
         var lessons = [Lesson]()
         do {
             if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [[String: Any]] {
                 
                 for jsonLesson in json {
                     if let id = jsonLesson["id"], let subjectId = jsonLesson["subject_id"], let reservationId = jsonLesson["reservation_id"], let studentClassId = jsonLesson["student_class_id"], let start = jsonLesson["start"], let end = jsonLesson["end"] {
-                        
-                        let lesson = Lesson(id: id as! Int, subjectId: subjectId as! Int, reservationId: reservationId as! Int, studentClassId: studentClassId as! Int, start: start as! String, end: end as! String)
+                        print("\(id) \(subjectId) \(reservationId) \(studentClassId) \(start) \(end)")
+                            let lesson = Lesson(id: id as! Int, subjectId: subjectId as! Int, reservationId: 5 as! Int, studentClassId: studentClassId as! Int, start: start as! String, end: end as! String)
                         lessons.append(lesson)
                     }
                 }

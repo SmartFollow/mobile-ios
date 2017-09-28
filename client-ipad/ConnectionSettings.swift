@@ -11,9 +11,19 @@ import UIKit
 public struct ConnectionSettings {
     
     static let clientId = "2"
-    static let clientSecret = "tDwwmNLg8FBlp8kL7jfBlqIevXUv2SdE1O7yzn43"
     static let grantType = "password"
-    static var apiBaseUrl = "http://api.dev.smartfollow.lan"
+    
+    #if DEBUG
+        static let clientSecret = "PyyGehoF54eJThzCkPmHe4lDm9wxj4rbMgVFVQn9"
+        static var apiBaseUrl = "http://api.dev.smartfollow.lan"
+    #else
+        static let clientSecret = "IT1tAxoBLlzOJeE5gOoNqq2LOZws1EV5rfc7tZW2"
+        static var apiBaseUrl = "http://api.dev.smartfollow.org"
+    #endif
+    
+    #if RELEASE
+
+    #endif
     
     public static func apiURLWithPathComponents(components: String) -> NSURL {
         let baseUrl = URL(string: ConnectionSettings.apiBaseUrl)

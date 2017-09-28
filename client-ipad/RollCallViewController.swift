@@ -13,27 +13,26 @@ class RollCallViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        self.scrollView.contentSize.height = 2048
-        
-        ApiManager.sharedInstance.b(endPoint: "/student-classes/6/students") { (result: Data?) in
+        ApiManager.sharedInstance.b(endPoint: "/api/student-classes/1/students") { (result: Data?) in
             let StudentClass: StudentClass = self.parseClassStudent(result: result)
             
-            var leftY = 100
-            var rightY = 100
+            var leftY = 200
+            var rightY = 200
             var i = true
+            self.scrollView.contentSize.height = 325.0 + (((CGFloat) (StudentClass.students.count / 2) * (300.0)) - 50.0)
+            let goodX = self.view.bounds.size.width - 100 - 200
             for student in StudentClass.students {
+                
+                let goodY = i ? leftY : rightY
+                let goodX = i ? 100 : self.view.bounds.size.width - 100 - 200
+                DispatchQueue.main.async {
+                    let view = RollCallUIView(frame: CGRect(x: Int(goodX), y: goodY, width: 200, height: 250), student: student)
+                    self.scrollView.addSubview(view)
+                }
                 if (i) {
-                    let button = RollCallButton(frame: CGRect(x: 100, y: leftY, width: 200, height: 200), student: student)
                     leftY += 300
-                    DispatchQueue.main.async {
-                        self.scrollView.addSubview(button)
-                    }
                 } else {
-                    let button = RollCallButton(frame: CGRect(x: 400, y: rightY, width: 200, height: 200), student: student)
                     rightY += 300
-                    DispatchQueue.main.async {
-                        self.scrollView.addSubview(button)
-                    }
                 }
                 i = !i
             }

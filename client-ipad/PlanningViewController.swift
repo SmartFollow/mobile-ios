@@ -1,0 +1,84 @@
+//
+//  PlanningViewController.swift
+//  CalendarWeekView
+//
+//  Created by Alexandre Page on 22/09/2017.
+//  Copyright © 2017 Alexandre Page. All rights reserved.
+//
+
+import UIKit
+import JTAppleCalendar
+
+class PlanningViewController: UIViewController {
+    @IBOutlet weak var hoursTableView: UITableView!
+    @IBOutlet weak var calendarView: JTAppleCalendarView!
+    @IBOutlet weak var year: UILabel!
+    @IBOutlet weak var month: UILabel!
+    var days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
+    
+    let formatter = DateFormatter()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        calendarView.scrollToDate(Date())
+        calendarView.scrollDirection = .horizontal
+        hoursTableView.delegate = self
+        hoursTableView.dataSource = self
+        
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+}
+
+extension PlanningViewController: JTAppleCalendarViewDataSource {
+    func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
+        
+        formatter.dateFormat = "yyyy MM dd"
+        formatter.timeZone = Calendar.current.timeZone
+        formatter.locale = Calendar.current.locale
+        
+        let startDate = formatter.date(from: "2017 01 01")!
+        let endDate = formatter.date(from: "2017 12 01")!
+        
+        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: 1)
+        return parameters
+    }
+    
+    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
+        
+        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        cell.circle.isHidden = true
+        cell.dateLabel.textColor = UIColor.black
+        
+        let calendar = Calendar.current
+        if calendar.isDateInToday(date) {
+            cell.circle.isHidden = false
+            cell.dateLabel.textColor = UIColor.white
+        }
+        cell.dateLabel.text = cellState.text
+        cell.day.text = days[cellState.day.hashValue]
+        cell.layer.borderColor = UIColor.gray.cgColor
+        cell.layer.borderWidth = 0.5
+        return cell
+    }
+
+}
+
+extension PlanningViewController:JTAppleCalendarViewDelegate {
+    
+    func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
+        if let date = visibleDates.monthDates.first?.date {
+            formatter.dateFormat = "MMMM"
+            month.text = formatter.string(from: date)
+            
+            formatter.dateFormat = "yyyy"
+            year.text = formatter.string(from: date)
+        }
+    }
+        
+}
+

@@ -23,13 +23,12 @@ class RollCallButton: UIButton {
         self.evaluationId = 5
         
         super.init(frame: frame)
-        self.titleLabel?.text = "\(student.firstName) + \(student.lastName)"
         initActivityMonitor()
         self.addTarget(self, action:#selector(self.changeState(sender:)), for: .touchUpInside)
         DispatchQueue.main.async {
             self.setBackgroundImage(UIImage(named: "bechad.png"), for: .normal)
             self.setImage(UIImage(named: self.iconTab[self.stateStudent]), for: .normal)
-            self.imageEdgeInsets = UIEdgeInsetsMake(-150, -150, 0, 0);
+            self.imageEdgeInsets = UIEdgeInsetsMake(-150, -150, 0, 0)
         }
     }
     
@@ -45,12 +44,13 @@ class RollCallButton: UIButton {
         self.activityIndicator.startAnimating()
         self.activityIndicator.hidesWhenStopped = true
         self.isEnabled = false
-        ApiManager.sharedInstance.b(endPoint: "/evaluations/\(self.evaluationId!)/absences", method: "POST") { (result: Data?) in
+        print("Evaluation Id : \(self.evaluationId)")
+        ApiManager.sharedInstance.b(endPoint: "/api/evaluations/\(self.evaluationId!)/absences", method: "POST") { (result: Data?) in
             
             do {
                 if let json = try JSONSerialization.jsonObject(with: result!, options: []) as?
                     [String: Any] {
-                    if let success = json["success"] {
+                    if json["success"] != nil {
                         self.stateStudent = self.stateStudent + 1
                         if (self.stateStudent > 2) {
                             self.stateStudent = 0

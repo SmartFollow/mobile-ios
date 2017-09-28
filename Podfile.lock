@@ -1,4 +1,5 @@
 PODS:
+  - JTAppleCalendar (7.0.3)
   - OHHTTPStubs/Core (6.0.0)
   - OHHTTPStubs/Default (6.0.0):
     - OHHTTPStubs/Core
@@ -15,13 +16,15 @@ PODS:
   - SlideMenuControllerSwift (3.0.1)
 
 DEPENDENCIES:
+  - JTAppleCalendar (~> 7.0)
   - OHHTTPStubs/Swift
   - SlideMenuControllerSwift
 
 SPEC CHECKSUMS:
+  JTAppleCalendar: 25bc075b9f7564704cfd915a0c515324d8c3cb82
   OHHTTPStubs: 752f9b11fd810a15162d50f11c06ff94f8e012eb
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
 
-PODFILE CHECKSUM: 9778c69d0698fae0b2a83e794c877b48f33a6507
+PODFILE CHECKSUM: 146c3a0667ffe4f3d74484b0d0d10354499fc83a
 
 COCOAPODS: 1.2.1
