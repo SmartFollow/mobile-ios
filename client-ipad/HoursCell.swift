@@ -8,6 +8,7 @@
 
 import UIKit
 
-class HoursOfDayCell: UITableViewCell {
+class HoursCell: UITableViewCell {
     @IBOutlet weak var time: UILabel!
+    
 }

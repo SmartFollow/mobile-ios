@@ -19,7 +19,7 @@ class HoursColumn: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HoursCell", for: indexPath) as! HoursOfDayCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HoursCell", for: indexPath) as! HoursCell
         cell.time.text = PlanningViewController.hours[indexPath.row]
         return cell
     }

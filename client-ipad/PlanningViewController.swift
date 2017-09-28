@@ -48,19 +48,19 @@ extension PlanningViewController: JTAppleCalendarViewDataSource {
     
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
         
-        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "DateCell", for: indexPath) as! DateCell
         cell.circle.isHidden = true
-        cell.dateLabel.textColor = UIColor.black
+        cell.dayNumber.textColor = UIColor.black
         
-        cell.columnDay.delegate = activityManager
-        cell.columnDay.dataSource = activityManager
+        cell.columnActivity.delegate = activityManager
+        cell.columnActivity.dataSource = activityManager
         
         let calendar = Calendar.current
         if calendar.isDateInToday(date) {
             cell.circle.isHidden = false
-            cell.dateLabel.textColor = UIColor.white
+            cell.dayNumber.textColor = UIColor.white
         }
-        cell.dateLabel.text = cellState.text
+        cell.dayNumber.text = cellState.text
         cell.day.text = self.days[cellState.day.hashValue]
         cell.layer.borderColor = UIColor.gray.cgColor
         cell.layer.borderWidth = 0.5

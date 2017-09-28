@@ -9,9 +9,10 @@
 import UIKit
 import JTAppleCalendar
 
-class CustomCell: JTAppleCell {
-    @IBOutlet weak var dateLabel: UILabel!
+class DateCell: JTAppleCell {
+    @IBOutlet weak var dayNumber: UILabel!
+    @IBOutlet weak var columnActivity: UITableView!
     @IBOutlet weak var day: UILabel!
     @IBOutlet weak var circle: UIView!
-    @IBOutlet weak var columnDay: UITableView!
+    
 }

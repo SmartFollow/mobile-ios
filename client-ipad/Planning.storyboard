@@ -32,7 +32,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCell" id="cQX-Eo-vsT" customClass="CustomCell" customModule="client_ipad" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DateCell" id="cQX-Eo-vsT" customClass="DateCell" customModule="client_ipad" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="747"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -118,10 +118,10 @@
                                         </constraints>
                                         <size key="customSize" width="150" height="747"/>
                                         <connections>
-                                            <outlet property="circle" destination="bvt-y1-65I" id="uK9-tY-imS"/>
-                                            <outlet property="columnDay" destination="JeG-hj-1Zf" id="Ymx-Bn-c8j"/>
-                                            <outlet property="dateLabel" destination="WCl-1y-A3B" id="UAJ-cr-5GM"/>
-                                            <outlet property="day" destination="AQa-Jg-Pu9" id="jzb-YX-4x3"/>
+                                            <outlet property="circle" destination="bvt-y1-65I" id="oSi-sa-20i"/>
+                                            <outlet property="columnActivity" destination="JeG-hj-1Zf" id="kiq-bh-jYq"/>
+                                            <outlet property="day" destination="AQa-Jg-Pu9" id="Ai0-nz-KMe"/>
+                                            <outlet property="dayNumber" destination="WCl-1y-A3B" id="Wb9-Vw-Hiq"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -171,7 +171,7 @@
                                 <rect key="frame" x="0.0" y="212" width="150" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HoursCell" id="tdf-ql-b5M" customClass="HoursOfDayCell" customModule="client_ipad" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HoursCell" id="tdf-ql-b5M" customClass="HoursCell" customModule="client_ipad" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="150" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tdf-ql-b5M" id="Bkn-oz-OFH">
@@ -192,7 +192,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="time" destination="HrN-Wa-33x" id="iGI-CV-xEd"/>
+                                            <outlet property="time" destination="HrN-Wa-33x" id="9AE-bo-GxW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
