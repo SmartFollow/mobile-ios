@@ -23,6 +23,10 @@
 		FA2013CE1F1CC58500105CED /* absent.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2013CD1F1CC58500105CED /* absent.png */; };
 		FA2013D11F1CC83500105CED /* work_done.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2013CF1F1CC83500105CED /* work_done.png */; };
 		FA2013D21F1CC83500105CED /* no_work.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2013D01F1CC83500105CED /* no_work.png */; };
+		FA27C4E01F7D21FB0004E953 /* ActivitiesColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27C4DF1F7D21FB0004E953 /* ActivitiesColumn.swift */; };
+		FA27C4E21F7D29D20004E953 /* HoursColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27C4E11F7D29D20004E953 /* HoursColumn.swift */; };
+		FA27C4E51F7D2C890004E953 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27C4E31F7D2C890004E953 /* ActivityCell.swift */; };
+		FA27C4E61F7D2C890004E953 /* ActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA27C4E41F7D2C890004E953 /* ActivityCell.xib */; };
 		FA3F03931F09795900B0A51F /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F03921F09795900B0A51F /* CoursesViewController.swift */; };
 		FA3F03961F098C4600B0A51F /* Courses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3F03941F098C4600B0A51F /* Courses.storyboard */; };
 		FA4CD8041ED5D11800621D34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4CD8031ED5D11800621D34 /* AppDelegate.swift */; };
@@ -41,7 +45,6 @@
 		FA8198561F7CDDAC00F37C0C /* PlanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8198511F7CDA7700F37C0C /* PlanningViewController.swift */; };
 		FA8198571F7CDE2900F37C0C /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8198521F7CDA8D00F37C0C /* CustomCell.swift */; };
 		FA8198581F7CDE2C00F37C0C /* HoursOfDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8198531F7CDA8D00F37C0C /* HoursOfDayCell.swift */; };
-		FA8198591F7CDE2E00F37C0C /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8198541F7CDA8D00F37C0C /* TableView.swift */; };
 		FA897FAB1F1139A000091D54 /* origami-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FA897FAA1F1139A000091D54 /* origami-7.png */; };
 		FA897FAD1F113A5900091D54 /* circle-tick-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FA897FAC1F113A5900091D54 /* circle-tick-7.png */; };
 		FA897FB11F113BA200091D54 /* file-list-tick-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FA897FB01F113BA200091D54 /* file-list-tick-7.png */; };
@@ -93,6 +96,10 @@
 		FA2013CD1F1CC58500105CED /* absent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = absent.png; sourceTree = "<group>"; };
 		FA2013CF1F1CC83500105CED /* work_done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = work_done.png; sourceTree = "<group>"; };
 		FA2013D01F1CC83500105CED /* no_work.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_work.png; sourceTree = "<group>"; };
+		FA27C4DF1F7D21FB0004E953 /* ActivitiesColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesColumn.swift; sourceTree = "<group>"; };
+		FA27C4E11F7D29D20004E953 /* HoursColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursColumn.swift; sourceTree = "<group>"; };
+		FA27C4E31F7D2C890004E953 /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
+		FA27C4E41F7D2C890004E953 /* ActivityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCell.xib; sourceTree = "<group>"; };
 		FA3F03921F09795900B0A51F /* CoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		FA3F03951F098C4600B0A51F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Courses.storyboard; sourceTree = "<group>"; };
 		FA4CD8001ED5D11800621D34 /* client-ipad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "client-ipad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +124,6 @@
 		FA8198511F7CDA7700F37C0C /* PlanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningViewController.swift; sourceTree = "<group>"; };
 		FA8198521F7CDA8D00F37C0C /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		FA8198531F7CDA8D00F37C0C /* HoursOfDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursOfDayCell.swift; sourceTree = "<group>"; };
-		FA8198541F7CDA8D00F37C0C /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		FA897FAA1F1139A000091D54 /* origami-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "origami-7.png"; sourceTree = "<group>"; };
 		FA897FAC1F113A5900091D54 /* circle-tick-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-tick-7.png"; sourceTree = "<group>"; };
 		FA897FB01F113BA200091D54 /* file-list-tick-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "file-list-tick-7.png"; sourceTree = "<group>"; };
@@ -273,8 +279,11 @@
 			children = (
 				FA8198521F7CDA8D00F37C0C /* CustomCell.swift */,
 				FA8198531F7CDA8D00F37C0C /* HoursOfDayCell.swift */,
-				FA8198541F7CDA8D00F37C0C /* TableView.swift */,
 				FA8198511F7CDA7700F37C0C /* PlanningViewController.swift */,
+				FA27C4DF1F7D21FB0004E953 /* ActivitiesColumn.swift */,
+				FA27C4E11F7D29D20004E953 /* HoursColumn.swift */,
+				FA27C4E31F7D2C890004E953 /* ActivityCell.swift */,
+				FA27C4E41F7D2C890004E953 /* ActivityCell.xib */,
 			);
 			name = Planning;
 			sourceTree = "<group>";
@@ -482,6 +491,7 @@
 				FA2013CC1F1CC56400105CED /* present.png in Resources */,
 				FA3F03961F098C4600B0A51F /* Courses.storyboard in Resources */,
 				FA4CD80B1ED5D11800621D34 /* Assets.xcassets in Resources */,
+				FA27C4E61F7D2C890004E953 /* ActivityCell.xib in Resources */,
 				FA4CD8091ED5D11800621D34 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,17 +569,19 @@
 				FA8198561F7CDDAC00F37C0C /* PlanningViewController.swift in Sources */,
 				FA8198571F7CDE2900F37C0C /* CustomCell.swift in Sources */,
 				FA8198581F7CDE2C00F37C0C /* HoursOfDayCell.swift in Sources */,
+				FA27C4E01F7D21FB0004E953 /* ActivitiesColumn.swift in Sources */,
 				FA2013C41F1C974700105CED /* RollCallViewController.swift in Sources */,
 				FAEF45121EF3092C00EA62CD /* UIImageView.swift in Sources */,
 				FA19E5781F23C1DC00CE02C5 /* RollCallUIView.swift in Sources */,
 				FA897FB51F116E1800091D54 /* CourseFlowController.swift in Sources */,
 				FA2013C81F1CB29800105CED /* RollCallButton.swift in Sources */,
-				FA8198591F7CDE2E00F37C0C /* TableView.swift in Sources */,
+				FA27C4E51F7D2C890004E953 /* ActivityCell.swift in Sources */,
 				FA3F03931F09795900B0A51F /* CoursesViewController.swift in Sources */,
 				FA175C541F1BDEA4009AFA27 /* StudentClass.swift in Sources */,
 				FA99E8BB1EF33B1E00F3CE4E /* ApiManager.swift in Sources */,
 				FA4CD8401ED60BE800621D34 /* ConnectionSettings.swift in Sources */,
 				FA4CD83E1ED608A900621D34 /* LoginService.swift in Sources */,
+				FA27C4E21F7D29D20004E953 /* HoursColumn.swift in Sources */,
 				FA897FB71F11710D00091D54 /* Lesson.swift in Sources */,
 				FAC13E261EEF07300068E912 /* TopMenuView.swift in Sources */,
 				FA60525A1EEC6A8C001D6475 /* LeftViewController.swift in Sources */,

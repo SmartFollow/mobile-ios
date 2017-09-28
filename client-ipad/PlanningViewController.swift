@@ -10,10 +10,13 @@ import UIKit
 import JTAppleCalendar
 
 class PlanningViewController: UIViewController {
-    @IBOutlet weak var hoursTableView: UITableView!
+    @IBOutlet weak var columnHours: UITableView!
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
+    let activityManager = ActivitiesColumn()
+    let hoursManager = HoursColumn()
+    static let hours = ["8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"]
     var days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
     
     let formatter = DateFormatter()
@@ -23,14 +26,8 @@ class PlanningViewController: UIViewController {
         self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
         calendarView.scrollToDate(Date())
         calendarView.scrollDirection = .horizontal
-        hoursTableView.delegate = self
-        hoursTableView.dataSource = self
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        columnHours.delegate = self.hoursManager
+        columnHours.dataSource = self.hoursManager
     }
 
 }
@@ -55,13 +52,16 @@ extension PlanningViewController: JTAppleCalendarViewDataSource {
         cell.circle.isHidden = true
         cell.dateLabel.textColor = UIColor.black
         
+        cell.columnDay.delegate = activityManager
+        cell.columnDay.dataSource = activityManager
+        
         let calendar = Calendar.current
         if calendar.isDateInToday(date) {
             cell.circle.isHidden = false
             cell.dateLabel.textColor = UIColor.white
         }
         cell.dateLabel.text = cellState.text
-        cell.day.text = days[cellState.day.hashValue]
+        cell.day.text = self.days[cellState.day.hashValue]
         cell.layer.borderColor = UIColor.gray.cgColor
         cell.layer.borderWidth = 0.5
         return cell

@@ -102,33 +102,6 @@
                                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JeG-hj-1Zf">
                                                             <rect key="frame" x="0.0" y="0.0" width="150" height="597"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <prototypes>
-                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="75" id="RIA-8g-GE0">
-                                                                    <rect key="frame" x="0.0" y="28" width="150" height="75"/>
-                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RIA-8g-GE0" id="yrb-De-hY4">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="74.5"/>
-                                                                        <autoresizingMask key="autoresizingMask"/>
-                                                                        <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Français" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svM-EH-u9Y">
-                                                                                <rect key="frame" x="42.5" y="27" width="65" height="21"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                <nil key="textColor"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                        </subviews>
-                                                                        <constraints>
-                                                                            <constraint firstItem="svM-EH-u9Y" firstAttribute="centerX" secondItem="yrb-De-hY4" secondAttribute="centerX" id="aoF-TZ-ESd"/>
-                                                                            <constraint firstItem="svM-EH-u9Y" firstAttribute="centerY" secondItem="yrb-De-hY4" secondAttribute="centerY" id="nia-MN-MK5"/>
-                                                                        </constraints>
-                                                                    </tableViewCellContentView>
-                                                                    <color key="backgroundColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </tableViewCell>
-                                                            </prototypes>
-                                                            <connections>
-                                                                <outlet property="dataSource" destination="BYZ-38-t0r" id="3U0-E4-9nf"/>
-                                                                <outlet property="delegate" destination="BYZ-38-t0r" id="H5d-dv-KrI"/>
-                                                            </connections>
                                                         </tableView>
                                                     </subviews>
                                                 </stackView>
@@ -146,6 +119,7 @@
                                         <size key="customSize" width="150" height="747"/>
                                         <connections>
                                             <outlet property="circle" destination="bvt-y1-65I" id="uK9-tY-imS"/>
+                                            <outlet property="columnDay" destination="JeG-hj-1Zf" id="Ymx-Bn-c8j"/>
                                             <outlet property="dateLabel" destination="WCl-1y-A3B" id="UAJ-cr-5GM"/>
                                             <outlet property="day" destination="AQa-Jg-Pu9" id="jzb-YX-4x3"/>
                                         </connections>
@@ -197,7 +171,7 @@
                                 <rect key="frame" x="0.0" y="212" width="150" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HoursCell" id="tdf-ql-b5M" customClass="HoursOfDayCell" customModule="client_ipad" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HoursCell" id="tdf-ql-b5M" customClass="HoursOfDayCell" customModule="client_ipad" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="150" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tdf-ql-b5M" id="Bkn-oz-OFH">
@@ -251,7 +225,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="calendarView" destination="nwK-Pi-EKf" id="xLj-38-EPb"/>
-                        <outlet property="hoursTableView" destination="VDx-zj-pQk" id="X2n-oR-Ljg"/>
+                        <outlet property="columnHours" destination="VDx-zj-pQk" id="LAt-8B-8Iy"/>
                         <outlet property="month" destination="RFZ-yS-uYe" id="yJ1-Ob-b4l"/>
                         <outlet property="year" destination="ow0-qJ-Azj" id="LHV-7U-vv4"/>
                     </connections>

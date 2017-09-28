@@ -13,4 +13,5 @@ class CustomCell: JTAppleCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var day: UILabel!
     @IBOutlet weak var circle: UIView!
+    @IBOutlet weak var columnDay: UITableView!
 }
