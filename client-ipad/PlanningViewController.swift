@@ -20,6 +20,7 @@ class PlanningViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
         calendarView.scrollToDate(Date())
         calendarView.scrollDirection = .horizontal
         hoursTableView.delegate = self
