@@ -15,4 +15,6 @@ class DateCell: JTAppleCell {
     @IBOutlet weak var day: UILabel!
     @IBOutlet weak var circle: UIView!
     
+    
+    
 }

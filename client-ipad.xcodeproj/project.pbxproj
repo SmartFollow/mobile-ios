@@ -27,6 +27,7 @@
 		FA27C4E21F7D29D20004E953 /* HoursColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27C4E11F7D29D20004E953 /* HoursColumn.swift */; };
 		FA27C4E51F7D2C890004E953 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27C4E31F7D2C890004E953 /* ActivityCell.swift */; };
 		FA27C4E61F7D2C890004E953 /* ActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA27C4E41F7D2C890004E953 /* ActivityCell.xib */; };
+		FA27C4E81F7D53720004E953 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27C4E71F7D53720004E953 /* Reservation.swift */; };
 		FA3F03931F09795900B0A51F /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F03921F09795900B0A51F /* CoursesViewController.swift */; };
 		FA3F03961F098C4600B0A51F /* Courses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3F03941F098C4600B0A51F /* Courses.storyboard */; };
 		FA4CD8041ED5D11800621D34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4CD8031ED5D11800621D34 /* AppDelegate.swift */; };
@@ -100,6 +101,7 @@
 		FA27C4E11F7D29D20004E953 /* HoursColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursColumn.swift; sourceTree = "<group>"; };
 		FA27C4E31F7D2C890004E953 /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
 		FA27C4E41F7D2C890004E953 /* ActivityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCell.xib; sourceTree = "<group>"; };
+		FA27C4E71F7D53720004E953 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		FA3F03921F09795900B0A51F /* CoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		FA3F03951F098C4600B0A51F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Courses.storyboard; sourceTree = "<group>"; };
 		FA4CD8001ED5D11800621D34 /* client-ipad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "client-ipad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				FA897FB61F11710D00091D54 /* Lesson.swift */,
+				FA27C4E71F7D53720004E953 /* Reservation.swift */,
 				FA175C531F1BDEA4009AFA27 /* StudentClass.swift */,
 				FA175C551F1BDEB7009AFA27 /* Student.swift */,
 				FA2013C71F1CB29800105CED /* RollCallButton.swift */,
@@ -587,6 +590,7 @@
 				FA60525A1EEC6A8C001D6475 /* LeftViewController.swift in Sources */,
 				FA4CD8061ED5D11800621D34 /* ProfileViewController.swift in Sources */,
 				FAB1A2791EEEB1E00020566B /* ChatViewController.swift in Sources */,
+				FA27C4E81F7D53720004E953 /* Reservation.swift in Sources */,
 				FA175C561F1BDEB7009AFA27 /* Student.swift in Sources */,
 				FA4CD8041ED5D11800621D34 /* AppDelegate.swift in Sources */,
 			);

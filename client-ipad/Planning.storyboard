@@ -96,25 +96,22 @@
                                                         <constraint firstAttribute="trailing" secondItem="WCl-1y-A3B" secondAttribute="trailing" id="sJd-rR-e0M"/>
                                                     </constraints>
                                                 </view>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Kas-Bi-6qv">
+                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JeG-hj-1Zf">
                                                     <rect key="frame" x="0.0" y="150" width="150" height="597"/>
-                                                    <subviews>
-                                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JeG-hj-1Zf">
-                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="597"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </tableView>
-                                                    </subviews>
-                                                </stackView>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="AN8-Wk-7Ch"/>
+                                                    </constraints>
+                                                </tableView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Kas-Bi-6qv" firstAttribute="leading" secondItem="cQX-Eo-vsT" secondAttribute="leading" id="A8y-FE-tiV"/>
-                                            <constraint firstAttribute="trailing" secondItem="Kas-Bi-6qv" secondAttribute="trailing" id="Fiv-VE-Spy"/>
+                                            <constraint firstAttribute="bottom" secondItem="JeG-hj-1Zf" secondAttribute="bottom" id="Fzc-hU-5wu"/>
+                                            <constraint firstItem="JeG-hj-1Zf" firstAttribute="top" secondItem="13Z-U8-mSy" secondAttribute="bottom" id="H8Z-nX-vZh"/>
                                             <constraint firstAttribute="trailing" secondItem="13Z-U8-mSy" secondAttribute="trailing" id="J0r-GJ-RpH"/>
+                                            <constraint firstItem="JeG-hj-1Zf" firstAttribute="leading" secondItem="cQX-Eo-vsT" secondAttribute="leading" id="Rvi-cN-hDw"/>
                                             <constraint firstItem="13Z-U8-mSy" firstAttribute="top" secondItem="cQX-Eo-vsT" secondAttribute="top" id="S4X-W0-1ZJ"/>
-                                            <constraint firstAttribute="bottom" secondItem="Kas-Bi-6qv" secondAttribute="bottom" id="ZZC-eY-jb8"/>
                                             <constraint firstItem="13Z-U8-mSy" firstAttribute="leading" secondItem="cQX-Eo-vsT" secondAttribute="leading" id="ryn-5c-QfL"/>
-                                            <constraint firstItem="Kas-Bi-6qv" firstAttribute="top" secondItem="13Z-U8-mSy" secondAttribute="bottom" id="zCM-vv-luN"/>
                                         </constraints>
                                         <size key="customSize" width="150" height="747"/>
                                         <connections>
