@@ -14,12 +14,14 @@ class PlanningViewController: UIViewController {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
+    
     let calendar = Calendar.current
     let activityManager = ActivitiesColumn()
     let hoursManager = HoursColumn()
     var reservations = [Reservation]()
     static let hours = ["8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"]
     var days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
+    let cellHeight: Double = Double((UIScreen.main.bounds.height - 212.0) / CGFloat(PlanningViewController.hours.count))
     
     let formatter = DateFormatter()
 
@@ -31,6 +33,19 @@ class PlanningViewController: UIViewController {
         columnHours.delegate = self.hoursManager
         columnHours.dataSource = self.hoursManager
         fetchSchedule()
+        initCaseCalendar()
+    }
+    
+    func initCaseCalendar() {
+        print(self.cellHeight)
+        let width = Double(UIScreen.main.bounds.size.width - 150.0)
+        for i in 1..<12 {
+            let y = 212 + (Double(i) * self.cellHeight)
+            let frame = CGRect(x: 150.0, y: y, width: width, height: 0)
+            let line = UIView(frame: frame)
+            line.add(border: ViewBorder(rawValue: "bottom")!, color: UIColor.gray, width: 1.0)
+            self.view.addSubview(line)
+        }
     }
     
     func fetchSchedule() {
@@ -42,33 +57,59 @@ class PlanningViewController: UIViewController {
         }
     }
     
-    func filterReservation(date: Date) -> [Reservation]? {
-        var reservationOfTheDay: [Reservation]?
+    func filterReservation(date: Date) -> [Reservation] {
+        var reservationOfTheDay = [Reservation]()
         for reservation in self.reservations {
             if calendar.isDate(date, inSameDayAs:reservation.timeStart) {
-                reservationOfTheDay?.append(reservation)
+                reservationOfTheDay.append(reservation)
             }
         }
         return reservationOfTheDay
     }
     
+    func addReservationOnView(customCell: JTAppleCell?, cellState: CellState?, date: Date) {
+        let reservations = self.filterReservation(date: date)
+        if (reservations.count) > 1 {
+            for reservation in reservations {
+                initView(customCell: customCell, cellState: cellState, reservation: reservation)
+            }
+        }
+    }
+    
+    func initView(customCell: JTAppleCell?, cellState: CellState?, reservation: Reservation) {
+        guard let cell = customCell as? DateCell else { return }
+        
+        let tmpIdiotXcode: Double = ((reservation.hourStart - 8.0) * self.cellHeight)
+        let tmp2IdiotXcode: Double = ((self.cellHeight/60) * reservation.minuteStart)
+        
+        let y: Double = 150.0 + tmpIdiotXcode + tmp2IdiotXcode
+        
+        let height = (((reservation.hourEnd - reservation.hourStart) * self.cellHeight) + ((44/60) * reservation.minuteEnd))
+        let event = CasePlanning(frame: CGRect(x: 0.0, y: y, width: 150.0, height: height))
+        cell.viewCell.addSubview(event)
+    }
+    
     func configureCell(customCell: JTAppleCell?, cellState: CellState, date: Date) {
         guard let cell = customCell as? DateCell else { return }
-        cell.circle.isHidden = true
-        cell.dayNumber.textColor = UIColor.black
+        for view in cell.viewCell.subviews {
+            if view.tag == 42 {
+                view.removeFromSuperview()
+            }
+        }
+        cell.circle?.isHidden = true
+        cell.dayNumber?.textColor = UIColor.black
         
-        cell.columnActivity.delegate = activityManager
-        cell.columnActivity.dataSource = activityManager
-        activityManager.date = cellState.date
-        activityManager.reservation = self.filterReservation(date: date)
-        
-        if calendar.isDateInToday(date) {
-            cell.circle.isHidden = false
-            cell.dayNumber.textColor = UIColor.white
+        if (self.reservations.count) > 1 {
+            self.addReservationOnView(customCell: customCell, cellState: cellState, date: date)
         }
         
-        cell.dayNumber.text = cellState.text
-        cell.day.text = self.days[cellState.day.hashValue]
+        if calendar.isDateInToday(date) {
+            cell.circle?.isHidden = false
+            cell.dayNumber?.textColor = UIColor.white
+        }
+        
+        cell.dayNumber?.text = cellState.text
+        cell.day?.text = self.days[cellState.day.hashValue]
         cell.layer.borderColor = UIColor.gray.cgColor
         cell.layer.borderWidth = 0.5
     }

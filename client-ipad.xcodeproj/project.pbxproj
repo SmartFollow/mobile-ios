@@ -52,7 +52,11 @@
 		FA897FB31F114DC600091D54 /* calendar-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FA897FB21F114DC600091D54 /* calendar-7.png */; };
 		FA897FB51F116E1800091D54 /* CourseFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA897FB41F116E1800091D54 /* CourseFlowController.swift */; };
 		FA897FB71F11710D00091D54 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA897FB61F11710D00091D54 /* Lesson.swift */; };
+		FA92FDF81F81298C0023CEBC /* CasePlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92FDF71F81298C0023CEBC /* CasePlanning.swift */; };
+		FA92FDFA1F812AE80023CEBC /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92FDF91F812AE80023CEBC /* Subjects.swift */; };
 		FA99E8BB1EF33B1E00F3CE4E /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99E8BA1EF33B1E00F3CE4E /* ApiManager.swift */; };
+		FA9EB10D1F80320F0000EB7A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9EB10C1F80320F0000EB7A /* UIView.swift */; };
+		FAA3916C1F7EB6A5007FCD2C /* ColumnStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3916B1F7EB6A5007FCD2C /* ColumnStackView.swift */; };
 		FAB1A2791EEEB1E00020566B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1A2781EEEB1E00020566B /* ChatViewController.swift */; };
 		FAC13E241EEF05930068E912 /* TopMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC13E231EEF05930068E912 /* TopMenuView.xib */; };
 		FAC13E261EEF07300068E912 /* TopMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC13E251EEF07300068E912 /* TopMenuView.swift */; };
@@ -132,7 +136,11 @@
 		FA897FB21F114DC600091D54 /* calendar-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-7.png"; sourceTree = "<group>"; };
 		FA897FB41F116E1800091D54 /* CourseFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseFlowController.swift; sourceTree = "<group>"; };
 		FA897FB61F11710D00091D54 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		FA92FDF71F81298C0023CEBC /* CasePlanning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasePlanning.swift; sourceTree = "<group>"; };
+		FA92FDF91F812AE80023CEBC /* Subjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subjects.swift; sourceTree = "<group>"; };
 		FA99E8BA1EF33B1E00F3CE4E /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		FA9EB10C1F80320F0000EB7A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		FAA3916B1F7EB6A5007FCD2C /* ColumnStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnStackView.swift; sourceTree = "<group>"; };
 		FAB1A2781EEEB1E00020566B /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FAC13E231EEF05930068E912 /* TopMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopMenuView.xib; sourceTree = "<group>"; };
 		FAC13E251EEF07300068E912 /* TopMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopMenuView.swift; sourceTree = "<group>"; };
@@ -286,6 +294,8 @@
 				FA27C4E11F7D29D20004E953 /* HoursColumn.swift */,
 				FA27C4E31F7D2C890004E953 /* ActivityCell.swift */,
 				FA27C4E41F7D2C890004E953 /* ActivityCell.xib */,
+				FAA3916B1F7EB6A5007FCD2C /* ColumnStackView.swift */,
+				FA92FDF71F81298C0023CEBC /* CasePlanning.swift */,
 			);
 			name = Planning;
 			sourceTree = "<group>";
@@ -299,6 +309,7 @@
 				FA175C551F1BDEB7009AFA27 /* Student.swift */,
 				FA2013C71F1CB29800105CED /* RollCallButton.swift */,
 				FA19E5771F23C1DC00CE02C5 /* RollCallUIView.swift */,
+				FA92FDF91F812AE80023CEBC /* Subjects.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -357,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				FAEF45111EF3092C00EA62CD /* UIImageView.swift */,
+				FA9EB10C1F80320F0000EB7A /* UIView.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -571,10 +583,13 @@
 				FA4CD8381ED5DBE400621D34 /* LoginViewController.swift in Sources */,
 				FA8198561F7CDDAC00F37C0C /* PlanningViewController.swift in Sources */,
 				FA8198571F7CDE2900F37C0C /* DateCell.swift in Sources */,
+				FA92FDFA1F812AE80023CEBC /* Subjects.swift in Sources */,
+				FA92FDF81F81298C0023CEBC /* CasePlanning.swift in Sources */,
 				FA8198581F7CDE2C00F37C0C /* HoursCell.swift in Sources */,
 				FA27C4E01F7D21FB0004E953 /* ActivitiesColumn.swift in Sources */,
 				FA2013C41F1C974700105CED /* RollCallViewController.swift in Sources */,
 				FAEF45121EF3092C00EA62CD /* UIImageView.swift in Sources */,
+				FA9EB10D1F80320F0000EB7A /* UIView.swift in Sources */,
 				FA19E5781F23C1DC00CE02C5 /* RollCallUIView.swift in Sources */,
 				FA897FB51F116E1800091D54 /* CourseFlowController.swift in Sources */,
 				FA2013C81F1CB29800105CED /* RollCallButton.swift in Sources */,
@@ -591,6 +606,7 @@
 				FA4CD8061ED5D11800621D34 /* ProfileViewController.swift in Sources */,
 				FAB1A2791EEEB1E00020566B /* ChatViewController.swift in Sources */,
 				FA27C4E81F7D53720004E953 /* Reservation.swift in Sources */,
+				FAA3916C1F7EB6A5007FCD2C /* ColumnStackView.swift in Sources */,
 				FA175C561F1BDEB7009AFA27 /* Student.swift in Sources */,
 				FA4CD8041ED5D11800621D34 /* AppDelegate.swift in Sources */,
 			);
