@@ -8,23 +8,49 @@
 
 import UIKit
 
-class Lesson: NSObject {
+class Lesson: NSObject, Planning {
     
     let id: Int
     let subjectId: Int
+    var subjectName: String
     let reservationId: Int
     let studentClassId: Int
-    let start: String
-    let end: String
+    var timeStart: Date
+    var timeEnd: Date
+    let formatter = DateFormatter()
+    var hourStart: Double
+    var hourEnd: Double
+    var minuteStart: Double
+    var minuteEnd: Double
+    var roomIdentifier: String
     
-    
-    init(id: Int, subjectId: Int, reservationId: Int, studentClassId: Int, start: String, end: String) {
+    init(id: Int, subjectId: Int, reservationId: Int, studentClassId: Int, start: String, end: String,
+         subjectName: String, roomIdentifier: String) {
         self.id = id
         self.subjectId = subjectId
         self.reservationId = reservationId
         self.studentClassId = studentClassId
-        self.start = start
-        self.end = end
+        self.subjectName = subjectName
+        self.roomIdentifier = roomIdentifier
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        self.timeStart = formatter.date(from: start)!
+        self.timeEnd = formatter.date(from: end)!
+        
+        formatter.dateFormat = "HH"
+        self.hourStart = Double(formatter.string(from: self.timeStart))!
+        self.hourEnd = Double(formatter.string(from: self.timeEnd))!
+        
+        formatter.dateFormat = "mm"
+        self.minuteStart = Double(formatter.string(from: self.timeStart))!
+        self.minuteEnd = Double(formatter.string(from: self.timeEnd))!
+        
     }
     
 }
+
+extension Lesson {
+    func getHourStart() -> Double {
+        return self.hourEnd
+    }
+}
+

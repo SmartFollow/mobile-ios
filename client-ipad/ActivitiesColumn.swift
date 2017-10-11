@@ -18,12 +18,6 @@ class ActivitiesColumn: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        self.formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        if let cell = Bundle.main.loadNibNamed("ActivityCell", owner: nil, options: nil)?.first as? ActivityCell {
-            cell.subject.text = formatter.string(from: date!)
-            cell.backgroundColor = UIColor.red
-            return cell
-        }
         return UITableViewCell()
     }
     

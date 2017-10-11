@@ -46,7 +46,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                             <subviews>
                                                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvt-y1-65I">
-                                                                    <rect key="frame" x="55" y="29" width="40" height="40"/>
+                                                                    <rect key="frame" x="55.5" y="29" width="40" height="40"/>
                                                                     <color key="backgroundColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="40" id="S8n-zb-wp6"/>
@@ -78,7 +78,6 @@
                                                                     <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="1" id="Lmr-dU-4h4"/>
-                                                                        <constraint firstAttribute="width" constant="150" id="zHg-fr-oYW"/>
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
@@ -92,7 +91,6 @@
                                                                 <constraint firstItem="bvt-y1-65I" firstAttribute="centerX" secondItem="13Z-U8-mSy" secondAttribute="centerX" id="NKM-T4-bFq"/>
                                                                 <constraint firstItem="sWq-Fi-Chy" firstAttribute="top" secondItem="AQa-Jg-Pu9" secondAttribute="bottom" constant="26" id="UVT-Sf-4c2"/>
                                                                 <constraint firstItem="sWq-Fi-Chy" firstAttribute="leading" secondItem="13Z-U8-mSy" secondAttribute="leading" id="WgV-VY-JKL"/>
-                                                                <constraint firstAttribute="width" constant="150" id="cAe-Nk-V4D"/>
                                                                 <constraint firstAttribute="trailing" secondItem="sWq-Fi-Chy" secondAttribute="trailing" id="d26-h9-fei"/>
                                                                 <constraint firstItem="bvt-y1-65I" firstAttribute="top" secondItem="13Z-U8-mSy" secondAttribute="top" constant="29" id="fXT-I7-fWL"/>
                                                                 <constraint firstItem="WCl-1y-A3B" firstAttribute="top" secondItem="13Z-U8-mSy" secondAttribute="top" constant="29" id="lOy-UP-FcM"/>
@@ -102,10 +100,9 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="150" id="E8a-lD-OTz"/>
+                                                        <constraint firstItem="13Z-U8-mSy" firstAttribute="top" secondItem="6pJ-ae-59i" secondAttribute="top" id="J98-Wy-Yi1"/>
                                                         <constraint firstItem="13Z-U8-mSy" firstAttribute="leading" secondItem="6pJ-ae-59i" secondAttribute="leading" id="KQz-rf-xwM"/>
                                                         <constraint firstAttribute="trailing" secondItem="13Z-U8-mSy" secondAttribute="trailing" id="mwn-fx-KOK"/>
-                                                        <constraint firstItem="13Z-U8-mSy" firstAttribute="top" secondItem="6pJ-ae-59i" secondAttribute="top" id="wVn-9v-AKU"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -114,6 +111,7 @@
                                             <constraint firstAttribute="bottom" secondItem="6pJ-ae-59i" secondAttribute="bottom" id="T6P-0y-MtQ"/>
                                             <constraint firstItem="6pJ-ae-59i" firstAttribute="leading" secondItem="cQX-Eo-vsT" secondAttribute="leading" id="imn-YF-a5V"/>
                                             <constraint firstItem="6pJ-ae-59i" firstAttribute="top" secondItem="cQX-Eo-vsT" secondAttribute="top" id="mtf-oL-Mzy"/>
+                                            <constraint firstAttribute="trailing" secondItem="6pJ-ae-59i" secondAttribute="trailing" id="uw4-wG-pwn"/>
                                         </constraints>
                                         <size key="customSize" width="150" height="737"/>
                                         <connections>

@@ -9,28 +9,35 @@
 import UIKit
 
 class CasePlanning: UIView {
-
-    override init(frame: CGRect) {
+    
+    //@IBOutlet weak var subject: UILabel!
+    @IBOutlet weak var roomIdentifier: UILabel!
+    
+    init<T:Planning>(frame: CGRect, event: T) {
         super.init(frame: frame)
         self.tag = 42
-        self.backgroundColor = UIColor.red
-        print(" -> \(self.bounds.width) \(self.bounds.height)")
         let subject: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
-        subject.text = "Réservation"
+        
+        if event is Lesson {
+            subject.text = "\(event.subjectName)"
+            //roomIdentifier.text = "\(event.roomIdentifier)"
+            self.backgroundColor = UIColor.red
+        } else if event is Reservation {
+            subject.text = "Réservation"
+            //roomIdentifier.text = "\(event.roomIdentifier)"
+            self.backgroundColor = UIColor.gray
+        }
+        subject.textColor = UIColor.white
+        subject.numberOfLines = 1
+        subject.minimumScaleFactor = 0.7
+        subject.adjustsFontSizeToFitWidth = true
         subject.textAlignment = .center
+        
         self.addSubview(subject)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
     
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
 }

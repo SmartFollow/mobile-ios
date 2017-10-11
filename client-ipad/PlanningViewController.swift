@@ -19,6 +19,7 @@ class PlanningViewController: UIViewController {
     let activityManager = ActivitiesColumn()
     let hoursManager = HoursColumn()
     var reservations = [Reservation]()
+    var lessons = [Lesson]()
     static let hours = ["8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"]
     var days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
     let cellHeight: Double = Double((UIScreen.main.bounds.height - 212.0) / CGFloat(PlanningViewController.hours.count))
@@ -50,43 +51,41 @@ class PlanningViewController: UIViewController {
     
     func fetchSchedule() {
         ApiManager.sharedInstance.b(endPoint: "/api/reservations") { (result: Data?) in
-            self.reservations = self.parseReservation(result: result)
-            DispatchQueue.main.async(execute: {
-                self.calendarView.reloadData()
-            })
-        }
-    }
-    
-    func filterReservation(date: Date) -> [Reservation] {
-        var reservationOfTheDay = [Reservation]()
-        for reservation in self.reservations {
-            if calendar.isDate(date, inSameDayAs:reservation.timeStart) {
-                reservationOfTheDay.append(reservation)
+            self.reservations = ApiManager.parseReservation(result: result)
+            ApiManager.sharedInstance.b(endPoint: "/api/lessons") { (result: Data?) in
+                self.lessons = ApiManager.parseLessons(result: result)
+                DispatchQueue.main.async(execute: {
+                    self.calendarView.reloadData()
+                })
             }
         }
-        return reservationOfTheDay
     }
     
     func addReservationOnView(customCell: JTAppleCell?, cellState: CellState?, date: Date) {
-        let reservations = self.filterReservation(date: date)
-        if (reservations.count) > 1 {
+        var (lessons, reservations) = self.filterReservationAndLesson(date: date)
+        if (reservations.count > 0) {
             for reservation in reservations {
-                initView(customCell: customCell, cellState: cellState, reservation: reservation)
+                initView(customCell: customCell, cellState: cellState, event: reservation)
+            }
+        }
+        if (lessons.count > 0) {
+            for lesson in lessons {
+                initView(customCell: customCell, cellState: cellState, event: lesson)
             }
         }
     }
     
-    func initView(customCell: JTAppleCell?, cellState: CellState?, reservation: Reservation) {
+    func initView<T: Planning>(customCell: JTAppleCell?, cellState: CellState?, event: T){
         guard let cell = customCell as? DateCell else { return }
         
-        let tmpIdiotXcode: Double = ((reservation.hourStart - 8.0) * self.cellHeight)
-        let tmp2IdiotXcode: Double = ((self.cellHeight/60) * reservation.minuteStart)
-        
+        let tmpIdiotXcode: Double = ((event.hourStart - 8.0) * self.cellHeight)
+        let tmp2IdiotXcode: Double = ((self.cellHeight / 60) * event.minuteStart)
+    
         let y: Double = 150.0 + tmpIdiotXcode + tmp2IdiotXcode
-        
-        let height = (((reservation.hourEnd - reservation.hourStart) * self.cellHeight) + ((44/60) * reservation.minuteEnd))
-        let event = CasePlanning(frame: CGRect(x: 0.0, y: y, width: 150.0, height: height))
-        cell.viewCell.addSubview(event)
+            
+        let height = (((event.hourEnd - event.hourStart) * self.cellHeight) + ((44/60) * event.minuteEnd))
+        let myCase = CasePlanning(frame: CGRect(x: 0.0, y: y, width: Double(cell.bounds.width), height: height), event: event)
+        cell.viewCell.addSubview(myCase)
     }
     
     func configureCell(customCell: JTAppleCell?, cellState: CellState, date: Date) {
@@ -99,7 +98,7 @@ class PlanningViewController: UIViewController {
         cell.circle?.isHidden = true
         cell.dayNumber?.textColor = UIColor.black
         
-        if (self.reservations.count) > 1 {
+        if (self.reservations.count > 0) || (self.lessons.count > 0) {
             self.addReservationOnView(customCell: customCell, cellState: cellState, date: date)
         }
         
@@ -112,23 +111,6 @@ class PlanningViewController: UIViewController {
         cell.day?.text = self.days[cellState.day.hashValue]
         cell.layer.borderColor = UIColor.gray.cgColor
         cell.layer.borderWidth = 0.5
-    }
-    
-    func parseReservation(result: Data?) -> [Reservation] {
-        var reservations = [Reservation]()
-        do {
-            if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [[String: Any]] {
-                for jsonReservation in json {
-                    if let id = jsonReservation["id"], let roomId = jsonReservation["room_id"], let timeStart = jsonReservation["time_start"], let timeEnd =  jsonReservation["time_end"], let dateStart = jsonReservation["date_start"], let dateEnd = jsonReservation["date_end"] {
-                        let reservation = Reservation(id: id as! Int, roomId: roomId as! Int, timeStart: "\(dateStart) \(timeStart)" as String, timeEnd: "\(dateEnd) \(timeEnd)" as String)
-                        reservations.append(reservation)
-                    }
-                }
-            }
-        } catch let error as NSError {
-            print("Failed to load: \(error.localizedDescription)")
-        }
-        return reservations
     }
 
 }
@@ -144,7 +126,7 @@ extension PlanningViewController: JTAppleCalendarViewDataSource {
         let startDate = formatter.date(from: "2017 01 01")!
         let endDate = formatter.date(from: "2017 12 01")!
         
-        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: 1)
+        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: 1, generateOutDates: OutDateCellGeneration.off)
         return parameters
     }
     

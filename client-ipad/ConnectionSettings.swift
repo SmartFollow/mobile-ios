@@ -14,7 +14,7 @@ public struct ConnectionSettings {
     static let grantType = "password"
     
     #if DEBUG
-        static let clientSecret = "PyyGehoF54eJThzCkPmHe4lDm9wxj4rbMgVFVQn9"
+        static let clientSecret = "I1GzJFdSwkKGCpxUWkHvaMLJqqPdbLAHjf3ZFVnB"
         static var apiBaseUrl = "http://api.dev.smartfollow.lan"
     #else
         static let clientSecret = "IT1tAxoBLlzOJeE5gOoNqq2LOZws1EV5rfc7tZW2"
