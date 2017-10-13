@@ -41,8 +41,3 @@ class Reservation: NSObject, Planning {
     }
 }
 
-extension Reservation {
-    func getHourStart() -> Double {
-        return self.hourEnd
-    }
-}

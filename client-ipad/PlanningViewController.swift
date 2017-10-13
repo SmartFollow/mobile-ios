@@ -21,7 +21,7 @@ class PlanningViewController: UIViewController {
     var reservations = [Reservation]()
     var lessons = [Lesson]()
     static let hours = ["8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"]
-    var days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
+    var days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]
     let cellHeight: Double = Double((UIScreen.main.bounds.height - 212.0) / CGFloat(PlanningViewController.hours.count))
     
     let formatter = DateFormatter()
@@ -30,6 +30,8 @@ class PlanningViewController: UIViewController {
         super.viewDidLoad()
         self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
         calendarView.scrollToDate(Date())
+        print("-> \(Date().startOfWeek!))")
+        calendarView.scrollingMode = .stopAtEachCalendarFrameWidth
         calendarView.scrollDirection = .horizontal
         columnHours.delegate = self.hoursManager
         columnHours.dataSource = self.hoursManager
@@ -108,7 +110,7 @@ class PlanningViewController: UIViewController {
         }
         
         cell.dayNumber?.text = cellState.text
-        cell.day?.text = self.days[cellState.day.hashValue]
+        cell.day?.text = self.days[cellState.day.rawValue - 1]
         cell.layer.borderColor = UIColor.gray.cgColor
         cell.layer.borderWidth = 0.5
     }
@@ -126,7 +128,7 @@ extension PlanningViewController: JTAppleCalendarViewDataSource {
         let startDate = formatter.date(from: "2017 01 01")!
         let endDate = formatter.date(from: "2017 12 01")!
         
-        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: 1, generateOutDates: OutDateCellGeneration.off)
+        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: 1, generateOutDates: OutDateCellGeneration.off, firstDayOfWeek: DaysOfWeek.monday)
         return parameters
     }
     
@@ -135,6 +137,9 @@ extension PlanningViewController: JTAppleCalendarViewDataSource {
         configureCell(customCell: cell, cellState: cellState, date: date)
         return cell
     }
+    
+    
+    
 
 }
 

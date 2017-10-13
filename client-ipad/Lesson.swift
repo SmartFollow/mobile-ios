@@ -48,9 +48,4 @@ class Lesson: NSObject, Planning {
     
 }
 
-extension Lesson {
-    func getHourStart() -> Double {
-        return self.hourEnd
-    }
-}
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CC30F6126EF91E71D13C4D1D /* Pods_client_ipad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839EA730BC92EAA6E1E12A1C /* Pods_client_ipad.framework */; };
 		FA0CEE261EEF3FC5008BBD1F /* Logo-black.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA0CEE251EEF3FC5008BBD1F /* Logo-black.jpg */; };
+		FA11FBAB1F8FCD3300E04FB9 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11FBAA1F8FCD3300E04FB9 /* Date.swift */; };
 		FA175C4D1F1BAA57009AFA27 /* lessons.json in Resources */ = {isa = PBXBuildFile; fileRef = FA175C4C1F1BAA57009AFA27 /* lessons.json */; };
 		FA175C521F1BD714009AFA27 /* user-profile.json in Resources */ = {isa = PBXBuildFile; fileRef = FA175C511F1BD714009AFA27 /* user-profile.json */; };
 		FA175C541F1BDEA4009AFA27 /* StudentClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA175C531F1BDEA4009AFA27 /* StudentClass.swift */; };
@@ -44,7 +45,6 @@
 		FA8198561F7CDDAC00F37C0C /* PlanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8198511F7CDA7700F37C0C /* PlanningViewController.swift */; };
 		FA8198571F7CDE2900F37C0C /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8198521F7CDA8D00F37C0C /* DateCell.swift */; };
 		FA8198581F7CDE2C00F37C0C /* HoursCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8198531F7CDA8D00F37C0C /* HoursCell.swift */; };
-		FA8312E11F8EA9EC00662056 /* CasePlanning.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8312E01F8EA9EC00662056 /* CasePlanning.xib */; };
 		FA897FAB1F1139A000091D54 /* origami-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FA897FAA1F1139A000091D54 /* origami-7.png */; };
 		FA897FAD1F113A5900091D54 /* circle-tick-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FA897FAC1F113A5900091D54 /* circle-tick-7.png */; };
 		FA897FB11F113BA200091D54 /* file-list-tick-7.png in Resources */ = {isa = PBXBuildFile; fileRef = FA897FB01F113BA200091D54 /* file-list-tick-7.png */; };
@@ -87,6 +87,7 @@
 		36FC25DD1243A28B35C73416 /* Pods-client-ipad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-client-ipad.release.xcconfig"; path = "Pods/Target Support Files/Pods-client-ipad/Pods-client-ipad.release.xcconfig"; sourceTree = "<group>"; };
 		839EA730BC92EAA6E1E12A1C /* Pods_client_ipad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_client_ipad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0CEE251EEF3FC5008BBD1F /* Logo-black.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Logo-black.jpg"; sourceTree = "<group>"; };
+		FA11FBAA1F8FCD3300E04FB9 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		FA175C4C1F1BAA57009AFA27 /* lessons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lessons.json; sourceTree = "<group>"; };
 		FA175C511F1BD714009AFA27 /* user-profile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "user-profile.json"; sourceTree = "<group>"; };
 		FA175C531F1BDEA4009AFA27 /* StudentClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentClass.swift; sourceTree = "<group>"; };
@@ -128,7 +129,6 @@
 		FA8198511F7CDA7700F37C0C /* PlanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningViewController.swift; sourceTree = "<group>"; };
 		FA8198521F7CDA8D00F37C0C /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		FA8198531F7CDA8D00F37C0C /* HoursCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursCell.swift; sourceTree = "<group>"; };
-		FA8312E01F8EA9EC00662056 /* CasePlanning.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CasePlanning.xib; sourceTree = "<group>"; };
 		FA897FAA1F1139A000091D54 /* origami-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "origami-7.png"; sourceTree = "<group>"; };
 		FA897FAC1F113A5900091D54 /* circle-tick-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-tick-7.png"; sourceTree = "<group>"; };
 		FA897FB01F113BA200091D54 /* file-list-tick-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "file-list-tick-7.png"; sourceTree = "<group>"; };
@@ -295,7 +295,6 @@
 				FA27C4E11F7D29D20004E953 /* HoursColumn.swift */,
 				FA92FDF71F81298C0023CEBC /* CasePlanning.swift */,
 				FABD9AF51F891FCF0003595B /* PlanningExtension.swift */,
-				FA8312E01F8EA9EC00662056 /* CasePlanning.xib */,
 			);
 			name = Planning;
 			sourceTree = "<group>";
@@ -369,6 +368,7 @@
 			children = (
 				FAEF45111EF3092C00EA62CD /* UIImageView.swift */,
 				FA9EB10C1F80320F0000EB7A /* UIView.swift */,
+				FA11FBAA1F8FCD3300E04FB9 /* Date.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -504,7 +504,6 @@
 				FA8198551F7CDD4000F37C0C /* Planning.storyboard in Resources */,
 				FA897FAB1F1139A000091D54 /* origami-7.png in Resources */,
 				FA2013CC1F1CC56400105CED /* present.png in Resources */,
-				FA8312E11F8EA9EC00662056 /* CasePlanning.xib in Resources */,
 				FA3F03961F098C4600B0A51F /* Courses.storyboard in Resources */,
 				FA4CD80B1ED5D11800621D34 /* Assets.xcassets in Resources */,
 				FA4CD8091ED5D11800621D34 /* Main.storyboard in Resources */,
@@ -581,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4CD8381ED5DBE400621D34 /* LoginViewController.swift in Sources */,
+				FA11FBAB1F8FCD3300E04FB9 /* Date.swift in Sources */,
 				FA8198561F7CDDAC00F37C0C /* PlanningViewController.swift in Sources */,
 				FA8198571F7CDE2900F37C0C /* DateCell.swift in Sources */,
 				FA92FDF81F81298C0023CEBC /* CasePlanning.swift in Sources */,
