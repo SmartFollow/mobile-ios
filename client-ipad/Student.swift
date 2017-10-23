@@ -10,29 +10,23 @@ import Foundation
 
 class Student: NSObject {
     
-    let id: Int!
-    let email: String!
-    let firstName: String!
-    let lastName: String!
-    let classId: Int!
-    let groupId: Int!
+    let id: Int
+    let email: String
+    let firstName: String
+    let lastName: String
+    let classId: Int
+    let groupId: Int
+    var evaluation: Evaluation?
     
     
-    init(id: Int, email: String, firstName: String, lastName: String, classId: Int, groupId: Int) {
+    init(id: Int, email: String, firstName: String, lastName: String, classId: Int, groupId: Int, evaluation: Evaluation? = nil) {
         self.id = id
         self.email = email
         self.firstName = firstName
         self.lastName = lastName
         self.classId = classId
         self.groupId = groupId
+        self.evaluation = evaluation
     }
-    
-    override init() {
-        self.id = nil
-        self.email = nil
-        self.firstName = nil
-        self.lastName = nil
-        self.classId = nil
-        self.groupId = nil
-    }
+
 }

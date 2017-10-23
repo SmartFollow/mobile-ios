@@ -13,7 +13,7 @@ class ApiManager: NSObject {
     
     static let sharedInstance = ApiManager()
     
-    public func b(endPoint: String, method: String = "GET", parameters: String = "", completion: @escaping (_ result: Data?) -> Void) {
+    public func fetch(endPoint: String, method: String = "GET", parameters: String = "", completion: @escaping (_ result: Data?) -> Void) {
         #if DEBUG
             stubbing()
         #endif
@@ -50,7 +50,7 @@ class ApiManager: NSObject {
     }
     
     func stubbing() {
-        stub(condition: isPath("/api/student-classes/1/students")) { request in
+        stub(condition: isPath("/api/student-classes/3/students")) { request in
             return OHHTTPStubsResponse(
                 fileAtPath: OHPathForFile("user-profile.json", type(of: self))!,
                 statusCode: 200,

@@ -21,7 +21,7 @@ class CourseFlowController: UIViewController {
         self.picker.dataSource = self
 
         
-        ApiManager.sharedInstance.b(endPoint: "/api/lessons") { (result: Data?) in
+        ApiManager.sharedInstance.fetch(endPoint: "/api/lessons") { (result: Data?) in
             
             
             let formatter = DateFormatter()
@@ -40,9 +40,9 @@ class CourseFlowController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        DispatchQueue.main.async(execute: { () -> Void in
-            self.professorLabel.text = "\(UserDefaults.standard.value(forKey: "firstName")!) \(UserDefaults.standard.value(forKey: "lastName")!)"
-        })
+//        DispatchQueue.main.async(execute: { () -> Void in
+//            self.professorLabel.text = "\(UserDefaults.standard.value(forKey: "firstName")!) \(UserDefaults.standard.value(forKey: "lastName")!)"
+//        })
     }
 }
 
