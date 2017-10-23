@@ -65,13 +65,17 @@ class StudentButton: UIButton {
     }
     
     public func postChatting() {
-        
+        if self.student.evaluation == nil {
+            ApiManager.sharedInstance.fetch(endPoint: "/api/evaluations", method: "POST", parameters: "student_id=\(self.student.id)&lesson_id=\(self.lesson.id)&comment=NO") { (result: Data?) in
+                self.student.evaluation = ApiManager.parseEvaluation(result: result)
+                self.gossip()
+            }
+        }
     }
     
     public func postAbsence() {
         
         if self.student.evaluation == nil {
-            print("student_id=\(self.student.id)&lesson_id=\(self.lesson.id)&comment=NO")
             ApiManager.sharedInstance.fetch(endPoint: "/api/evaluations", method: "POST", parameters: "student_id=\(self.student.id)&lesson_id=\(self.lesson.id)&comment=NO") { (result: Data?) in
                 self.student.evaluation = ApiManager.parseEvaluation(result: result)
                 self.rollCall()
