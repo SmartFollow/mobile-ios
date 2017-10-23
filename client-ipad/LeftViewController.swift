@@ -42,7 +42,7 @@ class LeftViewController: UIViewController {
         let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController")
         self.profileViewController = UINavigationController(rootViewController: profileViewController)
         
-        let coursesViewController = coursesStoryboard.instantiateViewController(withIdentifier: "CoursesViewController")
+        let coursesViewController = coursesStoryboard.instantiateViewController(withIdentifier: "LessonViewController")
         self.coursesViewController = UINavigationController(rootViewController: coursesViewController)
         
         let planningViewController = planningStoryBoard.instantiateViewController(withIdentifier: "PlanningViewController")

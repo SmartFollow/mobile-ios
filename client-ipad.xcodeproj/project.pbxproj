@@ -12,13 +12,12 @@
 		FA11FBAB1F8FCD3300E04FB9 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11FBAA1F8FCD3300E04FB9 /* Date.swift */; };
 		FA175C4D1F1BAA57009AFA27 /* lessons.json in Resources */ = {isa = PBXBuildFile; fileRef = FA175C4C1F1BAA57009AFA27 /* lessons.json */; };
 		FA175C521F1BD714009AFA27 /* user-profile.json in Resources */ = {isa = PBXBuildFile; fileRef = FA175C511F1BD714009AFA27 /* user-profile.json */; };
-		FA175C541F1BDEA4009AFA27 /* StudentClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA175C531F1BDEA4009AFA27 /* StudentClass.swift */; };
 		FA175C561F1BDEB7009AFA27 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA175C551F1BDEB7009AFA27 /* Student.swift */; };
 		FA19E5761F23A10500CE02C5 /* postAbsence.json in Resources */ = {isa = PBXBuildFile; fileRef = FA19E5751F23A10500CE02C5 /* postAbsence.json */; };
 		FA19E5781F23C1DC00CE02C5 /* RollCallUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA19E5771F23C1DC00CE02C5 /* RollCallUIView.swift */; };
 		FA2013C41F1C974700105CED /* RollCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2013C31F1C974700105CED /* RollCallViewController.swift */; };
 		FA2013C61F1CA64100105CED /* bechad.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2013C51F1CA64100105CED /* bechad.png */; };
-		FA2013C81F1CB29800105CED /* RollCallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2013C71F1CB29800105CED /* RollCallButton.swift */; };
+		FA2013C81F1CB29800105CED /* StudentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2013C71F1CB29800105CED /* StudentButton.swift */; };
 		FA2013CA1F1CC54E00105CED /* late.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2013C91F1CC54E00105CED /* late.png */; };
 		FA2013CC1F1CC56400105CED /* present.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2013CB1F1CC56400105CED /* present.png */; };
 		FA2013CE1F1CC58500105CED /* absent.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2013CD1F1CC58500105CED /* absent.png */; };
@@ -27,8 +26,12 @@
 		FA27C4E01F7D21FB0004E953 /* ActivitiesColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27C4DF1F7D21FB0004E953 /* ActivitiesColumn.swift */; };
 		FA27C4E21F7D29D20004E953 /* HoursColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27C4E11F7D29D20004E953 /* HoursColumn.swift */; };
 		FA27C4E81F7D53720004E953 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27C4E71F7D53720004E953 /* Reservation.swift */; };
-		FA3F03931F09795900B0A51F /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F03921F09795900B0A51F /* CoursesViewController.swift */; };
+		FA2CD4831F9CD6AB000CD7EB /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CD4821F9CD6AB000CD7EB /* Evaluation.swift */; };
+		FA3F03931F09795900B0A51F /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F03921F09795900B0A51F /* LessonViewController.swift */; };
 		FA3F03961F098C4600B0A51F /* Courses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3F03941F098C4600B0A51F /* Courses.storyboard */; };
+		FA4C69271F9E2BEA001F8E2E /* RollCallButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C69261F9E2BEA001F8E2E /* RollCallButtonExtension.swift */; };
+		FA4C69291F9E3EBE001F8E2E /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C69281F9E3EBE001F8E2E /* Delay.swift */; };
+		FA4C692B1F9E42B8001F8E2E /* Absence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C692A1F9E42B8001F8E2E /* Absence.swift */; };
 		FA4CD8041ED5D11800621D34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4CD8031ED5D11800621D34 /* AppDelegate.swift */; };
 		FA4CD8061ED5D11800621D34 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4CD8051ED5D11800621D34 /* ProfileViewController.swift */; };
 		FA4CD8091ED5D11800621D34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4CD8071ED5D11800621D34 /* Main.storyboard */; };
@@ -40,6 +43,7 @@
 		FA4CD83E1ED608A900621D34 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4CD83D1ED608A900621D34 /* LoginService.swift */; };
 		FA4CD8401ED60BE800621D34 /* ConnectionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4CD83F1ED60BE800621D34 /* ConnectionSettings.swift */; };
 		FA60525A1EEC6A8C001D6475 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6052591EEC6A8C001D6475 /* LeftViewController.swift */; };
+		FA67E83A1F97964E00EEB0C7 /* SegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67E8391F97964E00EEB0C7 /* SegmentController.swift */; };
 		FA6C59D31EF593E900BB4083 /* Login-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA6C59D21EF593E900BB4083 /* Login-logo.jpg */; };
 		FA8198551F7CDD4000F37C0C /* Planning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA81984F1F7CDA5900F37C0C /* Planning.storyboard */; };
 		FA8198561F7CDDAC00F37C0C /* PlanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8198511F7CDA7700F37C0C /* PlanningViewController.swift */; };
@@ -54,6 +58,8 @@
 		FA92FDF81F81298C0023CEBC /* CasePlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92FDF71F81298C0023CEBC /* CasePlanning.swift */; };
 		FA99E8BB1EF33B1E00F3CE4E /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99E8BA1EF33B1E00F3CE4E /* ApiManager.swift */; };
 		FA9EB10D1F80320F0000EB7A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9EB10C1F80320F0000EB7A /* UIView.swift */; };
+		FAAB5C5D1F97B13D00AD8804 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = FAAB5C5B1F97B13C00AD8804 /* black.png */; };
+		FAAB5C5E1F97B13D00AD8804 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = FAAB5C5C1F97B13D00AD8804 /* red.png */; };
 		FAB1A2791EEEB1E00020566B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1A2781EEEB1E00020566B /* ChatViewController.swift */; };
 		FABD9AF61F891FCF0003595B /* PlanningExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD9AF51F891FCF0003595B /* PlanningExtension.swift */; };
 		FABD9AF81F8927D80003595B /* ExtensionApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD9AF71F8927D80003595B /* ExtensionApiManager.swift */; };
@@ -90,13 +96,12 @@
 		FA11FBAA1F8FCD3300E04FB9 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		FA175C4C1F1BAA57009AFA27 /* lessons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lessons.json; sourceTree = "<group>"; };
 		FA175C511F1BD714009AFA27 /* user-profile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "user-profile.json"; sourceTree = "<group>"; };
-		FA175C531F1BDEA4009AFA27 /* StudentClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentClass.swift; sourceTree = "<group>"; };
 		FA175C551F1BDEB7009AFA27 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		FA19E5751F23A10500CE02C5 /* postAbsence.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = postAbsence.json; sourceTree = "<group>"; };
 		FA19E5771F23C1DC00CE02C5 /* RollCallUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollCallUIView.swift; sourceTree = "<group>"; };
 		FA2013C31F1C974700105CED /* RollCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollCallViewController.swift; sourceTree = "<group>"; };
 		FA2013C51F1CA64100105CED /* bechad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bechad.png; sourceTree = "<group>"; };
-		FA2013C71F1CB29800105CED /* RollCallButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollCallButton.swift; sourceTree = "<group>"; };
+		FA2013C71F1CB29800105CED /* StudentButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentButton.swift; sourceTree = "<group>"; };
 		FA2013C91F1CC54E00105CED /* late.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = late.png; sourceTree = "<group>"; };
 		FA2013CB1F1CC56400105CED /* present.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = present.png; sourceTree = "<group>"; };
 		FA2013CD1F1CC58500105CED /* absent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = absent.png; sourceTree = "<group>"; };
@@ -105,8 +110,12 @@
 		FA27C4DF1F7D21FB0004E953 /* ActivitiesColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesColumn.swift; sourceTree = "<group>"; };
 		FA27C4E11F7D29D20004E953 /* HoursColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursColumn.swift; sourceTree = "<group>"; };
 		FA27C4E71F7D53720004E953 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
-		FA3F03921F09795900B0A51F /* CoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		FA2CD4821F9CD6AB000CD7EB /* Evaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
+		FA3F03921F09795900B0A51F /* LessonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
 		FA3F03951F098C4600B0A51F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Courses.storyboard; sourceTree = "<group>"; };
+		FA4C69261F9E2BEA001F8E2E /* RollCallButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollCallButtonExtension.swift; sourceTree = "<group>"; };
+		FA4C69281F9E3EBE001F8E2E /* Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
+		FA4C692A1F9E42B8001F8E2E /* Absence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Absence.swift; sourceTree = "<group>"; };
 		FA4CD8001ED5D11800621D34 /* client-ipad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "client-ipad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4CD8031ED5D11800621D34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA4CD8051ED5D11800621D34 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +133,7 @@
 		FA4CD83D1ED608A900621D34 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		FA4CD83F1ED60BE800621D34 /* ConnectionSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionSettings.swift; sourceTree = "<group>"; };
 		FA6052591EEC6A8C001D6475 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		FA67E8391F97964E00EEB0C7 /* SegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentController.swift; sourceTree = "<group>"; };
 		FA6C59D21EF593E900BB4083 /* Login-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Login-logo.jpg"; sourceTree = "<group>"; };
 		FA81984F1F7CDA5900F37C0C /* Planning.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Planning.storyboard; sourceTree = "<group>"; };
 		FA8198511F7CDA7700F37C0C /* PlanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +148,8 @@
 		FA92FDF71F81298C0023CEBC /* CasePlanning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasePlanning.swift; sourceTree = "<group>"; };
 		FA99E8BA1EF33B1E00F3CE4E /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		FA9EB10C1F80320F0000EB7A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		FAAB5C5B1F97B13C00AD8804 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
+		FAAB5C5C1F97B13D00AD8804 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		FAB1A2781EEEB1E00020566B /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FABD9AF51F891FCF0003595B /* PlanningExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningExtension.swift; sourceTree = "<group>"; };
 		FABD9AF71F8927D80003595B /* ExtensionApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionApiManager.swift; sourceTree = "<group>"; };
@@ -205,9 +217,13 @@
 		FA3F038F1F09792B00B0A51F /* Course */ = {
 			isa = PBXGroup;
 			children = (
-				FA3F03921F09795900B0A51F /* CoursesViewController.swift */,
+				FA19E5771F23C1DC00CE02C5 /* RollCallUIView.swift */,
+				FA2013C71F1CB29800105CED /* StudentButton.swift */,
+				FA3F03921F09795900B0A51F /* LessonViewController.swift */,
 				FA897FB41F116E1800091D54 /* CourseFlowController.swift */,
 				FA2013C31F1C974700105CED /* RollCallViewController.swift */,
+				FA67E8391F97964E00EEB0C7 /* SegmentController.swift */,
+				FA4C69261F9E2BEA001F8E2E /* RollCallButtonExtension.swift */,
 			);
 			name = Course;
 			sourceTree = "<group>";
@@ -304,11 +320,11 @@
 			children = (
 				FA897FB61F11710D00091D54 /* Lesson.swift */,
 				FA27C4E71F7D53720004E953 /* Reservation.swift */,
-				FA175C531F1BDEA4009AFA27 /* StudentClass.swift */,
 				FA175C551F1BDEB7009AFA27 /* Student.swift */,
-				FA2013C71F1CB29800105CED /* RollCallButton.swift */,
-				FA19E5771F23C1DC00CE02C5 /* RollCallUIView.swift */,
 				FAD1D0FD1F8E794F00F480ED /* PlanningProtocol.swift */,
+				FA2CD4821F9CD6AB000CD7EB /* Evaluation.swift */,
+				FA4C69281F9E3EBE001F8E2E /* Delay.swift */,
+				FA4C692A1F9E42B8001F8E2E /* Absence.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -335,6 +351,8 @@
 		FAC5B32F1EF1ADFD00267888 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				FAAB5C5B1F97B13C00AD8804 /* black.png */,
+				FAAB5C5C1F97B13D00AD8804 /* red.png */,
 				FA2013CF1F1CC83500105CED /* work_done.png */,
 				FA2013D01F1CC83500105CED /* no_work.png */,
 				FA2013CD1F1CC58500105CED /* absent.png */,
@@ -501,11 +519,13 @@
 				FA897FB31F114DC600091D54 /* calendar-7.png in Resources */,
 				FA4CD80E1ED5D11800621D34 /* LaunchScreen.storyboard in Resources */,
 				FA175C4D1F1BAA57009AFA27 /* lessons.json in Resources */,
+				FAAB5C5D1F97B13D00AD8804 /* black.png in Resources */,
 				FA8198551F7CDD4000F37C0C /* Planning.storyboard in Resources */,
 				FA897FAB1F1139A000091D54 /* origami-7.png in Resources */,
 				FA2013CC1F1CC56400105CED /* present.png in Resources */,
 				FA3F03961F098C4600B0A51F /* Courses.storyboard in Resources */,
 				FA4CD80B1ED5D11800621D34 /* Assets.xcassets in Resources */,
+				FAAB5C5E1F97B13D00AD8804 /* red.png in Resources */,
 				FA4CD8091ED5D11800621D34 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,24 +599,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4C69291F9E3EBE001F8E2E /* Delay.swift in Sources */,
 				FA4CD8381ED5DBE400621D34 /* LoginViewController.swift in Sources */,
 				FA11FBAB1F8FCD3300E04FB9 /* Date.swift in Sources */,
 				FA8198561F7CDDAC00F37C0C /* PlanningViewController.swift in Sources */,
+				FA2CD4831F9CD6AB000CD7EB /* Evaluation.swift in Sources */,
 				FA8198571F7CDE2900F37C0C /* DateCell.swift in Sources */,
 				FA92FDF81F81298C0023CEBC /* CasePlanning.swift in Sources */,
+				FA4C69271F9E2BEA001F8E2E /* RollCallButtonExtension.swift in Sources */,
 				FAD1D0FE1F8E794F00F480ED /* PlanningProtocol.swift in Sources */,
 				FABD9AF81F8927D80003595B /* ExtensionApiManager.swift in Sources */,
 				FA8198581F7CDE2C00F37C0C /* HoursCell.swift in Sources */,
 				FA27C4E01F7D21FB0004E953 /* ActivitiesColumn.swift in Sources */,
 				FA2013C41F1C974700105CED /* RollCallViewController.swift in Sources */,
+				FA4C692B1F9E42B8001F8E2E /* Absence.swift in Sources */,
 				FAEF45121EF3092C00EA62CD /* UIImageView.swift in Sources */,
 				FA9EB10D1F80320F0000EB7A /* UIView.swift in Sources */,
 				FA19E5781F23C1DC00CE02C5 /* RollCallUIView.swift in Sources */,
 				FA897FB51F116E1800091D54 /* CourseFlowController.swift in Sources */,
-				FA2013C81F1CB29800105CED /* RollCallButton.swift in Sources */,
-				FA3F03931F09795900B0A51F /* CoursesViewController.swift in Sources */,
+				FA2013C81F1CB29800105CED /* StudentButton.swift in Sources */,
+				FA3F03931F09795900B0A51F /* LessonViewController.swift in Sources */,
 				FABD9AF61F891FCF0003595B /* PlanningExtension.swift in Sources */,
-				FA175C541F1BDEA4009AFA27 /* StudentClass.swift in Sources */,
 				FA99E8BB1EF33B1E00F3CE4E /* ApiManager.swift in Sources */,
 				FA4CD8401ED60BE800621D34 /* ConnectionSettings.swift in Sources */,
 				FA4CD83E1ED608A900621D34 /* LoginService.swift in Sources */,
@@ -609,6 +632,7 @@
 				FA27C4E81F7D53720004E953 /* Reservation.swift in Sources */,
 				FA175C561F1BDEB7009AFA27 /* Student.swift in Sources */,
 				FA4CD8041ED5D11800621D34 /* AppDelegate.swift in Sources */,
+				FA67E83A1F97964E00EEB0C7 /* SegmentController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

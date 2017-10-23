@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
         profilePicture.asCircle(borderWidth: 5)
-        ApiManager.sharedInstance.b(endPoint: "/users/profile") { (result: Data?) in
+        ApiManager.sharedInstance.fetch(endPoint: "/users/profile") { (result: Data?) in
             self.saveInformationProfile(result: result)
         }
     }

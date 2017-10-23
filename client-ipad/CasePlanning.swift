@@ -8,12 +8,23 @@
 
 import UIKit
 
-class CasePlanning: UIView {
+protocol ViewProtocol {
+    func performSegueFromView(event: Planning)
+}
 
+class CasePlanning: UIView {
+    
+    var delegate : ViewProtocol?
+    var event: Planning?
+    
     init<T:Planning>(frame: CGRect, event: T) {
         super.init(frame: frame)
         self.tag = 42
-    
+        self.event = event
+        
+        let gesture = UITapGestureRecognizer(target:self, action:#selector(CasePlanning.handleTap(_:)))
+        self.addGestureRecognizer(gesture)
+        
         let subject: UILabel = UILabel()
         let roomIdentifier: UILabel = UILabel()
         let timeStart: UILabel = UILabel()
@@ -77,4 +88,10 @@ class CasePlanning: UIView {
         super.init(coder: aDecoder)
     }
     
+    func handleTap(_ sender: UITapGestureRecognizer) {
+        if let myEvent = self.event as? Lesson {
+            self.delegate?.performSegueFromView(event: myEvent)
+        }
+    }
+
 }

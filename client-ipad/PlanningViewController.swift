@@ -9,7 +9,7 @@
 import UIKit
 import JTAppleCalendar
 
-class PlanningViewController: UIViewController {
+class PlanningViewController: UIViewController, ViewProtocol {
     @IBOutlet weak var columnHours: UITableView!
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: UILabel!
@@ -28,15 +28,27 @@ class PlanningViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
         calendarView.scrollToDate(Date())
-        print("-> \(Date().startOfWeek!))")
         calendarView.scrollingMode = .stopAtEachCalendarFrameWidth
         calendarView.scrollDirection = .horizontal
         columnHours.delegate = self.hoursManager
         columnHours.dataSource = self.hoursManager
         fetchSchedule()
         initCaseCalendar()
+    }
+    
+    func performSegueFromView(event: Planning) {
+        self.performSegue(withIdentifier: "Course", sender: event)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Course" {
+            if let destinationVC = segue.destination as? LessonViewController {
+                destinationVC.lesson = sender as? Lesson
+            }
+        }
     }
     
     func initCaseCalendar() {
@@ -52,9 +64,9 @@ class PlanningViewController: UIViewController {
     }
     
     func fetchSchedule() {
-        ApiManager.sharedInstance.b(endPoint: "/api/reservations") { (result: Data?) in
+        ApiManager.sharedInstance.fetch(endPoint: "/api/reservations") { (result: Data?) in
             self.reservations = ApiManager.parseReservation(result: result)
-            ApiManager.sharedInstance.b(endPoint: "/api/lessons") { (result: Data?) in
+            ApiManager.sharedInstance.fetch(endPoint: "/api/lessons") { (result: Data?) in
                 self.lessons = ApiManager.parseLessons(result: result)
                 DispatchQueue.main.async(execute: {
                     self.calendarView.reloadData()
@@ -86,7 +98,9 @@ class PlanningViewController: UIViewController {
         let y: Double = 150.0 + tmpIdiotXcode + tmp2IdiotXcode
             
         let height = (((event.hourEnd - event.hourStart) * self.cellHeight) + ((44/60) * event.minuteEnd))
+        
         let myCase = CasePlanning(frame: CGRect(x: 0.0, y: y, width: Double(cell.bounds.width), height: height), event: event)
+        myCase.delegate = self
         cell.viewCell.addSubview(myCase)
     }
     

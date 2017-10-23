@@ -9,16 +9,22 @@
 import UIKit
 
 class RollCallUIView: UIView {
+
+    var studentState: UILabel!
     
-    required init(frame: CGRect, student: Student) {
+    required init(frame: CGRect, student: Student, lesson: Lesson) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor(red:0.20, green:0.20, blue:0.20, alpha:1.0)
-        
-        let button = RollCallButton(frame: CGRect(x: 0, y: 0, width: 200, height: 200), student: student)
+        self.tag = 1
+        let button = StudentButton(frame: CGRect(x: 0, y: 0, width: 200, height: 200), student: student, lesson: lesson)
         let studentName = UILabel(frame: CGRect(x: 0, y: button.frame.size.height + 10, width: 200, height: 25))
-        studentName.text = "\(student.firstName!) \(student.lastName!)"
+        self.studentState = UILabel(frame: CGRect(x: 0, y: button.frame.size.height + 40, width: 200, height: 25))
+        studentName.text = "\(student.firstName) \(student.lastName)"
         studentName.textAlignment = .center
-        studentName.textColor = UIColor.white
+        studentName.textColor = UIColor.black
+        studentState.text = "Présent"
+        studentState.textColor = UIColor.black
+        studentState.textAlignment = .center
+        self.addSubview(studentState)
         self.addSubview(studentName)
         self.addSubview(button)
     }

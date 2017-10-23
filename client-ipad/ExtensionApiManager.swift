@@ -48,4 +48,71 @@ extension ApiManager {
         }
         return reservations
     }
+    
+    public static func parseClassStudent(result: Data?) -> [Student] {
+        var studentClass = [Student]()
+        do {
+            if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [[String: Any]] {
+                for jsonStudent in json {
+                    if let id = jsonStudent["id"], let email = jsonStudent["email"], let firstName = jsonStudent["firstname"], let lastName = jsonStudent["lastname"], let classId = jsonStudent["class_id"], let groupId = jsonStudent["group_id"] {
+                        print(id)
+                        let student = Student(id: id as! Int, email: email as! String, firstName: firstName as! String, lastName: lastName as! String, classId: classId as! Int, groupId: groupId as! Int)
+                        studentClass.append(student)
+                    }
+                }
+            }
+        }
+        catch let error as NSError {
+            print("Failed to load: \(error.localizedDescription)")
+        }
+        return studentClass
+    }
+    
+    public static func parseEvaluation(result: Data?) -> Evaluation? {
+        var evaluation: Evaluation?
+        do {
+            if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [String: Any] {
+                if let id = json["id"], let studentId = json["student_id"], let lessonId = json["lesson_id"], let comment = json["comment"] {
+                    evaluation = Evaluation(id: Int(id as! Int), studentId: Int((studentId as! NSString).intValue), lessonId: Int((lessonId as! NSString).intValue), comment: comment as? String)
+                }
+            }
+        }
+        catch let error as NSError {
+            print("Failed to load: \(error.localizedDescription)")
+        }
+        return evaluation
+    }
+    
+    public static func parseDelay(result: Data?) -> Delay? {
+        var delay: Delay?
+        do {
+            if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [String: Any] {
+                if let id = json["id"], let evaluationId = json["evaluation_id"], let arrivedAt = json["arrived_at"] {
+                    print(type(of: id))
+                    print(id)
+                    print(type(of: evaluationId))
+                    delay = Delay(id: id as! Int, evaluationId: Int((evaluationId as! NSString).intValue), arrivedAt: arrivedAt as! String)
+                }
+            }
+        }
+        catch let error as NSError {
+            print("Failed to load: \(error.localizedDescription)")
+        }
+        return delay
+    }
+    
+    public static func parseAbsence(result: Data?) -> Absence? {
+        var absence: Absence?
+        do {
+            if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [String: Any] {
+                if let id = json["id"], let evaluationId = json["evaluation_id"] {
+                    absence = Absence(id: id as! Int, evaluationId:  Int((evaluationId as! NSString).intValue))
+                }
+            }
+        }
+        catch let error as NSError {
+            print("Failed to load: \(error.localizedDescription)")
+        }
+        return absence
+    }
 }
