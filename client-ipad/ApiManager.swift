@@ -7,15 +7,21 @@
 //
 
 import Foundation
+import OHHTTPStubs
 
 class ApiManager: NSObject {
     
     static let sharedInstance = ApiManager()
-    let baseUrl = "http://api.dev.smartfollow.lan"
     
-    public func b(endPoint: String, completion: @escaping (_ result: Data?) -> Void) {
-        let url = URL(string: baseUrl + endPoint )
+    public func b(endPoint: String, method: String = "GET", parameters: String = "", completion: @escaping (_ result: Data?) -> Void) {
+        #if DEBUG
+            stubbing()
+        #endif
+        
+        let url = URL(string: ConnectionSettings.apiBaseUrl + endPoint )
         var request = URLRequest(url: (url as URL?)!)
+        request.httpMethod = method
+        request.httpBody = parameters.data(using: String.Encoding.utf8)
         
         let accessToken = UserDefaults.standard.value(forKey: "accessToken")
         request.setValue("Bearer \(accessToken!)", forHTTPHeaderField: "Authorization")
@@ -26,6 +32,7 @@ class ApiManager: NSObject {
         configuration.timeoutIntervalForResource = 15
         configuration.requestCachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData
         let session = URLSession(configuration: configuration)
+        
         let task = session.dataTask(with: request) { (data, response, error) in
             if error != nil {
                 return
@@ -41,4 +48,24 @@ class ApiManager: NSObject {
         }
         task.resume()
     }
+    
+    func stubbing() {
+        stub(condition: isPath("/api/student-classes/1/students")) { request in
+            return OHHTTPStubsResponse(
+                fileAtPath: OHPathForFile("user-profile.json", type(of: self))!,
+                statusCode: 200,
+                headers: ["Content-Type":"application/json"]
+            )
+        }
+        
+        stub(condition: isPath("/api/evaluations/5/absences")) { request in
+            return OHHTTPStubsResponse(
+                fileAtPath: OHPathForFile("postAbsence.json", type(of: self))!,
+                statusCode: 200,
+                headers: ["Content-Type": "application/json"]
+            ).requestTime(0.5, responseTime: 1.0)
+        }
+    }
 }
+
+

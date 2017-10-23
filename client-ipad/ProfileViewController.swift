@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
         profilePicture.asCircle(borderWidth: 5)
-        ApiManager.sharedInstance.b(endPoint: "/api/users/profile") { (result: Data?) in
+        ApiManager.sharedInstance.b(endPoint: "/users/profile") { (result: Data?) in
             self.saveInformationProfile(result: result)
         }
     }
@@ -54,10 +54,10 @@ class ProfileViewController: UIViewController {
                     }
                     UserDefaults.standard.set(taughtSubjectsArray, forKey: "taughtSubjects")
                     let a = UserDefaults.standard.object(forKey: "taughtSubjects") as! [Dictionary<String, Int>]
-                    for b in a {
-                        print(b["id"]!)
-                        print(b["levelId"]!)
-                    }
+//                    for b in a {
+//                        print(b["id"]!)
+//                        print(b["levelId"]!)
+//                    }
                 }
             }
             

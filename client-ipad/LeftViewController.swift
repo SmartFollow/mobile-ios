@@ -13,15 +13,18 @@ enum Menu : Int {
     case Profile = 0
     case Courses
     case Chat
+    case Planning
     case Settings
     case Logout
 }
 
 class LeftViewController: UIViewController {
     
-    let menus = ["Profile", "Cours", "Messagerie", "Paramètres", "Déconnexion"]
+    let menus = ["Profile", "Cours", "Messagerie", "Planning", "Paramètres", "Déconnexion"]
     var chatViewController: UIViewController!
     var profileViewController: UIViewController!
+    var coursesViewController: UIViewController!
+    var planningViewController: UIViewController!
     var topMenuView: TopMenuView!
     
     @IBOutlet weak var tableView: UITableView!
@@ -30,11 +33,20 @@ class LeftViewController: UIViewController {
         super.viewDidLoad()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let coursesStoryboard = UIStoryboard(name: "Courses", bundle: nil)
+        let planningStoryBoard = UIStoryboard(name: "Planning", bundle: nil)
+        
         let chatViewController = storyboard.instantiateViewController(withIdentifier: "ChatViewController")
         self.chatViewController = UINavigationController(rootViewController: chatViewController)
         
         let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController")
         self.profileViewController = UINavigationController(rootViewController: profileViewController)
+        
+        let coursesViewController = coursesStoryboard.instantiateViewController(withIdentifier: "CoursesViewController")
+        self.coursesViewController = UINavigationController(rootViewController: coursesViewController)
+        
+        let planningViewController = planningStoryBoard.instantiateViewController(withIdentifier: "PlanningViewController")
+        self.planningViewController = UINavigationController(rootViewController: planningViewController)
         
         self.topMenuView = Bundle.main.loadNibNamed("TopMenuView", owner: nil, options: nil)?.first as? TopMenuView
         self.view.addSubview(topMenuView)
@@ -85,9 +97,11 @@ extension LeftViewController: UITableViewDelegate {
             case .Profile:
                 self.slideMenuController()?.changeMainViewController(self.profileViewController, close: true)
             case .Courses:
-                self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true)
+                self.slideMenuController()?.changeMainViewController(self.coursesViewController, close: true)
             case .Settings:
                 self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true)
+            case .Planning:
+                self.slideMenuController()?.changeMainViewController(self.planningViewController, close: true)
             case .Logout:
                 self.Logout()
             }
