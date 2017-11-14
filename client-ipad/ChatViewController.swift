@@ -10,14 +10,14 @@ import Foundation
 import SlideMenuControllerSwift
 
 class ChatViewController : UIViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
-    }
-
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
+  }
+  
 }

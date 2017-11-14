@@ -9,12 +9,12 @@
 import Foundation
 
 protocol Planning {
-    var timeStart: Date { get }
-    var timeEnd: Date { get set }
-    var hourStart: Double { get set }
-    var hourEnd: Double { get set }
-    var minuteStart: Double { get set }
-    var minuteEnd: Double { get set }
-    var subjectName: String { get }
-    var roomIdentifier: String { get }
+  var timeStart: Date { get }
+  var timeEnd: Date { get set }
+  var hourStart: Double { get set }
+  var hourEnd: Double { get set }
+  var minuteStart: Double { get set }
+  var minuteEnd: Double { get set }
+  var subjectName: String { get }
+  var roomIdentifier: String { get }
 }

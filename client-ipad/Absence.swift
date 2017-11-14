@@ -9,13 +9,13 @@
 import UIKit
 
 class Absence: NSObject {
-    let id: Int
-    let evaluationId: Int
-    let justifiedAt: Date?
-    
-    init(id: Int, evaluationId: Int, justifiedAt: Date? = nil) {
-        self.id = id
-        self.evaluationId = evaluationId
-        self.justifiedAt = justifiedAt
-    }
+  let id: Int
+  let evaluationId: Int
+  let justifiedAt: Date?
+  
+  init(id: Int, evaluationId: Int, justifiedAt: Date? = nil) {
+    self.id = id
+    self.evaluationId = evaluationId
+    self.justifiedAt = justifiedAt
+  }
 }
