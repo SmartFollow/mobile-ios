@@ -209,14 +209,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "client-ipad/CasePlanning.swift"
-            timestampString = "530628381.570506"
+            filePath = "client-ipad/RightViewController.swift"
+            timestampString = "532693803.468821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "handleTap(_:)"
-            landmarkType = "7">
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

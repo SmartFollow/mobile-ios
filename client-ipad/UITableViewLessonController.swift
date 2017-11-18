@@ -22,7 +22,7 @@ extension LessonViewController: UITableViewDelegate, UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell", for: indexPath) as! StudentCell
     if let student: Student = self.students?[indexPath.row] {
       cell.studentName.text = "\(student.firstName) \(student.lastName)"
-      cell.studentPicture.image = UIImage(named: "profil1.jpg")
+      cell.studentPicture.image = self.students?[indexPath.row].avatar
       cell.studentPicture.asCircle()
       cell.presence.text = "Présence : 1"
       cell.activity.text = "Activités : 1"

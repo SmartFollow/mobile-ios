@@ -35,8 +35,9 @@ class LeftViewController: UIViewController {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let coursesStoryboard = UIStoryboard(name: "Courses", bundle: nil)
     let planningStoryBoard = UIStoryboard(name: "Planning", bundle: nil)
+    let messagingStoryBoard = UIStoryboard(name: "Messaging", bundle: nil)
     
-    let chatViewController = storyboard.instantiateViewController(withIdentifier: "ChatViewController")
+    let chatViewController = messagingStoryBoard.instantiateViewController(withIdentifier: "ChatViewController")
     self.chatViewController = UINavigationController(rootViewController: chatViewController)
     
     let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController")

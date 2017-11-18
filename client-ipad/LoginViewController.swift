@@ -30,13 +30,18 @@ class LoginViewController: UIViewController {
   
   func loadProfile() {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let sideBar = UIStoryboard(name: "Sidebar", bundle: nil)
+    let bounds = UIScreen.main.bounds
     
     let mainViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
     let leftViewController = storyboard.instantiateViewController(withIdentifier: "LeftViewController") as! LeftViewController
+    let rightViewController = sideBar.instantiateViewController(withIdentifier: "RightViewController") as! RightViewController
+    
+    SlideMenuOptions.rightViewWidth = bounds.size.width
     
     let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
     
-    let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+    let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
     slideMenuController.automaticallyAdjustsScrollViewInsets = true
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     appDelegate.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)

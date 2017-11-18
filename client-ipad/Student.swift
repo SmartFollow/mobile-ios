@@ -6,7 +6,7 @@
 //  Copyright © 2017 Alexandre Page. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Student: NSObject {
   
@@ -16,9 +16,11 @@ class Student: NSObject {
   let lastName: String
   let classId: Int
   let groupId: Int
+  var avatar: UIImage
   var evaluation: Evaluation?
   
-  init(id: Int, email: String, firstName: String, lastName: String, classId: Int, groupId: Int, evaluation: Evaluation? = nil) {
+  init(id: Int, email: String, firstName: String, lastName: String, classId: Int, groupId: Int, evaluation: Evaluation? = nil,
+       avatarUrl: String) {
     self.id = id
     self.email = email
     self.firstName = firstName
@@ -26,6 +28,6 @@ class Student: NSObject {
     self.classId = classId
     self.groupId = groupId
     self.evaluation = evaluation
+    self.avatar = UIImage(link: ConnectionSettings.apiBaseUrl + avatarUrl)
   }
-  
 }

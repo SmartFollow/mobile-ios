@@ -26,18 +26,16 @@ class StudentButton: UIButton {
     self.activityIndicator = UIActivityIndicatorView()
     self.student = student
     self.lesson = lesson
-    self.segmentState = 0
+    self.segmentState = 1
     self.buttonState = 0
     
     super.init(frame: frame)
     initActivityMonitor()
     self.tag = StudentButton.viewTag
     self.addTarget(self, action:#selector(self.changeState(sender:)), for: .touchUpInside)
-    DispatchQueue.main.async {
-      self.layer.masksToBounds = true
-      self.layer.cornerRadius = self.frame.width / 2
-      self.setBackgroundImage(UIImage(named: "bechad.png"), for: .normal)
-    }
+    self.layer.masksToBounds = true
+    self.layer.cornerRadius = self.frame.width / 2
+    self.setBackgroundImage(self.student.avatar, for: .normal)
   }
   
   func initActivityMonitor() {
@@ -53,9 +51,9 @@ class StudentButton: UIButton {
     self.activityIndicator.hidesWhenStopped = true
     self.isEnabled = false
     switch self.segmentState {
-    case 0:
-      postAbsence()
     case 1:
+      postAbsence()
+    case 2:
       postChatting()
     default:
       break
