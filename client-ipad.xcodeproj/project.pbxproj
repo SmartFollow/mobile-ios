@@ -78,6 +78,7 @@
 		FABD9AF81F8927D80003595B /* ExtensionApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD9AF71F8927D80003595B /* ExtensionApiManager.swift */; };
 		FAC13E241EEF05930068E912 /* SideBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC13E231EEF05930068E912 /* SideBarView.xib */; };
 		FAC13E261EEF07300068E912 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC13E251EEF07300068E912 /* SideBarView.swift */; };
+		FAC273F81FC31AF300C3A0BC /* new-message.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC273F71FC31AF300C3A0BC /* new-message.png */; };
 		FAC5B32E1EF1ADF600267888 /* profil1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAC5B32D1EF1ADF600267888 /* profil1.jpg */; };
 		FAC5B3311EF1B29200267888 /* Logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAC5B3301EF1B29200267888 /* Logo.jpg */; };
 		FAD1D0FE1F8E794F00F480ED /* PlanningProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1D0FD1F8E794F00F480ED /* PlanningProtocol.swift */; };
@@ -185,6 +186,7 @@
 		FABD9AF71F8927D80003595B /* ExtensionApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionApiManager.swift; sourceTree = "<group>"; };
 		FAC13E231EEF05930068E912 /* SideBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideBarView.xib; sourceTree = "<group>"; };
 		FAC13E251EEF07300068E912 /* SideBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
+		FAC273F71FC31AF300C3A0BC /* new-message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "new-message.png"; path = "../../../Desktop/new-message.png"; sourceTree = "<group>"; };
 		FAC5B32D1EF1ADF600267888 /* profil1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profil1.jpg; sourceTree = "<group>"; };
 		FAC5B3301EF1B29200267888 /* Logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Logo.jpg; sourceTree = "<group>"; };
 		FAD1D0FD1F8E794F00F480ED /* PlanningProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningProtocol.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 		FAC5B32F1EF1ADFD00267888 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				FAC273F71FC31AF300C3A0BC /* new-message.png */,
 				FA44BDC71FBCB58C00C2C7EF /* default-avatar.png */,
 				FA24627E1FABC93B0085D51C /* adjust-64.png */,
 				FA24627C1FABBB6A0085D51C /* focus.png */,
@@ -630,6 +633,7 @@
 				FA4CD80E1ED5D11800621D34 /* LaunchScreen.storyboard in Resources */,
 				FA175C4D1F1BAA57009AFA27 /* lessons.json in Resources */,
 				FAAB5C5D1F97B13D00AD8804 /* black.png in Resources */,
+				FAC273F81FC31AF300C3A0BC /* new-message.png in Resources */,
 				FA8198551F7CDD4000F37C0C /* Planning.storyboard in Resources */,
 				FA44BDCA1FBCB5FF00C2C7EF /* Messaging.storyboard in Resources */,
 				FA897FAB1F1139A000091D54 /* origami-7.png in Resources */,

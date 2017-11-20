@@ -18,7 +18,8 @@ class ChatViewController : UITableViewController {
     super.viewDidLoad()
     
     self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
-    self.addRightBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
+    self.addRightBarButtonWithImage(UIImage(named: "new-message")!)
+    
     let semaphore = DispatchSemaphore(value: 0)
     ApiManager.sharedInstance.fetch(endPoint: "/api/conversations") { (result: Data?) in
       self.conversations = ApiManager.parseListConversation(result: result!)
@@ -58,6 +59,10 @@ class ChatViewController : UITableViewController {
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 100.0
+  }
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    self.performSegue(withIdentifier: "SwitchToConversation", sender: nil)
   }
   
 }

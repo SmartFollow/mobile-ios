@@ -11,12 +11,17 @@ import UIKit
 class RightViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
-  @IBOutlet weak var cancel: UIBarButtonItem!
   var users = [User]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    
+    self.slideMenuController()?.removeLeftGestures()
+    self.slideMenuController()?.removeRightGestures()
+    
+    let button: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.cancel(_:)))
+    
+    self.navigationItem.leftBarButtonItem = button
     let semaphore = DispatchSemaphore(value: 0)
     ApiManager.sharedInstance.fetch(endPoint: "/api/users") { (result: Data?) in
       self.users = ApiManager.parseAllUsers(result: result)
@@ -31,7 +36,7 @@ class RightViewController: UIViewController {
     super.didReceiveMemoryWarning()
   }
   
-  @IBAction func cancel(_ sender: Any) {
+  func cancel(_ sender: Any) {
     self.slideMenuController()?.closeRight()
   }
   

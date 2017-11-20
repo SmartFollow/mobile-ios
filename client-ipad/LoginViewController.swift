@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
     
     let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
     
-    let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
+    let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController, rightMenuViewController:  UINavigationController(rootViewController: rightViewController))
     slideMenuController.automaticallyAdjustsScrollViewInsets = true
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     appDelegate.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)

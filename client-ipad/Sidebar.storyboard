@@ -52,13 +52,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGY-CC-aIi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="tPn-nx-72M">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="kg5-PI-6XP">
-                                            <connections>
-                                                <action selector="cancel:" destination="Xlb-X2-Dhb" id="gK4-Lw-jHm"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem id="tPn-nx-72M"/>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -75,7 +69,6 @@
                         <viewLayoutGuide key="safeArea" id="dVS-SE-CdS"/>
                     </view>
                     <connections>
-                        <outlet property="cancel" destination="kg5-PI-6XP" id="3B9-kD-ajo"/>
                         <outlet property="tableView" destination="QwR-Ei-OyE" id="ndb-A6-2vt"/>
                         <segue destination="xb9-n1-L8D" kind="show" identifier="SwitchToConversation" id="OWe-RL-8gv"/>
                     </connections>
