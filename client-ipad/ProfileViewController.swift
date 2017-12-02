@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController {
     super.viewDidLoad()
     self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
     profilePicture.asCircle(borderWidth: 5)
-    ApiManager.sharedInstance.fetch(endPoint: "/users/profile") { (result: Data?) in
+    ApiManager.sharedInstance.fetch(endPoint: "/api/users/profile") { (result: Data?) in
       self.saveInformationProfile(result: result)
     }
   }
@@ -33,11 +33,12 @@ class ProfileViewController: UIViewController {
     var taughtSubjectsArray = [Dictionary<String, Int>]()
     do {
       if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [String: Any] {
-        if let firstName = json["firstname"], let lastName = json["lastname"],
+        if let firstName = json["firstname"], let lastName = json["lastname"], let id = json["id"],
           let email = json["email"] as? String {
           UserDefaults.standard.set(firstName, forKey: "firstName")
           UserDefaults.standard.set(lastName, forKey: "lastName")
           UserDefaults.standard.set(email, forKey: "email")
+          UserDefaults.standard.set(id, forKey: "id")
         }
         if let group = json["group"] as? [String: AnyObject] {
           if let groupId = group["id"], let groupName = group["name"] as? String {

@@ -13,6 +13,7 @@ class Conversation: NSObject {
   let creatorId: Int
   let subject: String
   let participants: [Participant]
+  var messages = [Message]()
   
   init(id: Int, creatorId: Int, subject: String, participants: [Participant]) {
     self.id = id
@@ -28,5 +29,24 @@ class Conversation: NSObject {
     }
     return array
   }
+  
+  func sortMessageByDate() {
+    self.messages = self.messages.sorted(by: { $0.date < $1.date })
+  }
+  
+  static func isMessageFromUser(message: Message) -> Bool {
+    let userId = UserDefaults.standard.value(forKey: "id")! as! Int
+    return message.creatorId == userId
+  }
+  
+  func getParticipantAvatar(message: Message) -> UIImage? {
+    for participant in participants {
+      if participant.id == message.creatorId {
+        return participant.picture
+      }
+    }
+    return nil
+  }
+  
   
 }

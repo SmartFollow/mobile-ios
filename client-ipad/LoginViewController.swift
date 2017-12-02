@@ -11,13 +11,34 @@ import SlideMenuControllerSwift
 
 class LoginViewController: UIViewController {
   
-  
+  @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var _password: UITextField!
   @IBOutlet weak var _username: UITextField!
   @IBOutlet weak var _loginButton: UIButton!
   
   override func viewDidLoad() {
+    let regularFont:UIFont = UIFont(name: "Lato-light", size: 50)!
+    let boldFont:UIFont = UIFont(name: "Lato-bold", size: 50)!
     
+    //Making dictionaries of fonts that will be passed as an attribute
+    
+    let firstDict:NSDictionary = NSDictionary(object: regularFont, forKey:
+      NSFontAttributeName as NSCopying)
+    let boldDict:NSDictionary = NSDictionary(object: boldFont, forKey:
+      NSFontAttributeName as NSCopying)
+    
+    var firstText = "Follow"
+    let attributedString = NSMutableAttributedString(string: firstText,
+                                                     attributes: firstDict as? [String : AnyObject])
+    
+    let boldText  = "Smart"
+    let boldString = NSMutableAttributedString(string:boldText,
+                                               attributes:boldDict as? [String : AnyObject])
+    
+    boldString.append(attributedString)
+    
+    titleLabel.textAlignment = .center
+    titleLabel.attributedText = boldString
   }
   
   @IBAction func loginButton(_ sender: Any) {

@@ -14,8 +14,10 @@ class User: NSObject {
   let firstName: String
   let lastName: String
   let avatar: UIImage
+  let id: Int
   
-  init(email: String, firstName: String, lastName: String, avatarUrl: String) {
+  init(id: Int, email: String, firstName: String, lastName: String, avatarUrl: String) {
+    self.id = id
     self.email = email
     self.firstName = firstName
     self.lastName = lastName

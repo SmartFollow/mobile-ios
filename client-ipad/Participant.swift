@@ -12,10 +12,12 @@ class Participant: NSObject {
   let id: Int
   let email: String
   let firstName: String
+  let picture: UIImage
   
-  init(id: Int, email: String, firstName: String) {
+  init(id: Int, email: String, firstName: String, avatarUrl: String) {
     self.id = id
     self.email = email
     self.firstName = firstName
+    self.picture = UIImage(link: ConnectionSettings.apiBaseUrl + avatarUrl)
   }
 }

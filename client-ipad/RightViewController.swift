@@ -12,6 +12,7 @@ class RightViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   var users = [User]()
+  var conversations: [Conversation]?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -25,9 +26,13 @@ class RightViewController: UIViewController {
     let semaphore = DispatchSemaphore(value: 0)
     ApiManager.sharedInstance.fetch(endPoint: "/api/users") { (result: Data?) in
       self.users = ApiManager.parseAllUsers(result: result)
-      semaphore.signal()
+      ApiManager.sharedInstance.fetch(endPoint: "/api/conversations") { (result: Data?) in
+        self.conversations = ApiManager.parseListConversation(result: result!)
+        semaphore.signal()
+      }
     }
     semaphore.wait()
+    
     self.tableView.delegate = self
     self.tableView.dataSource = self
   }
@@ -38,6 +43,15 @@ class RightViewController: UIViewController {
   
   func cancel(_ sender: Any) {
     self.slideMenuController()?.closeRight()
+    
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "SwitchToConversation" {
+      if let destinationVC = segue.destination as? ConversationCollectionViewController {
+        destinationVC.conversation = sender as? Conversation
+      }
+    }
   }
   
 }
@@ -61,11 +75,18 @@ extension RightViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    self.performSegue(withIdentifier: "SwitchToConversation", sender: nil)
+    let user = self.users[indexPath.row]
+    ApiManager.sharedInstance.fetch(endPoint: "/api/conversations", method: "POST", parameters: "participants%5B0%5D=\(user.id)&subject=Conversation\(user.id)]", completion: { (result: Data?) in
+      let conversation = ApiManager.parseConversation(result: result)
+      self.conversations?.append(conversation!)
+      DispatchQueue.main.async {
+        self.performSegue(withIdentifier: "SwitchToConversation", sender: conversation!)
+      }
+    })
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 100
   }
-
+  
 }

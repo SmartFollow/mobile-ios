@@ -9,15 +9,6 @@
 import Foundation
 import UIKit
 
-enum Menu : Int {
-  case Profile = 0
-  case Courses
-  case Chat
-  case Planning
-  case Settings
-  case Logout
-}
-
 class LeftViewController: UIViewController {
   
   let menus = ["Profile", "Cours", "Messagerie", "Planning", "Paramètres", "Déconnexion"]

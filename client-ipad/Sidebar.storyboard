@@ -51,9 +51,6 @@
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGY-CC-aIi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <items>
-                                    <navigationItem id="tPn-nx-72M"/>
-                                </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,7 +77,7 @@
         <!--ConversationViewController-->
         <scene sceneID="QAt-Ly-hoI">
             <objects>
-                <viewControllerPlaceholder storyboardName="Messaging" referencedIdentifier="ConversationViewController" id="xb9-n1-L8D" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="ConversationViewController" storyboardName="Messaging" referencedIdentifier="ConversationViewController" id="xb9-n1-L8D" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="xzk-An-rrC"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chU-bB-Ur1" userLabel="First Responder" sceneMemberID="firstResponder"/>

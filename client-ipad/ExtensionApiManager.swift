@@ -126,8 +126,9 @@ extension ApiManager {
             var myParticipants = [Participant]()
             
             for participant in participants {
-              if let id = participant["id"], let email = participant["email"], let firstName = participant["firstname"] {
-                myParticipants.append(Participant(id: id as! Int, email: email as! String, firstName: firstName as! String))
+              if let id = participant["id"], let email = participant["email"], let firstName = participant["firstname"],
+                let avatarUrl = participant["avatar"] {
+                myParticipants.append(Participant(id: id as! Int, email: email as! String, firstName: firstName as! String, avatarUrl: avatarUrl as! String))
               }
             }
             conversations.append(Conversation(id: id as! Int, creatorId: creatorId as! Int, subject: subject as! String, participants: myParticipants))
@@ -146,9 +147,8 @@ extension ApiManager {
     do {
       if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [[String: Any]] {
         for jsonStudent in json {
-          if let firstName = jsonStudent["firstname"], let lastName = jsonStudent["lastname"], let email = jsonStudent["email"],
-          let avatar = jsonStudent["avatar"] {
-            let user = User(email: email as! String, firstName: firstName as! String, lastName: lastName as! String, avatarUrl: avatar as! String)
+          if let firstName = jsonStudent["firstname"], let lastName = jsonStudent["lastname"], let email = jsonStudent["email"], let avatar = jsonStudent["avatar"], let id = jsonStudent["id"] {
+            let user = User(id: id as! Int, email: email as! String, firstName: firstName as! String, lastName: lastName as! String, avatarUrl: avatar as! String)
             users.append(user)
           }
         }
@@ -159,4 +159,63 @@ extension ApiManager {
     }
     return users
   }
+  
+  public static func parseMessages(result: Data?, conversation: Conversation) {
+    do {
+      if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [String: Any] {
+        if let messages = json["messages"] as? [[String: Any]] {
+          for message in messages {
+            let userMessage = Message(content: message["content"] as! String, date: message["created_at"] as! String, creatorId: message["creator_id"] as! Int)
+            conversation.messages.append(userMessage)
+          }
+        }
+      }
+    }
+    catch let error as NSError {
+      print("Failed to load: \(error.localizedDescription)")
+    }
+    conversation.sortMessageByDate()
+  }
+  
+  public static func parseMessageSent(result: Data?) -> Message? {
+    var message: Message?
+    do {
+      if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [String: Any] {
+        if let id = json["id"], let creatorId = json["creator_id"], let date = json["created_at"], let content = json["content"] {
+          message = Message(content: content as! String, date: date as! String, creatorId: creatorId as! Int)
+        }
+      }
+    }
+    catch let error as NSError {
+      print("Failed to load: \(error.localizedDescription)")
+    }
+    return message
+  }
+  
+  public static func parseConversation(result: Data?) -> Conversation? {
+    var conversation: Conversation?
+    
+    do {
+      if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [String: Any] {
+          if let id = json["id"], let creatorId = json["creator_id"], let subject = json["subject"], let participants = json["participants"] as? [[String: Any]] {
+            
+            var myParticipants = [Participant]()
+            
+            for participant in participants {
+              if let id = participant["id"], let email = participant["email"], let firstName = participant["firstname"],
+                let avatarUrl = participant["avatar"] {
+                myParticipants.append(Participant(id: id as! Int, email: email as! String, firstName: firstName as! String, avatarUrl: avatarUrl as! String))
+              }
+            }
+            conversation = Conversation(id: id as! Int, creatorId: creatorId as! Int, subject: subject as! String, participants: myParticipants)
+          }
+      }
+    }
+    catch let error as NSError {
+      print("Failed to load: \(error.localizedDescription)")
+    }
+    return conversation
+  }
+  
+  
 }
