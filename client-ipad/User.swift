@@ -24,4 +24,26 @@ class User: NSObject {
     self.avatar = UIImage(link: ConnectionSettings.apiBaseUrl + avatarUrl)
   }
   
+  static func getUsers(users: [User], selections: [IndexPath]) -> [User]? {
+    var list = [User]()
+    
+    for selection in selections {
+      list.append(User.getUserAtIndex(users: users, index: selection.row)!)
+    }
+    return (list.count != 0 ? list : nil)!
+  }
+  
+  private
+  
+  static func getUserAtIndex(users: [User], index: Int) -> User? {
+    var i = 0
+    for user in users {
+      if i == index {
+        return user
+      }
+      i = i + 1
+    }
+    return nil
+  }
+  
 }

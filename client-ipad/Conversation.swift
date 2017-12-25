@@ -24,8 +24,12 @@ class Conversation: NSObject {
   
   func getParticipantsName() -> [String] {
     var array: [String] = []
+    let userId = UserDefaults.standard.value(forKey: "id")! as! Int
+    
     for participant in participants {
-      array.append(participant.firstName)
+      if participant.id != userId {
+        array.append(participant.firstName)
+      }
     }
     return array
   }
@@ -39,6 +43,24 @@ class Conversation: NSObject {
     return message.creatorId == userId
   }
   
+  static func doesUsersMatchParticipants(conversation: Conversation, users: [User]) -> Bool {
+    for user in users {
+      if isUserInParticipants(participants: conversation.participants, user: user) == false {
+        return false
+      }
+    }
+    return true
+  }
+  
+  static func getConversation(conversations: [Conversation], users: [User]) -> Conversation? {
+    for conversation in conversations {
+      if doesUsersMatchParticipants(conversation: conversation, users: users) {
+        return conversation
+      }
+    }
+    return nil
+  }
+  
   func getParticipantAvatar(message: Message) -> UIImage? {
     for participant in participants {
       if participant.id == message.creatorId {
@@ -46,6 +68,21 @@ class Conversation: NSObject {
       }
     }
     return nil
+  }
+  
+  private
+  
+  static func isUserParticipant(participant: Participant, user: User) -> Bool {
+    return participant.id == user.id
+  }
+  
+  static func isUserInParticipants(participants: [Participant], user: User) -> Bool {
+    for participant in participants {
+      if isUserParticipant(participant: participant, user: user) {
+        return true
+      }
+    }
+    return false
   }
   
   

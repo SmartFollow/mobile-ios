@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 class ConversationCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
   
@@ -39,12 +40,14 @@ class ConversationCollectionViewController: UICollectionViewController, UICollec
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navigationItem.title = self.conversation.subject
-    let semaphore = DispatchSemaphore(value: 0)
-    ApiManager.sharedInstance.fetch(endPoint: "/api/conversations/\(conversation.id)") { (result: Data?) in
-      ApiManager.parseMessages(result: result, conversation: self.conversation)
-      semaphore.signal()
+    if self.conversation.messages.count == 0 {
+      let semaphore = DispatchSemaphore(value: 0)
+      ApiManager.sharedInstance.fetch(endPoint: "/api/conversations/\(conversation.id)") { (result: Data?) in
+        ApiManager.parseMessages(result: result, conversation: self.conversation)
+        semaphore.signal()
+      }
+      semaphore.wait()
     }
-    semaphore.wait()
     
     collectionView?.register(BubbleCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     view.addSubview(messageInputContainerView)
@@ -64,6 +67,25 @@ class ConversationCollectionViewController: UICollectionViewController, UICollec
     let count = self.conversation.messages.count
     let indexPath = IndexPath(item: count, section: 0)
     self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: true)
+  }
+  
+  @objc func back(_sender: UIBarButtonItem) {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let sideBar = UIStoryboard(name: "Sidebar", bundle: nil)
+    let messaging = UIStoryboard(name: "Messaging", bundle: nil)
+    let bounds = UIScreen.main.bounds
+    
+  
+    let chatViewController = messaging.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+    let rightViewController = sideBar.instantiateViewController(withIdentifier: "RightViewController") as! RightViewController
+    let leftViewController = storyboard.instantiateViewController(withIdentifier: "LeftViewController") as! LeftViewController
+    SlideMenuOptions.rightViewWidth = bounds.size.width
+    
+    let nvc: UINavigationController = UINavigationController(rootViewController: chatViewController)
+    let rightNaviguationController = UINavigationController(rootViewController: rightViewController)
+    
+    let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController, rightMenuViewController:  rightNaviguationController)
+    self.present(slideMenuController, animated: true, completion: nil)
   }
   
   @objc private func handleSend() {
