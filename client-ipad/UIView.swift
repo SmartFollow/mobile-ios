@@ -61,4 +61,12 @@ extension UIView {
     
   }
   
+  func viewWithRestorationTag(str: String) -> UIView? {
+    for view in self.subviews {
+      if view.restorationIdentifier == str {
+        return view
+      }
+    }
+    return nil
+  }
 }

@@ -10,10 +10,8 @@ import Foundation
 
 enum Menu : Int {
   case Profile = 0
-  case Courses
   case Chat
   case Planning
-  case Settings
   case Logout
 }
 

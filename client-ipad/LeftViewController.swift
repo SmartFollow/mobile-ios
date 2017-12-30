@@ -11,7 +11,7 @@ import UIKit
 
 class LeftViewController: UIViewController {
   
-  let menus = ["Profile", "Cours", "Messagerie", "Planning", "Paramètres", "Déconnexion"]
+  let menus = ["Profile", "Messagerie", "Planning", "Déconnexion"]
   var chatViewController: UIViewController!
   var profileViewController: UIViewController!
   var coursesViewController: UIViewController!
@@ -34,9 +34,6 @@ class LeftViewController: UIViewController {
     let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController")
     self.profileViewController = UINavigationController(rootViewController: profileViewController)
     
-    let coursesViewController = coursesStoryboard.instantiateViewController(withIdentifier: "LessonViewController")
-    self.coursesViewController = UINavigationController(rootViewController: coursesViewController)
-    
     let planningViewController = planningStoryBoard.instantiateViewController(withIdentifier: "PlanningViewController")
     self.planningViewController = UINavigationController(rootViewController: planningViewController)
     
@@ -46,6 +43,16 @@ class LeftViewController: UIViewController {
     self.tableView.tableFooterView = UIView()
     
     self.tableView.backgroundColor = UIColor.init(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha: 1.0)
+  }
+  
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    for section in 0...self.tableView.numberOfSections - 1 {
+      for row in 0...self.tableView.numberOfRows(inSection: section) - 1 {
+        let indexPath = IndexPath(row: row, section: section)
+        tableView.deselectRow(at: indexPath, animated: true)
+      }
+    }
   }
   
   func Logout() {
@@ -88,10 +95,6 @@ extension LeftViewController: UITableViewDelegate {
         self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true)
       case .Profile:
         self.slideMenuController()?.changeMainViewController(self.profileViewController, close: true)
-      case .Courses:
-        self.slideMenuController()?.changeMainViewController(self.coursesViewController, close: true)
-      case .Settings:
-        self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true)
       case .Planning:
         self.slideMenuController()?.changeMainViewController(self.planningViewController, close: true)
       case .Logout:

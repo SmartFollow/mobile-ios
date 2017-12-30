@@ -12,6 +12,44 @@ import UIKit
 
 extension ApiManager {
   
+  public static func saveInformationProfile(result: Data?) -> Void {
+    var taughtSubjectsArray = [Dictionary<String, Int>]()
+    do {
+      if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [String: Any] {
+        if let firstName = json["firstname"], let lastName = json["lastname"], let id = json["id"],
+          let email = json["email"] as? String {
+          UserDefaults.standard.set(firstName, forKey: "firstName")
+          UserDefaults.standard.set(lastName, forKey: "lastName")
+          UserDefaults.standard.set(email, forKey: "email")
+          UserDefaults.standard.set(id, forKey: "id")
+        }
+        if let group = json["group"] as? [String: AnyObject] {
+          if let groupId = group["id"], let groupName = group["name"] as? String {
+            UserDefaults.standard.set(groupId, forKey: "groupId")
+            UserDefaults.standard.set(groupName, forKey: "groupName")
+          }
+        }
+        if let taughtSubjects = json["taught_subjects"] as? [[String: Any]] {
+          for subject in taughtSubjects {
+            if let id = subject["id"] as? Int,
+              let levelId = subject["level_id"] as? Int {
+              taughtSubjectsArray.append(["id": id, "levelId": levelId])
+            }
+          }
+          UserDefaults.standard.set(taughtSubjectsArray, forKey: "taughtSubjects")
+          let a = UserDefaults.standard.object(forKey: "taughtSubjects") as! [Dictionary<String, Int>]
+          //                    for b in a {
+          //                        print(b["id"]!)
+          //                        print(b["levelId"]!)
+          //                    }
+        }
+      }
+      
+    } catch let error as NSError {
+      print("Failed to load: \(error.localizedDescription)")
+    }
+  }
+  
   public static func parseLessons(result: Data?) -> [Lesson] {
     var lessons = [Lesson]()
     do {
@@ -197,24 +235,46 @@ extension ApiManager {
     
     do {
       if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [String: Any] {
-          if let id = json["id"], let creatorId = json["creator_id"], let subject = json["subject"], let participants = json["participants"] as? [[String: Any]] {
-            
-            var myParticipants = [Participant]()
-            
-            for participant in participants {
-              if let id = participant["id"], let email = participant["email"], let firstName = participant["firstname"],
-                let avatarUrl = participant["avatar"] {
-                myParticipants.append(Participant(id: id as! Int, email: email as! String, firstName: firstName as! String, avatarUrl: avatarUrl as! String))
-              }
+        if let id = json["id"], let creatorId = json["creator_id"], let subject = json["subject"], let participants = json["participants"] as? [[String: Any]] {
+          
+          var myParticipants = [Participant]()
+          
+          for participant in participants {
+            if let id = participant["id"], let email = participant["email"], let firstName = participant["firstname"],
+              let avatarUrl = participant["avatar"] {
+              myParticipants.append(Participant(id: id as! Int, email: email as! String, firstName: firstName as! String, avatarUrl: avatarUrl as! String))
             }
-            conversation = Conversation(id: id as! Int, creatorId: creatorId as! Int, subject: subject as! String, participants: myParticipants)
           }
+          conversation = Conversation(id: id as! Int, creatorId: creatorId as! Int, subject: subject as! String, participants: myParticipants)
+        }
       }
     }
     catch let error as NSError {
       print("Failed to load: \(error.localizedDescription)")
     }
     return conversation
+  }
+  
+  public static func parseDifficulty(result: Data?) -> [Student] {
+    var students =  [Student]()
+    do {
+      if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [String: Any] {
+        if let difficulties = json["self_difficulties"] as? [[String: Any]] {
+          for difficulty in difficulties {
+            if let student = difficulty["student"] as? [String: Any] {
+              if let id = student["id"], let email = student["email"], let firstName = student["firstname"], let lastName = student["lastname"], let avatar = student["avatar"], let classId = student["class_id"], let groupId = student["group_id"] {
+                let entityStudent = Student(id: id as! Int, email: email as! String, firstName: firstName as! String, lastName: lastName as! String, classId: classId as! Int, groupId: groupId as! Int, avatarUrl: avatar as! String)
+                students.append(entityStudent)
+              }
+            }
+          }
+        }
+      }
+    }
+    catch let error as NSError {
+      print("Failed to load: \(error.localizedDescription)")
+    }
+    return students
   }
   
   

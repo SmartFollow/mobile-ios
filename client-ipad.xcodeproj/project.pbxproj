@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC30F6126EF91E71D13C4D1D /* Pods_client_ipad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839EA730BC92EAA6E1E12A1C /* Pods_client_ipad.framework */; };
+		FA07FF551FF2A2C300E108D4 /* UIButtonStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07FF541FF2A2C300E108D4 /* UIButtonStudent.swift */; };
 		FA0CEE261EEF3FC5008BBD1F /* Logo-black.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA0CEE251EEF3FC5008BBD1F /* Logo-black.jpg */; };
 		FA11FBAB1F8FCD3300E04FB9 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11FBAA1F8FCD3300E04FB9 /* Date.swift */; };
 		FA1375711FA0DF5C0041E417 /* UITableViewLessonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1375701FA0DF5C0041E417 /* UITableViewLessonController.swift */; };
@@ -59,6 +60,8 @@
 		FA4CD83E1ED608A900621D34 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4CD83D1ED608A900621D34 /* LoginService.swift */; };
 		FA4CD8401ED60BE800621D34 /* ConnectionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4CD83F1ED60BE800621D34 /* ConnectionSettings.swift */; };
 		FA60525A1EEC6A8C001D6475 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6052591EEC6A8C001D6475 /* LeftViewController.swift */; };
+		FA65301F1FF54D1300956512 /* ViewWrapper.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA65301E1FF54D1300956512 /* ViewWrapper.xib */; };
+		FA6530211FF54D4300956512 /* ViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6530201FF54D4300956512 /* ViewWrapper.swift */; };
 		FA67E83A1F97964E00EEB0C7 /* SegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67E8391F97964E00EEB0C7 /* SegmentController.swift */; };
 		FA6C59D31EF593E900BB4083 /* Login-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA6C59D21EF593E900BB4083 /* Login-logo.jpg */; };
 		FA7B4AC31FA0BE70009C53F4 /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B4AC21FA0BE70009C53F4 /* StudentCell.swift */; };
@@ -91,6 +94,8 @@
 		FAD1D0FE1F8E794F00F480ED /* PlanningProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1D0FD1F8E794F00F480ED /* PlanningProtocol.swift */; };
 		FADAEC3E1FBD907900705664 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAEC3D1FBD907900705664 /* ConversationCell.swift */; };
 		FADF6D271FBA355F0093ABE1 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADF6D261FBA355F0093ABE1 /* Position.swift */; };
+		FAE617D81FF2893A0071B72E /* StudentsInDifficultiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE617D71FF2893A0071B72E /* StudentsInDifficultiesController.swift */; };
+		FAE617DA1FF28AC40071B72E /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE617D91FF28AC40071B72E /* Difficulty.swift */; };
 		FAE8CF021F9E748400855715 /* Criterion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8CF011F9E748400855715 /* Criterion.swift */; };
 		FAE8CF041F9E80CD00855715 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8CF031F9E80CD00855715 /* UIAlertController.swift */; };
 		FAEF45121EF3092C00EA62CD /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF45111EF3092C00EA62CD /* UIImageView.swift */; };
@@ -117,6 +122,7 @@
 		044886DC2297C2644CF89F19 /* Pods-client-ipad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-client-ipad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-client-ipad/Pods-client-ipad.debug.xcconfig"; sourceTree = "<group>"; };
 		36FC25DD1243A28B35C73416 /* Pods-client-ipad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-client-ipad.release.xcconfig"; path = "Pods/Target Support Files/Pods-client-ipad/Pods-client-ipad.release.xcconfig"; sourceTree = "<group>"; };
 		839EA730BC92EAA6E1E12A1C /* Pods_client_ipad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_client_ipad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA07FF541FF2A2C300E108D4 /* UIButtonStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonStudent.swift; sourceTree = "<group>"; };
 		FA0CEE251EEF3FC5008BBD1F /* Logo-black.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Logo-black.jpg"; sourceTree = "<group>"; };
 		FA11FBAA1F8FCD3300E04FB9 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		FA1375701FA0DF5C0041E417 /* UITableViewLessonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewLessonController.swift; sourceTree = "<group>"; };
@@ -174,6 +180,8 @@
 		FA4CD83D1ED608A900621D34 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		FA4CD83F1ED60BE800621D34 /* ConnectionSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionSettings.swift; sourceTree = "<group>"; };
 		FA6052591EEC6A8C001D6475 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		FA65301E1FF54D1300956512 /* ViewWrapper.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewWrapper.xib; sourceTree = "<group>"; };
+		FA6530201FF54D4300956512 /* ViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWrapper.swift; sourceTree = "<group>"; };
 		FA67E8391F97964E00EEB0C7 /* SegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentController.swift; sourceTree = "<group>"; };
 		FA6C59D21EF593E900BB4083 /* Login-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Login-logo.jpg"; sourceTree = "<group>"; };
 		FA7B4AC21FA0BE70009C53F4 /* StudentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCell.swift; sourceTree = "<group>"; };
@@ -206,6 +214,8 @@
 		FAD1D0FD1F8E794F00F480ED /* PlanningProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningProtocol.swift; sourceTree = "<group>"; };
 		FADAEC3D1FBD907900705664 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		FADF6D261FBA355F0093ABE1 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		FAE617D71FF2893A0071B72E /* StudentsInDifficultiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsInDifficultiesController.swift; sourceTree = "<group>"; };
+		FAE617D91FF28AC40071B72E /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		FAE8CF011F9E748400855715 /* Criterion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Criterion.swift; sourceTree = "<group>"; };
 		FAE8CF031F9E80CD00855715 /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		FAEF45111EF3092C00EA62CD /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
@@ -254,6 +264,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FA07FF531FF2A23700E108D4 /* WidgetDifficulties */ = {
+			isa = PBXGroup;
+			children = (
+				FA07FF541FF2A2C300E108D4 /* UIButtonStudent.swift */,
+				FA65301E1FF54D1300956512 /* ViewWrapper.xib */,
+				FA6530201FF54D4300956512 /* ViewWrapper.swift */,
+			);
+			name = WidgetDifficulties;
+			sourceTree = "<group>";
+		};
 		FA175C501F1BD20C009AFA27 /* jsonResponse */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,7 +292,6 @@
 				FA8198501F7CDA6300F37C0C /* Planning */,
 				FA6052581EEC6A70001D6475 /* Profile */,
 				FAB1A2771EEEB1C50020566B /* Chat */,
-				FA3F038F1F09792B00B0A51F /* Course */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -315,7 +334,7 @@
 			name = SideBar;
 			sourceTree = "<group>";
 		};
-		FA3F038F1F09792B00B0A51F /* Course */ = {
+		FA3F038F1F09792B00B0A51F /* CourseFlow */ = {
 			isa = PBXGroup;
 			children = (
 				FA19E5771F23C1DC00CE02C5 /* RollCallUIView.swift */,
@@ -327,7 +346,7 @@
 				FA7B4AC21FA0BE70009C53F4 /* StudentCell.swift */,
 				FA1375701FA0DF5C0041E417 /* UITableViewLessonController.swift */,
 			);
-			name = Course;
+			name = CourseFlow;
 			sourceTree = "<group>";
 		};
 		FA4CD7F71ED5D11800621D34 = {
@@ -392,7 +411,9 @@
 		FA6052581EEC6A70001D6475 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				FA07FF531FF2A23700E108D4 /* WidgetDifficulties */,
 				FA4CD8051ED5D11800621D34 /* ProfileViewController.swift */,
+				FAE617D71FF2893A0071B72E /* StudentsInDifficultiesController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -408,6 +429,7 @@
 		FA8198501F7CDA6300F37C0C /* Planning */ = {
 			isa = PBXGroup;
 			children = (
+				FA3F038F1F09792B00B0A51F /* CourseFlow */,
 				FA8198511F7CDA7700F37C0C /* PlanningViewController.swift */,
 				FA27C4DF1F7D21FB0004E953 /* ActivitiesColumn.swift */,
 				FA27C4E11F7D29D20004E953 /* HoursColumn.swift */,
@@ -441,6 +463,7 @@
 				FA48C4291FBDC11C0036856F /* Participant.swift */,
 				FA20D9841FBF2C6C00D17621 /* User.swift */,
 				FA45C4A41FC45BDE00C0824B /* Message.swift */,
+				FAE617D91FF28AC40071B72E /* Difficulty.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -675,6 +698,7 @@
 				FAAB5C5E1F97B13D00AD8804 /* red.png in Resources */,
 				FA1F311F1FC36EBE003CFE8A /* new-message.png in Resources */,
 				FA20D9831FBF10E600D17621 /* Sidebar.storyboard in Resources */,
+				FA65301F1FF54D1300956512 /* ViewWrapper.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,6 +795,7 @@
 				FA92FDF81F81298C0023CEBC /* CasePlanning.swift in Sources */,
 				FA4C69271F9E2BEA001F8E2E /* RollCallButtonExtension.swift in Sources */,
 				FAD1D0FE1F8E794F00F480ED /* PlanningProtocol.swift in Sources */,
+				FA07FF551FF2A2C300E108D4 /* UIButtonStudent.swift in Sources */,
 				FABC4E9E1FC4A6690032354D /* Menu.swift in Sources */,
 				FABD9AF81F8927D80003595B /* ExtensionApiManager.swift in Sources */,
 				FA8198581F7CDE2C00F37C0C /* HoursCell.swift in Sources */,
@@ -795,6 +820,7 @@
 				FA4CD8401ED60BE800621D34 /* ConnectionSettings.swift in Sources */,
 				FA4CD83E1ED608A900621D34 /* LoginService.swift in Sources */,
 				FAE8CF021F9E748400855715 /* Criterion.swift in Sources */,
+				FAE617DA1FF28AC40071B72E /* Difficulty.swift in Sources */,
 				FA27C4E21F7D29D20004E953 /* HoursColumn.swift in Sources */,
 				FA20D9811FBF0ED500D17621 /* RecipientCell.swift in Sources */,
 				FA897FB71F11710D00091D54 /* Lesson.swift in Sources */,
@@ -806,7 +832,9 @@
 				FA27C4E81F7D53720004E953 /* Reservation.swift in Sources */,
 				FA175C561F1BDEB7009AFA27 /* Student.swift in Sources */,
 				FA4CD8041ED5D11800621D34 /* AppDelegate.swift in Sources */,
+				FA6530211FF54D4300956512 /* ViewWrapper.swift in Sources */,
 				FA67E83A1F97964E00EEB0C7 /* SegmentController.swift in Sources */,
+				FAE617D81FF2893A0071B72E /* StudentsInDifficultiesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

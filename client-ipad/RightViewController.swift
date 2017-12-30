@@ -18,7 +18,6 @@ class RightViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.slideMenuController()?.removeLeftGestures()
     self.slideMenuController()?.removeRightGestures()
     
     let button: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.cancel(_:)))

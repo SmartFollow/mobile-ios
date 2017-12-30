@@ -209,22 +209,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "client-ipad/LessonViewController.swift"
-            timestampString = "535924724.493595"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "client-ipad/ConversationCollectionViewController.swift"
             timestampString = "535919840.303593"
             startingColumnNumber = "9223372036854775807"
@@ -241,24 +225,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "client-ipad/ChatViewController.swift"
-            timestampString = "535924724.495494"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Pods/SlideMenuControllerSwift/Source/SlideMenuController.swift"
-            timestampString = "535647874.16394"
+            timestampString = "536169467.320013"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1047"
@@ -274,7 +242,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/SlideMenuControllerSwift/Source/SlideMenuController.swift"
-            timestampString = "535647874.163988"
+            timestampString = "536169467.320102"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "219"
@@ -286,11 +254,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/SlideMenuControllerSwift/Source/SlideMenuController.swift"
-            timestampString = "535647874.164031"
+            timestampString = "536169467.32015"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "217"
@@ -306,7 +274,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/SlideMenuControllerSwift/Source/SlideMenuController.swift"
-            timestampString = "535647874.164073"
+            timestampString = "536169467.320192"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1038"
@@ -322,7 +290,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/SlideMenuControllerSwift/Source/SlideMenuController.swift"
-            timestampString = "535647874.164114"
+            timestampString = "536169467.320231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1039"
@@ -398,16 +366,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "client-ipad/ChatViewController.swift"
-            timestampString = "535924724.496112"
+            filePath = "client-ipad/ButtonWrapper.swift"
+            timestampString = "536170426.750284"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "viewDidAppear(_:)"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "init(frame:student:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

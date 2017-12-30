@@ -18,9 +18,10 @@ class Student: NSObject {
   let groupId: Int
   var avatar: UIImage
   var evaluation: Evaluation?
+  var difficulty: [Difficulty]
   
   init(id: Int, email: String, firstName: String, lastName: String, classId: Int, groupId: Int, evaluation: Evaluation? = nil,
-       avatarUrl: String) {
+       avatarUrl: String, difficulty: [Difficulty] = [Difficulty]()) {
     self.id = id
     self.email = email
     self.firstName = firstName
@@ -29,5 +30,6 @@ class Student: NSObject {
     self.groupId = groupId
     self.evaluation = evaluation
     self.avatar = UIImage(link: ConnectionSettings.apiBaseUrl + avatarUrl)
+    self.difficulty = difficulty
   }
 }
