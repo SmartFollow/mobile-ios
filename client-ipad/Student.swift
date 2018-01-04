@@ -6,27 +6,30 @@
 //  Copyright © 2017 Alexandre Page. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Student: NSObject {
-    
-    let id: Int
-    let email: String
-    let firstName: String
-    let lastName: String
-    let classId: Int
-    let groupId: Int
-    var evaluation: Evaluation?
-    
-    
-    init(id: Int, email: String, firstName: String, lastName: String, classId: Int, groupId: Int, evaluation: Evaluation? = nil) {
-        self.id = id
-        self.email = email
-        self.firstName = firstName
-        self.lastName = lastName
-        self.classId = classId
-        self.groupId = groupId
-        self.evaluation = evaluation
-    }
-
+  
+  let id: Int
+  let email: String
+  let firstName: String
+  let lastName: String
+  let classId: Int
+  let groupId: Int
+  var avatar: UIImage
+  var evaluation: Evaluation?
+  var difficulty: [Difficulty]
+  
+  init(id: Int, email: String, firstName: String, lastName: String, classId: Int, groupId: Int, evaluation: Evaluation? = nil,
+       avatarUrl: String, difficulty: [Difficulty] = [Difficulty]()) {
+    self.id = id
+    self.email = email
+    self.firstName = firstName
+    self.lastName = lastName
+    self.classId = classId
+    self.groupId = groupId
+    self.evaluation = evaluation
+    self.avatar = UIImage(link: ConnectionSettings.apiBaseUrl + avatarUrl)
+    self.difficulty = difficulty
+  }
 }

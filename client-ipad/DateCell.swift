@@ -10,8 +10,8 @@ import UIKit
 import JTAppleCalendar
 
 class DateCell: JTAppleCell {
-    @IBOutlet weak var dayNumber: UILabel!
-    @IBOutlet weak var day: UILabel!
-    @IBOutlet weak var circle: UIView!
-    @IBOutlet weak var viewCell: UIView!
+  @IBOutlet weak var dayNumber: UILabel!
+  @IBOutlet weak var day: UILabel!
+  @IBOutlet weak var circle: UIView!
+  @IBOutlet weak var viewCell: UIView!
 }

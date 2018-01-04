@@ -10,14 +10,14 @@
 import UIKit
 
 class Delay: NSObject {
-    
-    let id: Int
-    let arrivedAt: String
-    let evaluationId: Int
-    
-    init(id: Int, evaluationId: Int, arrivedAt: String) {
-        self.id = id
-        self.arrivedAt = arrivedAt
-        self.evaluationId = evaluationId
-    }
+  
+  let id: Int
+  let arrivedAt: String
+  let evaluationId: Int
+  
+  init(id: Int, evaluationId: Int, arrivedAt: String) {
+    self.id = id
+    self.arrivedAt = arrivedAt
+    self.evaluationId = evaluationId
+  }
 }

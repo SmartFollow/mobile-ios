@@ -209,13 +209,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "client-ipad/PlanningViewController.swift"
-            timestampString = "530470638.424194"
+            filePath = "client-ipad/ConversationCollectionViewController.swift"
+            timestampString = "535919840.303593"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "configureCell(customCell:cellState:date:)"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -225,13 +225,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "client-ipad/PlanningViewController.swift"
-            timestampString = "530470638.424261"
+            filePath = "Pods/SlideMenuControllerSwift/Source/SlideMenuController.swift"
+            timestampString = "536169467.320013"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "configureCell(customCell:cellState:date:)"
+            startingLineNumber = "1047"
+            endingLineNumber = "1047"
+            landmarkName = "toggleLeft()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -241,13 +241,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "client-ipad/PlanningViewController.swift"
-            timestampString = "530470638.424311"
+            filePath = "Pods/SlideMenuControllerSwift/Source/SlideMenuController.swift"
+            timestampString = "536169467.320102"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "addReservationOnView(customCell:cellState:date:)"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
+            landmarkName = "openLeft()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -257,13 +257,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "client-ipad/PlanningViewController.swift"
-            timestampString = "530470638.424358"
+            filePath = "Pods/SlideMenuControllerSwift/Source/SlideMenuController.swift"
+            timestampString = "536169467.32015"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "fetchSchedule()"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
+            landmarkName = "openLeft()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -273,13 +273,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "client-ipad/PlanningViewController.swift"
-            timestampString = "530470638.424403"
+            filePath = "Pods/SlideMenuControllerSwift/Source/SlideMenuController.swift"
+            timestampString = "536169467.320192"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "addReservationOnView(customCell:cellState:date:)"
+            startingLineNumber = "1038"
+            endingLineNumber = "1038"
+            landmarkName = "addLeftBarButtonWithImage(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -289,13 +289,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "client-ipad/PlanningViewController.swift"
-            timestampString = "530470638.424447"
+            filePath = "Pods/SlideMenuControllerSwift/Source/SlideMenuController.swift"
+            timestampString = "536169467.320231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "addReservationOnView(customCell:cellState:date:)"
+            startingLineNumber = "1039"
+            endingLineNumber = "1039"
+            landmarkName = "addLeftBarButtonWithImage(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -305,28 +305,188 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "client-ipad/CasePlanning.swift"
-            timestampString = "530377972.035769"
+            filePath = "client-ipad/LoginService.swift"
+            timestampString = "535919202.741753"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "loginWithCompletionHandler(username:password:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "client_ipad.LoginService.loginWithCompletionHandler(username: Swift.String, password: Swift.String, completionHandler: Swift.ImplicitlyUnwrappedOptional&lt;(Swift.Optional&lt;Swift.String&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "client-ipad"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alex/Projects/ios-tablet/client-ipad/LoginService.swift"
+                  timestampString = "535733173.320054"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;client_ipad.LoginService.OAuthInfo&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in client_ipad.LoginService.loginWithCompletionHandler(username: Swift.String, password: Swift.String, completionHandler: Swift.ImplicitlyUnwrappedOptional&lt;(Swift.Optional&lt;Swift.String&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "client-ipad"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alex/Projects/ios-tablet/client-ipad/LoginService.swift"
+                  timestampString = "535733173.321485"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "383">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "client-ipad/LoginService.swift"
+            timestampString = "535919202.742084"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "exchangeTokenForUserAccessTokenWithCompletionHandler(username:password:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "client-ipad/ButtonWrapper.swift"
+            timestampString = "536170426.750284"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "init(frame:student:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "client-ipad/ViewWrapper.swift"
+            timestampString = "536352455.825642"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "init(frame:student:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "client-ipad/ApiManager.swift"
+            timestampString = "536410149.730766"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "fetch(endPoint:method:parameters:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "client-ipad/ApiManager.swift"
+            timestampString = "536410163.575935"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "fetch(endPoint:method:parameters:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "client-ipad/RollCallButtonExtension.swift"
+            timestampString = "536411999.379573"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "removeDelay(evaluation:delay:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "client_ipad.StudentButton.removeDelay(evaluation: client_ipad.Evaluation, delay: client_ipad.Delay) -&gt; ()"
+                  moduleName = "client-ipad"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alex/Projects/ios-tablet/client-ipad/RollCallButtonExtension.swift"
+                  timestampString = "536411234.938831"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;) -&gt; () in client_ipad.StudentButton.removeDelay(evaluation: client_ipad.Evaluation, delay: client_ipad.Delay) -&gt; ()"
+                  moduleName = "client-ipad"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alex/Projects/ios-tablet/client-ipad/RollCallButtonExtension.swift"
+                  timestampString = "536411234.941469"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "client-ipad/ExtensionApiManager.swift"
+            timestampString = "536776077.889106"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
             endingLineNumber = "93"
-            landmarkName = "handleTap(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "530470638.424512"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
             landmarkName = "parseClassStudent(result:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -338,11 +498,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "530470638.42457"
+            timestampString = "536776077.889357"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "parseClassStudent(result:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -354,76 +514,124 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "530470638.425208"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "parseEvaluation(result:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "530470638.425269"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "parseEvaluation(result:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "530470638.425326"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "parseEvaluation(result:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "530470638.425402"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "parseDelay(result:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "530470638.425456"
+            timestampString = "536776077.889471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
             endingLineNumber = "109"
-            landmarkName = "parseAbsence(result:)"
+            landmarkName = "parseClassStudent(result:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "client-ipad/StudentButton.swift"
+            timestampString = "536772503.820329"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "postAbsence()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "client-ipad/StudentButton.swift"
+            timestampString = "536772505.542807"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "postAbsence()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "client_ipad.StudentButton.postAbsence() -&gt; ()"
+                  moduleName = "client-ipad"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alex/Projects/ios-tablet/client-ipad/StudentButton.swift"
+                  timestampString = "536772505.758403"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "195">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;) -&gt; () in client_ipad.StudentButton.postAbsence() -&gt; ()"
+                  moduleName = "client-ipad"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alex/Projects/ios-tablet/client-ipad/StudentButton.swift"
+                  timestampString = "536772505.760471"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "26">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "client-ipad/StudentButton.swift"
+            timestampString = "536772506.590768"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "postAbsence()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "client-ipad/ExtensionApiManager.swift"
+            timestampString = "536776077.889589"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "parseClassStudent(result:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "client-ipad/ExtensionApiManager.swift"
+            timestampString = "536776077.889646"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "parseClassStudent(result:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
