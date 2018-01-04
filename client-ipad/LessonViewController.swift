@@ -27,7 +27,7 @@ class LessonViewController: UIViewController {
         super.viewDidLoad()
         
         let semaphore = DispatchSemaphore(value: 0)
-        ApiManager.sharedInstance.fetch(endPoint: "/api/student-classes/\(self.lesson.studentClassId)/students") { (result: Data?) in
+        ApiManager.sharedInstance.fetch(endPoint: "/api/lessons/\(self.lesson.id)") { (result: Data?) in
             self.students = ApiManager.parseClassStudent(result: result)
             semaphore.signal()
         }

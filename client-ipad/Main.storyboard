@@ -57,7 +57,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="thea.reinger@example.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="68e-6g-4Ji" userLabel="Username Text Field">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="teacher@example.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="68e-6g-4Ji" userLabel="Username Text Field">
                                         <rect key="frame" x="48" y="259" width="305" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="305" id="Hi6-US-0PJ"/>

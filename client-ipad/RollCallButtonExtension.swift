@@ -22,7 +22,7 @@ extension StudentButton {
         }
         createDelay(evaluation: evaluation)
       case 2:
-        if let delay = self.delay {
+        if let delay = self.delay, let evaluation = self.student.evaluation {
           removeDelay(evaluation: evaluation, delay: delay)
         }
       default:
@@ -43,6 +43,7 @@ extension StudentButton {
   }
   
   public func removeDelay(evaluation: Evaluation, delay: Delay) {
+    
     ApiManager.sharedInstance.fetch(endPoint: "/api/evaluations/\(evaluation.id)/delays/\(delay.id)", method: "DELETE", completion: { (result: Data?) in
       self.finishAnimation()
     })

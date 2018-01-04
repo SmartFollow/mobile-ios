@@ -89,16 +89,45 @@ extension ApiManager {
     return reservations
   }
   
-  public static func parseClassStudent(result: Data?) -> [Student] {
+  public static func parseClassStudent(result: Data?) -> [Student]? {
     var studentClass = [Student]()
     do {
-      if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [[String: Any]] {
-        for jsonStudent in json {
-          if let id = jsonStudent["id"], let email = jsonStudent["email"], let firstName = jsonStudent["firstname"], let lastName = jsonStudent["lastname"], let classId = jsonStudent["class_id"], let groupId = jsonStudent["group_id"],
-            let avatar = jsonStudent["avatar"]{
-            let student = Student(id: id as! Int, email: email as! String, firstName: firstName as! String, lastName: lastName as! String, classId: classId as! Int, groupId: groupId as! Int, avatarUrl: avatar as! String)
-            studentClass.append(student)
+      if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [String: Any] {
+        guard let student_class = json["student_class"] as? [String: Any] else { return nil }
+        guard let students = student_class["students"] as? [[String: Any]] else { return nil }
+        for student in students {
+          guard let id = student["id"] else { return nil }
+          guard let email = student["email"] else { return nil }
+          guard let firstName = student["firstname"] else { return nil }
+          guard let lastName = student["lastname"] else { return nil }
+          guard let classId = student["class_id"] else { return nil }
+          guard let groupIpd = student["group_id"] else { return nil }
+          guard let avatar = student["avatar"] else { return nil }
+          let myStudent = Student(id: id as! Int, email: email as! String, firstName: firstName as! String, lastName: lastName as! String, classId: classId as! Int, groupId: groupIpd as! Int, avatarUrl: avatar as! String)
+          
+          if let evaluation = student["lesson_evaluation"] as? [String: Any] {
+            guard let id = evaluation["id"] else { return nil }
+            guard let studentId = evaluation["student_id"] else { return nil }
+            guard let lessonId = evaluation["lesson_id"] else { return nil }
+            let myEvaluation = Evaluation(id: id as! Int, studentId: studentId as! Int, lessonId: lessonId as! Int)
+            
+            if let absence = evaluation["absence"] as? [String: Any] {
+              guard let id = absence["id"] else { return nil }
+              guard let evaluationId = absence["evaluation_id"] else { return nil }
+              let myAbsence = Absence(id: id as! Int, evaluationId: evaluationId as! Int)
+              myEvaluation.absence = myAbsence
+            }
+            
+            if let delay = evaluation["delay"] as? [String: Any] {
+              guard let id = delay["id"] else { return nil }
+              guard let evaluationId = delay["evaluation_id"] else { return nil }
+              guard let arrivedAt = delay["arrived_at"] else { return nil }
+              let myDelay = Delay(id: id as! Int, evaluationId: evaluationId as! Int, arrivedAt: arrivedAt as! String)
+              myEvaluation.delay = myDelay
+            }
+            myStudent.evaluation = myEvaluation
           }
+          studentClass.append(myStudent)
         }
       }
     }

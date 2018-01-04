@@ -35,8 +35,12 @@ class PlanningViewController: UIViewController, ViewProtocol {
     calendarView.scrollDirection = .horizontal
     columnHours.delegate = self.hoursManager
     columnHours.dataSource = self.hoursManager
-    fetchSchedule()
     initCaseCalendar()
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    fetchSchedule()
   }
   
   func performSegueFromView(event: Planning) {

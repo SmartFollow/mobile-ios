@@ -17,8 +17,8 @@ public struct ConnectionSettings {
   static let clientSecret = "I1GzJFdSwkKGCpxUWkHvaMLJqqPdbLAHjf3ZFVnB"
   static var apiBaseUrl = "http://api.dev.smartfollow.lan"
   #else
-  static let clientSecret = "IT1tAxoBLlzOJeE5gOoNqq2LOZws1EV5rfc7tZW2"
-  static var apiBaseUrl = "http://api.dev.smartfollow.org"
+  static let clientSecret = "fpWbyzAyOqQgugwnNZKIzxnbLuF5E5ZBK3Puf2IK"
+  static var apiBaseUrl = "http://api.eip.mmo-trick.org"
   #endif
   
   #if RELEASE

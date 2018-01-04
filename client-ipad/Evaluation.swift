@@ -14,12 +14,17 @@ class Evaluation: NSObject {
   let studentId: Int
   let lessonId: Int
   let comment: String?
+  var absence: Absence?
+  var delay: Delay?
   
-  init(id: Int, studentId: Int, lessonId: Int, comment: String? = nil) {
+  init(id: Int, studentId: Int, lessonId: Int, comment: String? = nil, absence: Absence? = nil,
+        delay: Delay? = nil) {
     self.id = id
     self.studentId = studentId
     self.lessonId = lessonId
     self.comment = comment
+    self.absence = absence
+    self.delay = delay
   }
   
 }

@@ -22,7 +22,13 @@ class RollCallUIView: UIView {
     studentName.text = "\(student.firstName) \(student.lastName)"
     studentName.textAlignment = .center
     studentName.textColor = UIColor.black
-    studentState.text = "Présent"
+    if student.evaluation?.absence != nil {
+        self.studentState.text = "Absent"
+    } else if student.evaluation?.delay != nil{
+      self.studentState.text = "En retard"
+    } else {
+      studentState.text = "Présent"
+    }
     studentState.textColor = UIColor.black
     studentState.textAlignment = .center
     self.addSubview(studentState)
