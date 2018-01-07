@@ -482,7 +482,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "536776077.889106"
+            timestampString = "537040045.474291"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
@@ -498,7 +498,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "536776077.889357"
+            timestampString = "537040045.474382"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "137"
@@ -514,7 +514,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "536776077.889471"
+            timestampString = "537040045.47443"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
@@ -610,7 +610,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "536776077.889589"
+            timestampString = "537040045.474511"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "115"
@@ -626,12 +626,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "536776077.889646"
+            timestampString = "537040045.4745539"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "123"
             endingLineNumber = "123"
             landmarkName = "parseClassStudent(result:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "client-ipad/LessonViewController.swift"
+            timestampString = "537045341.716682"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "displayStudent()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
