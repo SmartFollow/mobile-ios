@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="768" height="2000"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Professeur" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIn-aQ-xOL">
-                                                <rect key="frame" x="302" y="102" width="230" height="45"/>
+                                                <rect key="frame" x="302" y="80" width="230" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="230" id="3cj-iZ-jg7"/>
                                                     <constraint firstAttribute="height" constant="45" id="nBN-vA-Fkp"/>
@@ -38,7 +38,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8V-UC-fAp">
-                                                <rect key="frame" x="302" y="144" width="230" height="45"/>
+                                                <rect key="frame" x="302" y="120" width="230" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="230" id="Zws-rE-g1X"/>
                                                     <constraint firstAttribute="height" constant="45" id="ucz-Z9-P8I"/>
@@ -47,7 +47,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cours" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gm-Ou-QYX">
-                                                <rect key="frame" x="302" y="190" width="230" height="45"/>
+                                                <rect key="frame" x="302" y="160" width="230" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="XHD-f9-6Zw"/>
                                                     <constraint firstAttribute="width" constant="230" id="wzX-mk-4Ln"/>
@@ -56,7 +56,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYm-MG-Za0">
-                                                <rect key="frame" x="302" y="234" width="230" height="45"/>
+                                                <rect key="frame" x="302" y="200" width="230" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="230" id="6oA-mn-Kxj"/>
                                                     <constraint firstAttribute="height" constant="45" id="VAn-VU-WEG"/>
@@ -64,7 +64,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profil1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ztn-lS-jVc">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="ztn-lS-jVc">
                                                 <rect key="frame" x="47" y="90" width="200" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="BZw-dh-FYe"/>
@@ -196,26 +196,39 @@
                                                     <action selector="segmentControl:" destination="f02-69-Aem" eventType="valueChanged" id="e0C-b1-TYq"/>
                                                 </connections>
                                             </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w14-5W-Fdv">
+                                                <rect key="frame" x="302" y="240" width="300" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="LrQ-CG-1aN"/>
+                                                    <constraint firstAttribute="height" constant="45" id="prh-mE-Lxa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="ztn-lS-jVc" firstAttribute="top" secondItem="udm-J9-oXw" secondAttribute="bottom" constant="40" id="1Mt-49-IQV"/>
                                             <constraint firstAttribute="trailing" secondItem="DbX-G2-IdD" secondAttribute="trailing" id="2Ke-0p-wDI"/>
+                                            <constraint firstAttribute="trailing" secondItem="w14-5W-Fdv" secondAttribute="trailing" constant="166" id="2YL-fg-iP3"/>
                                             <constraint firstItem="ztn-lS-jVc" firstAttribute="leading" secondItem="TlN-Is-iNW" secondAttribute="leading" constant="47" id="41p-MB-Rw5"/>
+                                            <constraint firstItem="w14-5W-Fdv" firstAttribute="leading" secondItem="ztn-lS-jVc" secondAttribute="trailing" constant="55" id="6Xo-Pf-MBQ"/>
+                                            <constraint firstItem="w14-5W-Fdv" firstAttribute="top" secondItem="udm-J9-oXw" secondAttribute="bottom" constant="190" id="7AK-f7-FuA"/>
                                             <constraint firstItem="udm-J9-oXw" firstAttribute="leading" secondItem="TlN-Is-iNW" secondAttribute="leading" id="AF1-Jb-asX"/>
                                             <constraint firstItem="QIn-aQ-xOL" firstAttribute="leading" secondItem="m8V-UC-fAp" secondAttribute="leading" id="Hb4-YK-uG0"/>
-                                            <constraint firstItem="QIn-aQ-xOL" firstAttribute="top" secondItem="udm-J9-oXw" secondAttribute="bottom" constant="52" id="Jhc-Oa-bDe"/>
+                                            <constraint firstItem="QIn-aQ-xOL" firstAttribute="top" secondItem="udm-J9-oXw" secondAttribute="bottom" constant="30" id="Jhc-Oa-bDe"/>
                                             <constraint firstItem="QIn-aQ-xOL" firstAttribute="leading" secondItem="ztn-lS-jVc" secondAttribute="trailing" constant="55" id="QMK-pg-HYQ"/>
                                             <constraint firstItem="udm-J9-oXw" firstAttribute="top" secondItem="TlN-Is-iNW" secondAttribute="top" id="RCX-FH-qUs"/>
-                                            <constraint firstItem="2Gm-Ou-QYX" firstAttribute="top" secondItem="QIn-aQ-xOL" secondAttribute="bottom" constant="43" id="Ryp-qp-DbW"/>
+                                            <constraint firstItem="2Gm-Ou-QYX" firstAttribute="top" secondItem="QIn-aQ-xOL" secondAttribute="bottom" constant="35" id="Ryp-qp-DbW"/>
                                             <constraint firstItem="QIn-aQ-xOL" firstAttribute="leading" secondItem="tYm-MG-Za0" secondAttribute="leading" id="U6K-cY-aZn"/>
                                             <constraint firstAttribute="height" constant="2000" identifier="Height" id="eFJ-4r-SyM"/>
                                             <constraint firstAttribute="bottom" secondItem="nzH-0O-5um" secondAttribute="bottom" id="hfb-6B-j8S"/>
                                             <constraint firstItem="DbX-G2-IdD" firstAttribute="leading" secondItem="TlN-Is-iNW" secondAttribute="leading" id="hz3-u7-VRT"/>
-                                            <constraint firstItem="tYm-MG-Za0" firstAttribute="top" secondItem="m8V-UC-fAp" secondAttribute="bottom" constant="45" id="iSf-Di-5ml"/>
+                                            <constraint firstItem="tYm-MG-Za0" firstAttribute="top" secondItem="m8V-UC-fAp" secondAttribute="bottom" constant="35" id="iSf-Di-5ml"/>
                                             <constraint firstItem="QIn-aQ-xOL" firstAttribute="leading" secondItem="2Gm-Ou-QYX" secondAttribute="leading" id="kWc-JR-g0T"/>
                                             <constraint firstItem="nzH-0O-5um" firstAttribute="leading" secondItem="TlN-Is-iNW" secondAttribute="leading" constant="64" id="kZ2-oH-2cJ"/>
-                                            <constraint firstItem="2Gm-Ou-QYX" firstAttribute="top" secondItem="m8V-UC-fAp" secondAttribute="bottom" constant="1" id="mpQ-85-kqf"/>
+                                            <constraint firstItem="2Gm-Ou-QYX" firstAttribute="top" secondItem="m8V-UC-fAp" secondAttribute="bottom" constant="-5" id="mpQ-85-kqf"/>
                                             <constraint firstItem="nzH-0O-5um" firstAttribute="top" secondItem="TlN-Is-iNW" secondAttribute="top" constant="480" id="p8a-s7-aO2"/>
                                             <constraint firstAttribute="trailing" secondItem="nzH-0O-5um" secondAttribute="trailing" constant="65" id="u9I-er-zBd"/>
                                             <constraint firstAttribute="trailing" secondItem="udm-J9-oXw" secondAttribute="trailing" id="xnO-0n-Bb4"/>
@@ -244,6 +257,7 @@
                     <size key="freeformSize" width="768" height="2000"/>
                     <connections>
                         <outlet property="classLabel" destination="m8V-UC-fAp" id="rS1-6G-yOG"/>
+                        <outlet property="dateLabel" destination="w14-5W-Fdv" id="0mc-5j-bjP"/>
                         <outlet property="lessonLabel" destination="2Gm-Ou-QYX" id="XcW-pU-7am"/>
                         <outlet property="profilPicture" destination="ztn-lS-jVc" id="ACV-Tz-LPx"/>
                         <outlet property="recap" destination="nzH-0O-5um" id="Fb3-XJ-uju"/>
@@ -261,6 +275,6 @@
     </scenes>
     <resources>
         <image name="adjust-64.png" width="64" height="64"/>
-        <image name="profil1.jpg" width="633" height="633"/>
+        <image name="default-avatar.png" width="200" height="200"/>
     </resources>
 </document>

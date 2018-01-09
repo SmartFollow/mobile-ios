@@ -17,11 +17,12 @@ extension ApiManager {
     do {
       if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [String: Any] {
         if let firstName = json["firstname"], let lastName = json["lastname"], let id = json["id"],
-          let email = json["email"] as? String {
+          let email = json["email"] as? String, let avatar = json["avatar"] as? String {
           UserDefaults.standard.set(firstName, forKey: "firstName")
           UserDefaults.standard.set(lastName, forKey: "lastName")
           UserDefaults.standard.set(email, forKey: "email")
           UserDefaults.standard.set(id, forKey: "id")
+          UserDefaults.standard.set(avatar, forKey: "avatar")
         }
         if let group = json["group"] as? [String: AnyObject] {
           if let groupId = group["id"], let groupName = group["name"] as? String {

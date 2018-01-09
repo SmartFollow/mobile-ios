@@ -49,6 +49,12 @@ class Lesson: NSObject, Planning {
     
   }
   
+  public func getTimeStart() -> String {
+    self.formatter.dateFormat = "yyyy-MM-dd HH:mm"
+    let date = formatter.string(from: self.timeStart)
+    return date
+  }
+  
 }
 
 

@@ -15,11 +15,12 @@ class ProfileViewController: UIViewController {
   @IBOutlet weak var name: UILabel!
   @IBOutlet weak var profilePicture: UIImageView!
   @IBOutlet weak var mainView: UIView!
-  
+  let avatar = UserDefaults.standard.object(forKey: "avatar") as! String
   var difficulties: StudentsInDifficultiesController?
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.profilePicture.downloadedFrom(link: ConnectionSettings.apiBaseUrl + avatar)
     self.addLeftBarButtonWithImage(UIImage(named: "ic_menu_black_24dp")!)
     profilePicture.asCircle(borderWidth: 5)
     ApiManager.sharedInstance.fetch(endPoint: "/api/users/profile") { (result: Data?) in

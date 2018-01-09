@@ -88,7 +88,6 @@ class LoginViewController: UIViewController {
           alertController.addAction(UIAlertAction(title: "Retour", style: UIAlertActionStyle.default,handler: nil))
           self.present(alertController, animated: true, completion: nil)
         })
-        
       }
     }
     

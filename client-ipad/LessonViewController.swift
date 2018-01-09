@@ -10,6 +10,7 @@ import UIKit
 
 class LessonViewController: UIViewController {
   
+  @IBOutlet weak var dateLabel: UILabel!
   @IBOutlet weak var roomLabel: UILabel!
   @IBOutlet weak var lessonLabel: UILabel!
   @IBOutlet weak var profilPicture: UIImageView!
@@ -18,6 +19,7 @@ class LessonViewController: UIViewController {
   @IBOutlet weak var scrollView: UIScrollView!
   @IBOutlet weak var segmentControl: UISegmentedControl!
   @IBOutlet weak var recap: UITableView!
+  let avatar = UserDefaults.standard.object(forKey: "avatar") as! String
   var rollCallLessonView: RollCallUIView!
   var lesson: Lesson!
   var students: [Student]?
@@ -37,6 +39,7 @@ class LessonViewController: UIViewController {
     setupDescriptionLabel()
     self.recap.isHidden = true
     profilPicture.asCircle()
+    profilPicture.downloadedFrom(link: ConnectionSettings.apiBaseUrl + avatar)
     self.segmentControl.selectedSegmentIndex = 1
     displayStudent()
     self.recap.delegate = self
@@ -44,14 +47,15 @@ class LessonViewController: UIViewController {
   }
   
   func setupDescriptionLabel() {
-    let title: [String] = ["Professeur", "Classe", "Cours", "Salle"]
-    let label: [UILabel] = [self.teacherLabel, self.classLabel, self.lessonLabel, self.roomLabel]
-    let content: [String] = ["alexandre.page@example.com", "\(self.lesson.studentClassName)", "\(self.lesson.subjectName)", "\(self.lesson.roomIdentifier)"]
+    let title: [String] = ["Professeur", "Classe", "Cours", "Salle", "Date"]
+    let label: [UILabel] = [self.teacherLabel, self.classLabel, self.lessonLabel, self.roomLabel, self.dateLabel]
+    let email = UserDefaults.standard.object(forKey: "email") as! String
+    let content: [String] = ["\n\(email)", "\n\(self.lesson.studentClassName)", "\n\(self.lesson.subjectName)", "\n\(self.lesson.roomIdentifier)", " \(self.lesson.getTimeStart())"]
     for (index, element) in title.enumerated() {
       let boldText = element
       let attrs = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 15)]
       let attributedString = NSMutableAttributedString(string:boldText, attributes:attrs)
-      let normalText = "\n\(content[index])"
+      let normalText = "\(content[index])"
       let normalString = NSMutableAttributedString(string:normalText)
       attributedString.append(normalString)
       label[index].attributedText = attributedString

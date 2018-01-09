@@ -17,6 +17,7 @@ class LeftViewController: UIViewController {
   var coursesViewController: UIViewController!
   var planningViewController: UIViewController!
   var sideBarView: SideBarView!
+  let avatar = UserDefaults.standard.object(forKey: "avatar") as! String
   
   @IBOutlet weak var tableView: UITableView!
   
@@ -38,6 +39,9 @@ class LeftViewController: UIViewController {
     self.planningViewController = UINavigationController(rootViewController: planningViewController)
     
     self.sideBarView = Bundle.main.loadNibNamed("SideBarView", owner: nil, options: nil)?.first as? SideBarView
+    self.sideBarView.profilePicture.downloadedFrom(link: ConnectionSettings.apiBaseUrl + avatar )
+    
+    
     self.view.addSubview(self.sideBarView)
     
     self.tableView.tableFooterView = UIView()
