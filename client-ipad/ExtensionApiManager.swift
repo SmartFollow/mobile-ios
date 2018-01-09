@@ -122,7 +122,7 @@ extension ApiManager {
               guard let id = delay["id"] else { return nil }
               guard let evaluationId = delay["evaluation_id"] else { return nil }
               guard let arrivedAt = delay["arrived_at"] else { return nil }
-              let myDelay = Delay(id: id as! Int, evaluationId: evaluationId as! Int, arrivedAt: arrivedAt as! String)
+              let myDelay = Delay(id: id as! Int, evaluationId: evaluationId as! Int)
               myEvaluation.delay = myDelay
             }
             myStudent.evaluation = myEvaluation
