@@ -22,6 +22,7 @@ class LessonViewController: UIViewController {
   var lesson: Lesson!
   var students: [Student]?
   var count: Int?
+  var row: CGFloat = 0
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -47,7 +48,7 @@ class LessonViewController: UIViewController {
     let label: [UILabel] = [self.teacherLabel, self.classLabel, self.lessonLabel, self.roomLabel]
     let content: [String] = ["alexandre.page@example.com", "\(self.lesson.studentClassName)", "\(self.lesson.subjectName)", "\(self.lesson.roomIdentifier)"]
     for (index, element) in title.enumerated() {
-      let boldText  = element
+      let boldText = element
       let attrs = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 15)]
       let attributedString = NSMutableAttributedString(string:boldText, attributes:attrs)
       let normalText = "\n\(content[index])"
@@ -76,12 +77,28 @@ class LessonViewController: UIViewController {
         view.isHidden = false
       }
     }
+    DispatchQueue.main.async {
+      self.scrollView.contentSize = CGSize(width: 768, height: self.row)
+      let view = self.scrollView.viewWithRestorationTag(str: "MyView")
+      let height = view?.constraints.filter { $0.identifier == "Height" }.first
+      height?.constant = self.row
+      view?.layoutIfNeeded()
+    }
   }
   
   func showRecap() {
-    //        DispatchQueue.main.async {
-    //            self.scrollView.contentSize.height = self.recap.frame.origin.y + self.recap.bounds.size.height
-    //        }
+    let count = CGFloat(self.students!.count)
+    let cell = self.recap.dequeueReusableCell(withIdentifier: "StudentCell") as! StudentCell
+    let rowHeight = cell.bounds.height
+    
+    let constraint = self.recap.constraints.filter { $0.identifier == "Height" }.first
+    DispatchQueue.main.async {
+      let view = self.scrollView.viewWithRestorationTag(str: "MyView")
+      let height = view?.constraints.filter { $0.identifier == "Height" }.first
+      height?.constant = self.recap.frame.origin.y + (count * rowHeight)
+      view?.layoutIfNeeded()
+      self.recap.layoutIfNeeded()
+    }
     self.recap.isHidden = false
     for view in self.scrollView.subviews {
       if view.tag == RollCallUIView.tagView {
@@ -115,13 +132,7 @@ class LessonViewController: UIViewController {
     if (adjust) {
       raw += 300
     }
-    DispatchQueue.main.async {
-      self.scrollView.contentSize = CGSize(width: 768, height: raw)
-      let view = self.scrollView.viewWithRestorationTag(str: "MyView")
-      let height = view?.constraints.filter { $0.identifier == "Height" }.first
-      height?.constant = raw
-      view?.layoutIfNeeded()
-    }
+    self.row = raw
   }
   
   @IBAction func onChange(_ sender: Any) {

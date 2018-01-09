@@ -64,9 +64,17 @@ class ConversationCollectionViewController: UICollectionViewController, UICollec
   }
   
   override func viewDidAppear(_ animated: Bool) {
-    let count = self.conversation.messages.count
-    let indexPath = IndexPath(item: count, section: 0)
-    self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: true)
+    if self.conversation.messages.count > 0 {
+      ApiManager.sharedInstance.fetch(endPoint: "/api/conversations/\(conversation.id)") { (result: Data?) in
+        ApiManager.parseMessages(result: result, conversation: self.conversation)
+        let count = self.conversation.messages.count
+        let indexPath = IndexPath(item: count, section: 0)
+        DispatchQueue.main.async {
+          self.collectionView?.reloadData()
+          self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: true)
+        }
+      }
+    }
   }
   
   @objc func back(_sender: UIBarButtonItem) {

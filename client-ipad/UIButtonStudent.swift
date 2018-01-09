@@ -24,7 +24,6 @@ class UIButtonStudent: UIButton {
   }
   
   private func commonInit() {
-    self.isEnabled = false
     self.layer.masksToBounds = true
     self.layer.cornerRadius = self.frame.width / 2
   }

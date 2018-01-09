@@ -71,10 +71,10 @@
                                                     <constraint firstAttribute="width" constant="200" id="uXu-Kd-mu6"/>
                                                 </constraints>
                                             </imageView>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nzH-0O-5um" customClass="RecapUIView" customModule="client_ipad" customModuleProvider="target">
-                                                <rect key="frame" x="64" y="480" width="639" height="1412"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nzH-0O-5um">
+                                                <rect key="frame" x="64" y="480" width="639" height="1520"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="sectionIndexBackgroundColor" red="0.94372826809999999" green="0.44975495809999999" blue="0.25437262329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StudentCell" rowHeight="200" id="l65-K4-h76" customClass="StudentCell" customModule="client_ipad" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="639" height="200"/>
@@ -132,6 +132,9 @@
                                                                 <constraint firstItem="E5l-KC-LZQ" firstAttribute="top" secondItem="qjU-ZO-YCP" secondAttribute="bottom" constant="20" id="y5Q-bf-W7Q"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                                        </accessibility>
                                                         <connections>
                                                             <outlet property="activity" destination="E5l-KC-LZQ" id="QR1-w5-s84"/>
                                                             <outlet property="presence" destination="qjU-ZO-YCP" id="3ck-3a-SXt"/>
@@ -207,10 +210,14 @@
                                             <constraint firstItem="2Gm-Ou-QYX" firstAttribute="top" secondItem="QIn-aQ-xOL" secondAttribute="bottom" constant="43" id="Ryp-qp-DbW"/>
                                             <constraint firstItem="QIn-aQ-xOL" firstAttribute="leading" secondItem="tYm-MG-Za0" secondAttribute="leading" id="U6K-cY-aZn"/>
                                             <constraint firstAttribute="height" constant="2000" identifier="Height" id="eFJ-4r-SyM"/>
+                                            <constraint firstAttribute="bottom" secondItem="nzH-0O-5um" secondAttribute="bottom" id="hfb-6B-j8S"/>
                                             <constraint firstItem="DbX-G2-IdD" firstAttribute="leading" secondItem="TlN-Is-iNW" secondAttribute="leading" id="hz3-u7-VRT"/>
                                             <constraint firstItem="tYm-MG-Za0" firstAttribute="top" secondItem="m8V-UC-fAp" secondAttribute="bottom" constant="45" id="iSf-Di-5ml"/>
                                             <constraint firstItem="QIn-aQ-xOL" firstAttribute="leading" secondItem="2Gm-Ou-QYX" secondAttribute="leading" id="kWc-JR-g0T"/>
+                                            <constraint firstItem="nzH-0O-5um" firstAttribute="leading" secondItem="TlN-Is-iNW" secondAttribute="leading" constant="64" id="kZ2-oH-2cJ"/>
                                             <constraint firstItem="2Gm-Ou-QYX" firstAttribute="top" secondItem="m8V-UC-fAp" secondAttribute="bottom" constant="1" id="mpQ-85-kqf"/>
+                                            <constraint firstItem="nzH-0O-5um" firstAttribute="top" secondItem="TlN-Is-iNW" secondAttribute="top" constant="480" id="p8a-s7-aO2"/>
+                                            <constraint firstAttribute="trailing" secondItem="nzH-0O-5um" secondAttribute="trailing" constant="65" id="u9I-er-zBd"/>
                                             <constraint firstAttribute="trailing" secondItem="udm-J9-oXw" secondAttribute="trailing" id="xnO-0n-Bb4"/>
                                             <constraint firstItem="DbX-G2-IdD" firstAttribute="top" secondItem="ztn-lS-jVc" secondAttribute="bottom" constant="52" id="zcq-MZ-xzA"/>
                                         </constraints>

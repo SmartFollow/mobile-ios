@@ -17,13 +17,12 @@ extension StudentButton {
       case 0:
         createAbsence(evaluation: evaluation)
       case 1:
-        if let absence = self.absence {
-          removeAbsence(evaluation: evaluation, absence: absence)
-        }
         createDelay(evaluation: evaluation)
+        self.student.evaluation?.absence = nil
       case 2:
-        if let delay = self.delay, let evaluation = self.student.evaluation {
+        if let delay = self.student.evaluation?.delay {
           removeDelay(evaluation: evaluation, delay: delay)
+          self.student.evaluation?.delay = nil
         }
       default:
         break
@@ -37,7 +36,8 @@ extension StudentButton {
     let min = String(format: "%02d", Calendar.current.component(.minute, from: Date()))
     
     ApiManager.sharedInstance.fetch(endPoint: "/api/evaluations/\(evaluation.id)/delays", method: "POST", parameters: "arrived_at=\(hour):\(min)", completion: { (result: Data?) in
-      self.delay = ApiManager.parseDelay(result: result)
+      //self.delay = ApiManager.parseDelay(result: result)
+      self.student.evaluation?.delay = ApiManager.parseDelay(result: result)
       self.finishAnimation()
     })
   }
@@ -51,13 +51,15 @@ extension StudentButton {
   
   public func removeAbsence(evaluation: Evaluation, absence: Absence) {
     ApiManager.sharedInstance.fetch(endPoint: "api/evaluations/\(evaluation.id)/absences/\(absence.id)", method: "DELETE", completion: { (result: Data?) in
-      self.finishAnimation()
     })
+    self.student.evaluation?.absence = nil
+    self.finishAnimation()
   }
   
   public func createAbsence(evaluation: Evaluation) {
     ApiManager.sharedInstance.fetch(endPoint: "/api/evaluations/\(evaluation.id)/absences", method: "POST", completion: { (result: Data?) in
-      self.absence = ApiManager.parseAbsence(result: result)
+      self.student.evaluation?.absence = ApiManager.parseAbsence(result: result)
+      //self.absence = ApiManager.parseAbsence(result: result)
       self.finishAnimation()
     })
   }

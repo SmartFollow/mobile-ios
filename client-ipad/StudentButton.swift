@@ -27,7 +27,14 @@ class StudentButton: UIButton {
     self.student = student
     self.lesson = lesson
     self.segmentState = 1
-    self.buttonState = 0
+    
+    if self.student.evaluation?.absence != nil {
+      self.buttonState = 1
+    } else if self.student.evaluation?.delay != nil {
+      self.buttonState = 2
+    } else {
+      self.buttonState = 0
+    }
     
     super.init(frame: frame)
     initActivityMonitor()

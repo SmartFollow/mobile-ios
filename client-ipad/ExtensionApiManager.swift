@@ -233,7 +233,18 @@ extension ApiManager {
         if let messages = json["messages"] as? [[String: Any]] {
           for message in messages {
             let userMessage = Message(content: message["content"] as! String, date: message["created_at"] as! String, creatorId: message["creator_id"] as! Int)
-            conversation.messages.append(userMessage)
+            if let createdAt = message["created_at"] as? String {
+              if let lastMessage = conversation.messages.last {
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                let date = formatter.date(from: createdAt)!
+                if (lastMessage.date) < date {
+                  conversation.messages.append(userMessage)
+                }
+              } else {
+                conversation.messages.append(userMessage)
+              }
+            }
           }
         }
       }
