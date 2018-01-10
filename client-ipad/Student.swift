@@ -19,9 +19,10 @@ class Student: NSObject {
   var avatar: UIImage
   var evaluation: Evaluation?
   var difficulty: [Difficulty]
+  var criteria: [Criterion]
   
   init(id: Int, email: String, firstName: String, lastName: String, classId: Int, groupId: Int, evaluation: Evaluation? = nil,
-       avatarUrl: String, difficulty: [Difficulty] = [Difficulty]()) {
+       avatarUrl: String, difficulty: [Difficulty] = [Difficulty](), criteria: [Criterion] = [Criterion]()) {
     self.id = id
     self.email = email
     self.firstName = firstName
@@ -31,5 +32,15 @@ class Student: NSObject {
     self.evaluation = evaluation
     self.avatar = UIImage(link: ConnectionSettings.apiBaseUrl + avatarUrl)
     self.difficulty = difficulty
+    self.criteria = criteria
+  }
+  
+  public func getCriteria(id: Int) -> Criterion? {
+    return self.criteria.filter { $0.id == id }.first
+  }
+  
+  public func incCriteria(id: Int) {
+    var criteria = self.criteria.filter { $0.id == id }.first
+    criteria?.value += 1
   }
 }

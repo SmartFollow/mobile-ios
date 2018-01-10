@@ -12,8 +12,9 @@ class StudentCell: UITableViewCell {
 
   @IBOutlet weak var studentName: UILabel!
   @IBOutlet weak var studentPicture: UIImageView!
-  @IBOutlet weak var presence: UILabel!
-  @IBOutlet weak var activity: UILabel!
+  @IBOutlet weak var criterion1: UILabel!
+  @IBOutlet weak var criterion2: UILabel!
+  @IBOutlet weak var criterion3: UILabel!
   
   override func awakeFromNib() {
         super.awakeFromNib()

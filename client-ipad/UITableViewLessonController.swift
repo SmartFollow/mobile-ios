@@ -24,8 +24,17 @@ extension LessonViewController: UITableViewDelegate, UITableViewDataSource {
       cell.studentName.text = "\(student.firstName) \(student.lastName)"
       cell.studentPicture.image = self.students?[indexPath.row].avatar
       cell.studentPicture.asCircle()
-      cell.presence.text = "Présence : 1"
-      cell.activity.text = "Activités : 1"
+      
+      if let participation = student.getCriteria(id: 1) {
+       cell.criterion1.text = "Participation : \(participation.value)"
+      }
+      if let noWork = student.getCriteria(id: 2) {
+       cell.criterion2.text = "Bavardage : 1 \(noWork.value)"
+      }
+      if let bavardage = student.getCriteria(id: 3) {
+       cell.criterion3.text = "Devoir non réalisé(s) : \(bavardage.value)"
+      }
+      
     }
     return cell
   }

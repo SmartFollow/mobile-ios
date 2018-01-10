@@ -126,6 +126,19 @@ extension ApiManager {
               let myDelay = Delay(id: id as! Int, evaluationId: evaluationId as! Int)
               myEvaluation.delay = myDelay
             }
+            
+            if let criteria = evaluation["criteria"] as? [[String: Any]] {
+              var myCriteria = [Criterion]()
+              for criterion in criteria {
+                guard let id = criterion["id"] else { return nil }
+                guard let name = criterion["name"] else { return nil }
+                guard let pivot = criterion["pivot"] as? [String: Any] else { return nil }
+                guard let value = pivot["value"] else { return nil }
+                let myCriterion = Criterion(id: id as! Int, name: name as! String, value: value as! Int)
+                myCriteria.append(myCriterion)
+              }
+              myStudent.criteria = myCriteria
+            }
             myStudent.evaluation = myEvaluation
           }
           studentClass.append(myStudent)

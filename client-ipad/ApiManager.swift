@@ -13,7 +13,7 @@ class ApiManager: NSObject {
   
   static let sharedInstance = ApiManager()
   
-  public func fetch(endPoint: String, method: String = "GET", parameters: String = "", completion: @escaping (_ result: Data?) -> Void) {
+  public func fetch(endPoint: String, method: String = "GET", parameters: String = "", json: [String: Any] = [:], completion: @escaping (_ result: Data?) -> Void) {
     #if DEBUG
       stubbing()
     #endif
@@ -21,7 +21,13 @@ class ApiManager: NSObject {
     let url = URL(string: ConnectionSettings.apiBaseUrl + endPoint )
     var request = URLRequest(url: (url as URL?)!)
     request.httpMethod = method
-    request.httpBody = parameters.data(using: String.Encoding.utf8)
+    if json.first != nil {
+      let jsonData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+      request.httpBody = jsonData
+      request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    } else {
+      request.httpBody = parameters.data(using: String.Encoding.utf8)
+    }
     
     let accessToken = UserDefaults.standard.value(forKey: "accessToken")
     request.setValue("Bearer \(accessToken!)", forHTTPHeaderField: "Authorization")

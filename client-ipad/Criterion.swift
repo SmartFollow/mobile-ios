@@ -12,9 +12,11 @@ class Criterion: NSObject {
   
   let id: Int
   let name: String
+  var value: Int
   
-  init(id: Int, name: String) {
+  init(id: Int, name: String, value: Int) {
     self.id = id
     self.name = name
+    self.value = value
   }
 }
