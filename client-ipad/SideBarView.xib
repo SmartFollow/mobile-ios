@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SideBarView" customModule="client_ipad" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iSE-Vu-YfZ" userLabel="Background image">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="09K-o7-jQT">
+                    <rect key="frame" x="8" y="72" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="4k9-hS-56V"/>
+                        <constraint firstAttribute="width" constant="80" id="wbS-fd-1AX"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8zQ-mL-Fcv">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="09K-o7-jQT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="BXk-nG-fyz"/>
+                <constraint firstItem="8zQ-mL-Fcv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HSc-Yj-WUf"/>
+                <constraint firstAttribute="trailing" secondItem="iSE-Vu-YfZ" secondAttribute="trailing" id="OlD-qT-rit"/>
+                <constraint firstItem="8zQ-mL-Fcv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ReT-ah-LX1"/>
+                <constraint firstAttribute="trailing" secondItem="8zQ-mL-Fcv" secondAttribute="trailing" id="Rpx-CN-mHV"/>
+                <constraint firstAttribute="bottom" secondItem="iSE-Vu-YfZ" secondAttribute="bottom" id="UbR-81-CyM"/>
+                <constraint firstItem="iSE-Vu-YfZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hFU-Om-ozs"/>
+                <constraint firstItem="iSE-Vu-YfZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mTL-Hs-h1k"/>
+                <constraint firstAttribute="bottom" secondItem="09K-o7-jQT" secondAttribute="bottom" constant="8" id="opn-cw-l7y"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="background" destination="iSE-Vu-YfZ" id="bF0-nc-nKv"/>
+                <outlet property="profilePicture" destination="09K-o7-jQT" id="FF6-LN-uNa"/>
+            </connections>
+            <point key="canvasLocation" x="97" y="253"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Logo.jpg" width="320" height="53"/>
+    </resources>
+</document>
