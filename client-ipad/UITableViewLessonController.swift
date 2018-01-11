@@ -26,13 +26,13 @@ extension LessonViewController: UITableViewDelegate, UITableViewDataSource {
       cell.studentPicture.asCircle()
       
       if let participation = student.getCriteria(id: 1) {
-       cell.criterion1.text = "Participation : \(participation.value)"
+       cell.criterion1.text = "Participation : \(participation)"
       }
       if let noWork = student.getCriteria(id: 2) {
-       cell.criterion2.text = "Bavardage : 1 \(noWork.value)"
+       cell.criterion2.text = "Bavardage : \(noWork)"
       }
       if let bavardage = student.getCriteria(id: 3) {
-       cell.criterion3.text = "Devoir non réalisé(s) : \(bavardage.value)"
+       cell.criterion3.text = "Devoir non réalisé(s) : \(bavardage)"
       }
       
     }

@@ -11,7 +11,6 @@ import UIKit
 class StudentButton: UIButton {
   
   static let viewTag: Int = 2
-  
   var iconTab = ["present.png", "late.png", "absent.png"]
   let studentStates = ["Présent", "Absent", "En retard"]
   var activityIndicator: UIActivityIndicatorView
@@ -27,6 +26,7 @@ class StudentButton: UIButton {
     self.student = student
     self.lesson = lesson
     self.segmentState = 1
+    
     
     if self.student.evaluation?.absence != nil {
       self.buttonState = 1

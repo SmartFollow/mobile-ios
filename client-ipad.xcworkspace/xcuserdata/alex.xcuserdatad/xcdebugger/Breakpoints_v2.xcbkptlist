@@ -386,7 +386,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ApiManager.swift"
-            timestampString = "537319871.274695"
+            timestampString = "537325387.407786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
@@ -402,7 +402,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ApiManager.swift"
-            timestampString = "537319871.275466"
+            timestampString = "537325387.407861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -418,7 +418,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/RollCallButtonExtension.swift"
-            timestampString = "537318531.6675071"
+            timestampString = "537323514.719076"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -466,7 +466,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "537319871.27595"
+            timestampString = "537325387.407937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
@@ -482,7 +482,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "537319871.2760251"
+            timestampString = "537325387.408"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "151"
@@ -498,7 +498,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "537319871.276085"
+            timestampString = "537325387.408057"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
@@ -514,7 +514,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "537319871.276143"
+            timestampString = "537325387.408111"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "116"
@@ -530,7 +530,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "537319871.2762001"
+            timestampString = "537325387.4081661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "320"
@@ -546,7 +546,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "537319871.2762541"
+            timestampString = "537325387.408221"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "319"
@@ -562,7 +562,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "537319871.2763079"
+            timestampString = "537325387.4082741"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "318"
@@ -641,7 +641,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "537319871.276381"
+            timestampString = "537325387.4083461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "254"
@@ -657,7 +657,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "537319871.276436"
+            timestampString = "537325387.4084001"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "259"
@@ -673,7 +673,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/RollCallButtonExtension.swift"
-            timestampString = "537318531.668065"
+            timestampString = "537323514.719627"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
@@ -721,7 +721,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/RollCallButtonExtension.swift"
-            timestampString = "537318531.6681091"
+            timestampString = "537323514.719668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
@@ -737,7 +737,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/RollCallButtonExtension.swift"
-            timestampString = "537318531.668149"
+            timestampString = "537323514.719708"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
@@ -753,7 +753,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/RollCallButtonExtension.swift"
-            timestampString = "537318531.668189"
+            timestampString = "537323514.7197469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -769,7 +769,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/RollCallButtonExtension.swift"
-            timestampString = "537318531.668229"
+            timestampString = "537323514.719786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
@@ -785,7 +785,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/RollCallButtonExtension.swift"
-            timestampString = "537318531.668269"
+            timestampString = "537323514.719828"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
@@ -801,7 +801,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/RollCallButtonExtension.swift"
-            timestampString = "537318531.668311"
+            timestampString = "537323514.719867"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -817,7 +817,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "client-ipad/RollCallButtonExtension.swift"
-            timestampString = "537318531.6683511"
+            timestampString = "537323514.719906"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -848,24 +848,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "client-ipad/UITableViewLessonController.swift"
-            timestampString = "537319871.27661"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "537319871.276661"
+            timestampString = "537325387.408568"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "134"
@@ -880,72 +864,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "client-ipad/UITableViewLessonController.swift"
-            timestampString = "537319871.276716"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "client-ipad/GossipButtonExtension.swift"
-            timestampString = "537319871.276765"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "gossip()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "client_ipad.StudentButton.gossip() -&gt; ()"
-                  moduleName = "client-ipad"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alex/Projects/ios-tablet/client-ipad/GossipButtonExtension.swift"
-                  timestampString = "537311803.704255"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "184">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "client_ipad.StudentButton.gossip() -&gt; ()"
-                  moduleName = "client-ipad"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alex/Projects/ios-tablet/client-ipad/GossipButtonExtension.swift"
-                  timestampString = "537311803.708474"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "1507">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "client-ipad/ExtensionApiManager.swift"
-            timestampString = "537319871.276829"
+            timestampString = "537325387.408626"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "136"
@@ -960,40 +880,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "client-ipad/GossipButtonExtension.swift"
-            timestampString = "537319871.276885"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "StudentButton"
-            landmarkType = "21">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "client-ipad/GossipButtonExtension.swift"
-            timestampString = "537319871.276937"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "addCriteria(alert:i:title:criterionId:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "client-ipad/ApiManager.swift"
-            timestampString = "537319871.276988"
+            timestampString = "537325387.4086781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -1008,29 +896,77 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "client-ipad/GossipButtonExtension.swift"
-            timestampString = "537319871.277495"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "addCriteria(alert:i:title:criterionId:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "client-ipad/ApiManager.swift"
-            timestampString = "537319871.277557"
+            timestampString = "537325387.408729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
             endingLineNumber = "23"
             landmarkName = "fetch(endPoint:method:parameters:json:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "client-ipad/Student.swift"
+            timestampString = "537325387.40878"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "incCriteria(id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "client_ipad.Student.incCriteria(id: Swift.Int) -&gt; ()"
+                  moduleName = "client-ipad"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alex/Projects/ios-tablet/client-ipad/Student.swift"
+                  timestampString = "537322417.940666"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (client_ipad.Criterion) -&gt; Swift.Bool in client_ipad.Student.incCriteria(id: Swift.Int) -&gt; ()"
+                  moduleName = "client-ipad"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alex/Projects/ios-tablet/client-ipad/Student.swift"
+                  timestampString = "537322417.942644"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "client-ipad/ExtensionApiManager.swift"
+            timestampString = "537325387.408824"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "336"
+            endingLineNumber = "336"
+            landmarkName = "parseCriteria(result:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -29,6 +29,8 @@ class LessonViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    NotificationCenter.default.addObserver(self, selector: #selector(self.shouldReload), name: NSNotification.Name(rawValue: "newDataNotificationForItemEdit"), object: nil)
+    
     let semaphore = DispatchSemaphore(value: 0)
     ApiManager.sharedInstance.fetch(endPoint: "/api/lessons/\(self.lesson.id)") { (result: Data?) in
       self.students = ApiManager.parseClassStudent(result: result)
@@ -44,6 +46,12 @@ class LessonViewController: UIViewController {
     displayStudent()
     self.recap.delegate = self
     self.recap.dataSource = self
+  }
+  
+  func shouldReload() {
+    DispatchQueue.main.async {
+      self.recap.reloadData()
+    }
   }
   
   func setupDescriptionLabel() {

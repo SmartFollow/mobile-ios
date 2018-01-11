@@ -331,5 +331,25 @@ extension ApiManager {
     return students
   }
   
+  public static func parseCriteria(result: Data?) -> [Criterion]? {
+    var criteria = [Criterion]()
+    
+    do {
+      if let json = try JSONSerialization.jsonObject(with: result!, options: []) as? [[String: Any]] {
+        for criterion in json {
+          guard let id = criterion["id"] else { return nil }
+          guard let name = criterion["name"] else { return nil }
+          guard let pivot = criterion["pivot"] as? [String: Any] else { return nil }
+          guard let value = pivot["value"] else { return nil }
+          let crit = Criterion(id: id as! Int, name: name as! String, value: value as! Int)
+          criteria.append(crit)
+        }
+      }
+    }
+    catch let error as NSError {
+      print("Failed to load: \(error.localizedDescription)")
+    }
+    return criteria
+  }
   
 }

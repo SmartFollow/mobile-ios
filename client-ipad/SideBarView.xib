@@ -19,7 +19,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="09K-o7-jQT">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="09K-o7-jQT">
                     <rect key="frame" x="8" y="72" width="80" height="80"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="4k9-hS-56V"/>
@@ -51,6 +51,5 @@
     </objects>
     <resources>
         <image name="Logo.jpg" width="320" height="53"/>
-        <image name="default-avatar.png" width="200" height="200"/>
     </resources>
 </document>

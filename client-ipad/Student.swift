@@ -35,12 +35,15 @@ class Student: NSObject {
     self.criteria = criteria
   }
   
-  public func getCriteria(id: Int) -> Criterion? {
-    return self.criteria.filter { $0.id == id }.first
+  public func getCriteria(id: Int) -> Int? {
+    if let crit = self.criteria.filter({ $0.id == id }).first {
+      return crit.value
+    }
+    return 0
   }
   
   public func incCriteria(id: Int) {
-    var criteria = self.criteria.filter { $0.id == id }.first
+    let criteria = self.criteria.filter { $0.id == id }.first
     criteria?.value += 1
   }
 }
